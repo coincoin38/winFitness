@@ -1,0 +1,54 @@
+{
+    "page": 1,
+    "page_count": 1,
+    "news": [
+             {
+             "_id": "56115e11c38648281fe8b965",
+             "title": "Mon titre",
+             "body": "Coucou",
+             "timestamp": "2015-10-04T17:12:49.667Z",
+             "location": "En salle de pause",
+             "agency": "Lyon"
+             },
+             {
+             "_id": "56115e11c38648281fe8b95f",
+             "title": "Mon titre",
+             "body": "Coucou",
+             "timestamp": "2015-10-04T17:12:49.369Z",
+             "location": "En salle de pause",
+             "agency": "Lyon"
+             },
+             {
+             "_id": "56115e11c38648281fe8b969",
+             "title": "Mon titre",
+             "body": "Coucou",
+             "timestamp": "2015-10-04T17:12:49.859Z",
+             "location": "En salle de pause",
+             "agency": "Lyon"
+             },
+             {
+             "_id": "56115e10c38648281fe8b957",
+             "title": "Mon titre",
+             "body": "Coucou",
+             "timestamp": "2015-10-04T17:12:48.996Z",
+             "location": "En salle de pause",
+             "agency": "Lyon"
+             },
+             {
+             "_id": "56115e11c38648281fe8b961",
+             "title": "Mon titre",
+             "body": "Coucou",
+             "timestamp": "2015-10-04T17:12:49.480Z",
+             "location": "En salle de pause",
+             "agency": "Lyon"
+             },
+             {
+             "_id": "56115e11c38648281fe8b963",
+             "title": "Mon titre",
+             "body": "Coucou",
+             "timestamp": "2015-10-04T17:12:49.566Z",
+             "location": "En salle de pause",
+             "agency": "Lyon"
+             }
+             ]
+}

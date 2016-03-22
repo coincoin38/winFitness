@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  myGymSwift
+
+  Created by SQLI51109 on 22/12/2015.
+  Copyright © 2015 julien gimenez. All rights reserved.
+*/
+
+"WHAT_IS_SPORT" = "WHAT IS %@ ?";
+"BACK" = "Retour";
+"NOTHING" = "Aucune séance de prévue";
+"OK" = "OK";
+"CLOSE" = "Fermer";
+"MINUTES_SHORT" = "min";
+"PULL_TO_REFRESH" = "Relâcher pour rafraîchir";

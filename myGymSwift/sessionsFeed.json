@@ -1,0 +1,176 @@
+{
+    "page": 1,
+    "page_count": 1,
+    "sessions": [
+                 {
+                 "id": "1",
+                 "sport_id": "569e3ecb521460e108c92459",
+                 "from": "9.30",
+                 "duration": "30",
+                 "day": "2016-01-31",
+                 "location": "Salle 1",
+                 "teacher_id": "1",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "2",
+                 "sport_id": "569e3ecb521460e108c92459",
+                 "from": "10.30",
+                 "duration": "45",
+                 "day": "2016-01-31",
+                 "location": "Salle 1",
+                 "teacher_id": "2",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "3",
+                 "sport_id": "569e3ecb521460e108c9245a",
+                 "from": "11.30",
+                 "duration": "30",
+                 "day": "2016-01-31",
+                 "location": "Salle 1",
+                 "teacher_id": "3",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "4",
+                 "sport_id": "569e3ecb521460e108c9245b",
+                 "from": "12.30",
+                 "duration": "45",
+                 "day": "2016-01-31",
+                 "location": "Salle 1",
+                 "teacher_id": "4",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "5",
+                 "sport_id": "569e3ecb521460e108c9245c",
+                 "from": "13.30",
+                 "duration": "30",
+                 "day": "2016-01-31",
+                 "location": "Salle 1",
+                 "teacher_id": "2",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "6",
+                 "sport_id": "569e3ecb521460e108c9245d",
+                 "from": "9.30",
+                 "duration": "45",
+                 "day": "2016-01-30",
+                 "location": "Salle 1",
+                 "teacher_id": "3",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "7",
+                 "sport_id": "569e3ecb521460e108c9245d",
+                 "from": "10.30",
+                 "duration": "30",
+                 "day": "2016-01-30",
+                 "location": "Salle 1",
+                 "teacher_id": "4",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "8",
+                 "sport_id": "569e3ecb521460e108c9245e",
+                 "from": "13.30",
+                 "duration": "45",
+                 "day": "2016-01-30",
+                 "location": "Salle 1",
+                 "teacher_id": "1",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "9",
+                 "sport_id": "569e3ecb521460e108c9245f",
+                 "from": "14.00",
+                 "duration": "30",
+                 "day": "2016-01-30",
+                 "location": "Salle 1",
+                 "teacher_id": "2",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "10",
+                 "sport_id": "569e3ecb521460e108c9245f",
+                 "from": "16.30",
+                 "duration": "45",
+                 "day": "2016-01-30",
+                 "location": "Salle 3",
+                 "teacher_id": "3",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "11",
+                 "sport_id": "569e3ecb521460e108c9245f",
+                 "from": "17.30",
+                 "duration": "45",
+                 "day": "2016-01-30",
+                 "location": "Salle 3",
+                 "teacher_id": "3",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "12",
+                 "sport_id": "569e3ecb521460e108c92460",
+                 "from": "19.30",
+                 "duration": "45",
+                 "day": "2016-01-30",
+                 "location": "Salle 3",
+                 "teacher_id": "3",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "13",
+                 "sport_id": "569e3ecb521460e108c92460",
+                 "from": "9.30",
+                 "duration": "45",
+                 "day": "2016-01-31",
+                 "location": "Salle 1",
+                 "teacher_id": "3",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "14",
+                 "sport_id": "569e3e9b521460e108c92458",
+                 "from": "10.30",
+                 "duration": "30",
+                 "day": "2016-01-31",
+                 "location": "Salle 1",
+                 "teacher_id": "4",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "15",
+                 "sport_id": "569e3e9b521460e108c92458",
+                 "from": "13.30",
+                 "duration": "45",
+                 "day": "2016-01-31",
+                 "location": "Salle 1",
+                 "teacher_id": "1",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "16",
+                 "sport_id": "569e3ecb521460e108c92459",
+                 "from": "14.00",
+                 "duration": "30",
+                 "day": "2016-01-31",
+                 "location": "Salle 1",
+                 "teacher_id": "2",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "17",
+                 "sport_id": "569e3ecb521460e108c9245b",
+                 "from": "16.30",
+                 "duration": "45",
+                 "day": "2016-01-31",
+                 "location": "Salle 3",
+                 "teacher_id": "3",
+                 "attendance": "0"
+                 }
+                 ]
+}
