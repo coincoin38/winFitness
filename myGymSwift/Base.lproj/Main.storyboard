@@ -146,40 +146,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="38M-JJ-3p5" customClass="FSCalendar">
-                                <rect key="frame" x="18" y="46" width="564" height="485"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="daz-HW-00e">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
-                                        <color key="value" red="0.1019607843" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
-                                        <color key="value" red="0.1019607843" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
-                                        <color key="value" red="0.8862745098" green="0.4941176471" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
-                                        <color key="value" red="0.8862745098" green="0.4941176471" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
-                                        <color key="value" red="0.47058823529999999" green="0.43921568630000002" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="NO"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dayIdentifier" id="DYl-Fk-igc">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DYl-Fk-igc" id="Xf6-tw-V3l">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="UE3-S5-Fyw" id="ABB-8F-rUP"/>
+                                    <outlet property="delegate" destination="UE3-S5-Fyw" id="S9G-u8-Tdv"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Hr3-qs-nNO" firstAttribute="top" secondItem="38M-JJ-3p5" secondAttribute="bottom" constant="20" id="0pz-sb-Kgu"/>
-                            <constraint firstItem="38M-JJ-3p5" firstAttribute="leading" secondItem="0eN-gV-dQ3" secondAttribute="leading" constant="18" id="JbI-eO-X8k"/>
-                            <constraint firstItem="38M-JJ-3p5" firstAttribute="top" secondItem="cUf-Ze-UQz" secondAttribute="bottom" constant="26" id="RMI-TM-mXe"/>
-                            <constraint firstAttribute="trailing" secondItem="38M-JJ-3p5" secondAttribute="trailing" constant="18" id="oc7-d8-F2e"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendrier" image="Sessions" selectedImage="Sessions" id="XKu-zB-Vnm"/>
                     <connections>
-                        <outlet property="myCalendar" destination="38M-JJ-3p5" id="ulv-fl-Vb0"/>
+                        <outlet property="tableView" destination="daz-HW-00e" id="k7L-SP-MBr"/>
                         <segue destination="0nj-ou-YLN" kind="presentation" identifier="showDetailDay" id="p67-Uv-Cv2"/>
                     </connections>
                 </viewController>
@@ -325,7 +315,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="140" y="64"/>
+            <point key="canvasLocation" x="140" y="56"/>
         </scene>
         <!--News View Controller-->
         <scene sceneID="yCz-xC-1EI">
