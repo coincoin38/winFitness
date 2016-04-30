@@ -7,10 +7,9 @@
 //
 
 import UIKit
-import FSCalendar
 import JLToast
 
-class SessionsViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
+class SessionsViewController: UIViewController {
 
     var daysArray: [String] = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"]
     @IBOutlet weak var tableView: UITableView?

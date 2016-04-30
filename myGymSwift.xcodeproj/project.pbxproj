@@ -33,6 +33,7 @@
 		13CF0E141C09ECC100715454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CF0E121C09ECC100715454 /* Main.storyboard */; };
 		13CF0E161C09ECC100715454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CF0E151C09ECC100715454 /* Assets.xcassets */; };
 		13CF0E191C09ECC100715454 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CF0E171C09ECC100715454 /* LaunchScreen.storyboard */; };
+		13DDC52E1CD4F9F300F4C955 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DDC52D1CD4F9F300F4C955 /* NetworkConstants.swift */; };
 		13E68F561C0B8B6A00CDCDD0 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E68F551C0B8B6A00CDCDD0 /* RealmManager.swift */; };
 		380E15CF1C46A9F0006A75DD /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E15CE1C46A9F0006A75DD /* AlamofireManager.swift */; };
 		380E15D11C47B5BB006A75DD /* NewsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E15D01C47B5BB006A75DD /* NewsDataManager.swift */; };
@@ -41,7 +42,6 @@
 		38210E711C2431210001A4CE /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38210E701C2431210001A4CE /* SportsViewController.swift */; };
 		3825E6781C24515C00F589FA /* SportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3825E6761C24515C00F589FA /* SportCollectionViewCell.swift */; };
 		3825E6791C24515C00F589FA /* SportCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3825E6771C24515C00F589FA /* SportCollectionViewCell.xib */; };
-		3865A5271C4D101E00D7F82B /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3865A5261C4D101E00D7F82B /* NetworkConstants.swift */; };
 		3865A5291C4E46B400D7F82B /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3865A5281C4E46B400D7F82B /* NewsDetailsViewController.swift */; };
 		3865A52B1C4E85DA00D7F82B /* SportsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3865A52A1C4E85DA00D7F82B /* SportsDataManager.swift */; };
 		3865A52D1C4E972D00D7F82B /* SportsDescriptionsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3865A52C1C4E972D00D7F82B /* SportsDescriptionsDataManager.swift */; };
@@ -83,6 +83,7 @@
 		13CF0E151C09ECC100715454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13CF0E181C09ECC100715454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13CF0E1A1C09ECC100715454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13DDC52D1CD4F9F300F4C955 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		13E68F551C0B8B6A00CDCDD0 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		380E15CE1C46A9F0006A75DD /* AlamofireManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		380E15D01C47B5BB006A75DD /* NewsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDataManager.swift; sourceTree = "<group>"; };
@@ -91,7 +92,6 @@
 		38210E701C2431210001A4CE /* SportsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
 		3825E6761C24515C00F589FA /* SportCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportCollectionViewCell.swift; sourceTree = "<group>"; };
 		3825E6771C24515C00F589FA /* SportCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SportCollectionViewCell.xib; sourceTree = "<group>"; };
-		3865A5261C4D101E00D7F82B /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		3865A5281C4E46B400D7F82B /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
 		3865A52A1C4E85DA00D7F82B /* SportsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsDataManager.swift; sourceTree = "<group>"; };
 		3865A52C1C4E972D00D7F82B /* SportsDescriptionsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsDescriptionsDataManager.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 				13CE08C91C2ABFB6009BC5E9 /* ImagesConstants.swift */,
 				13CE08CB1C2AC209009BC5E9 /* ColorsConstants.swift */,
 				38F943B91C3FA05200643571 /* ModelsConstants.swift */,
-				3865A5261C4D101E00D7F82B /* NetworkConstants.swift */,
+				13DDC52D1CD4F9F300F4C955 /* NetworkConstants.swift */,
 			);
 			name = Constans;
 			sourceTree = "<group>";
@@ -437,7 +437,6 @@
 				380E15D11C47B5BB006A75DD /* NewsDataManager.swift in Sources */,
 				1376A5FA1C09F1C2000AA652 /* SessionsViewController.swift in Sources */,
 				13616EB11C2C1D6D00DC459A /* SportDescriptionModel.swift in Sources */,
-				3865A5271C4D101E00D7F82B /* NetworkConstants.swift in Sources */,
 				13E68F561C0B8B6A00CDCDD0 /* RealmManager.swift in Sources */,
 				387B1AB91C2990CA004FAA16 /* ObjectiveCollectionViewCell.swift in Sources */,
 				38F943571C3D2A3900643571 /* NewsModel.swift in Sources */,
@@ -447,6 +446,7 @@
 				138C3F771C3F049600470ACB /* NewsTableViewCell.swift in Sources */,
 				13A6B1D11C131FC800F93232 /* FormaterManager.swift in Sources */,
 				38210E711C2431210001A4CE /* SportsViewController.swift in Sources */,
+				13DDC52E1CD4F9F300F4C955 /* NetworkConstants.swift in Sources */,
 				387666031C28383600DE8A62 /* SportDetailsViewController.swift in Sources */,
 				13616EB31C2C25B700DC459A /* ObjectiveModel.swift in Sources */,
 				13CF0E0F1C09ECC100715454 /* AppDelegate.swift in Sources */,

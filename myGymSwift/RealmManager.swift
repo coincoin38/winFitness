@@ -19,7 +19,8 @@ class RealmManager: NSObject {
     // MARK: - Generateur d'objets
     
     func startFeed(){
-        for var index = 0; index < 6; ++index {
+        //for var index = 0; index < 6; index += 1 {
+        for index in 0 ..< 6 {
             RealmManager.SharedInstance.feedDataBaseWithFile(index)
         }
     }

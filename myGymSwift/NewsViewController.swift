@@ -36,7 +36,7 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         tableView?.registerNib(UINib(nibName: cellXib, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         self.refreshControl = UIRefreshControl()
         self.refreshControl.attributedTitle = NSAttributedString(string: NSLocalizedString("PULL_TO_REFRESH", comment:""))
-        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl.addTarget(self, action: #selector(NewsViewController.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         tableView?.addSubview(refreshControl)
     }
     

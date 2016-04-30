@@ -63,10 +63,10 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                 if(self.sessionsArray.count > 0) {
                     
                     if(isNext){
-                        self.dayPageIndicator?.currentPage++
+                        self.dayPageIndicator?.currentPage+=1
                     }
                     else{
-                        self.dayPageIndicator?.currentPage--
+                        self.dayPageIndicator?.currentPage-=1
                     }
                     self.selectedDay  = FormaterManager.SharedInstance.formatWeekDayAndDate(newDate)
                     self.dateLabel?.text = self.selectedDay
@@ -76,7 +76,7 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             }
             else{
                 if(!self.timer.valid){
-                    self.timer = NSTimer.scheduledTimerWithTimeInterval(JLToastDelay.ShortDelay+1.0, target: self, selector: "countUp", userInfo: nil, repeats: false)
+                    self.timer = NSTimer.scheduledTimerWithTimeInterval(JLToastDelay.ShortDelay+1.0, target: self, selector: #selector(DayViewController.countUp), userInfo: nil, repeats: false)
                     JLToast.makeText(NSLocalizedString("NOTHING", comment:"")+"\n"+FormaterManager.SharedInstance.formatWeekDayAndDate(newDate), duration: JLToastDelay.ShortDelay).show()
                 }
             }

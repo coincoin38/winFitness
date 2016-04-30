@@ -57,7 +57,7 @@ class SportDetailsViewController: UIViewController,UIGestureRecognizerDelegate,U
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         
         //Back button
-        let newBackButton = UIBarButtonItem(title: NSLocalizedString("BACK", comment:""), style: UIBarButtonItemStyle.Done, target: self, action: "back:")
+        let newBackButton = UIBarButtonItem(title: NSLocalizedString("BACK", comment:""), style: UIBarButtonItemStyle.Done, target: self, action: #selector(SportDetailsViewController.back(_:)))
         newBackButton.setTitleTextAttributes([NSForegroundColorAttributeName: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor),NSFontAttributeName:UIFont.systemFontOfSize(15, weight: 0)], forState: UIControlState.Normal)
 
         self.navigationItem.leftBarButtonItem = newBackButton;
