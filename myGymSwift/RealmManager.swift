@@ -34,6 +34,10 @@ class RealmManager: NSObject {
                 
                 switch key {
                     
+                case ModelsConstants.stub_sports:
+                    self.writeSportsInDB(result)
+                case ModelsConstants.stub_sportsDescription:
+                    self.writeSportsDescriptionsInDB(result)
                 case ModelsConstants.stub_sessions:
                     self.writeSessionsInDB(result)
                 case ModelsConstants.stub_teachers:
@@ -67,7 +71,6 @@ class RealmManager: NSObject {
                 //print(self.getAllSportsDescriptions())
             case ModelsConstants.stub_objectives:
                 self.writeObjectivesInDB(json)
-                //print(self.getAllObjectives())
             case ModelsConstants.stub_news:
                 self.writeNewsInDB(json)
                 completion(bool: true)

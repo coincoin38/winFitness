@@ -15,7 +15,7 @@ class SportsDataManager: NSObject {
         // Récupération du token
         AlamofireManager.SharedInstance.getToken { (isTokenOK) -> Void in
             
-            if isTokenOK{
+            /*if isTokenOK{
                 
                 AlamofireManager.SharedInstance.downloadSports({ (sports) -> Void in
                     
@@ -24,12 +24,12 @@ class SportsDataManager: NSObject {
                     })
                 })
             }
-            else{
+            else{*/
                 
                 self.getSportsfromDB({ (sportsFromDB) -> Void in
                     completion(sportsArray: sportsFromDB)
                 })
-            }
+           // }
         }
     }
     

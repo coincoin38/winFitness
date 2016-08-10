@@ -27,7 +27,7 @@ class DaysViewController: UIViewController {
         super.viewDidLoad()
         tableView?.registerNib(UINib(nibName: cellXib, bundle: nil), forCellReuseIdentifier: cellIdentifier)
 
-        getSports()
+        //getSports()
     }
     
     func getSports(){
