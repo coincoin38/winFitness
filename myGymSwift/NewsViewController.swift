@@ -8,6 +8,8 @@
 
 import UIKit
 import Alamofire
+import FBSDKCoreKit
+import SwiftyJSON
 
 class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
@@ -42,14 +44,49 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     
     func getNews(){
     
-        newsDataManager.getNewsOrdered { (newsArray) -> Void in
-            self.newsArray = newsArray
+        //newsDataManager.getNewsOrdered { (newsArray) -> Void in
+          //  self.newsArray = newsArray
             self.tableView?.reloadData()
             let range = NSMakeRange(0, 1)
             let sections = NSIndexSet(indexesInRange: range)
             self.tableView?.reloadSections(sections, withRowAnimation: .Fade)
             self.refreshControl.endRefreshing()
-        }
+        
+        //}
+        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "/oauth/access_token",
+                                                                 parameters:["client_id":"286786961691987",
+                "client_secret":"31bed12dbc2fd2268613d27fe87b3405",
+                "grant_type":"client_credentials"])
+        
+        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+            
+            if ((error) != nil)
+            {
+                // Process error
+                print("Error: \(error)")
+            }
+            else
+            {
+                let access_token = result.valueForKey("access_token") as! String
+                let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "1207136935980128/feed",
+                    parameters: ["limit" : "5","fields" : "full_picture,actions,description,created_time" ],
+                    tokenString : access_token as String,
+                    version :"v2.7",
+                    HTTPMethod: "GET")
+                
+                graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+                    
+                    if ((error) != nil)
+                    {
+                        print("Error: \(error)")
+                    }
+                    else
+                    {
+                        print("Result: \(result)")
+                    }
+                })
+            }
+        })
     }
     
     func refresh(sender:AnyObject)
