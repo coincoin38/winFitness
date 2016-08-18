@@ -53,7 +53,13 @@ struct ModelsConstants {
     static let kAgency         = "agency"
     static let kImage          = "image"
     static let kKey_sport      = "key_sport"
-    
+    static let kCreated_time   = "created_time"
+    static let kFull_picture   = "full_picture"
+    static let kActions        = "actions"
+    static let kData           = "data"
+    static let kMessage        = "message"
+    static let kType           = "type"
+
     static let kGetDay         = "day = %@"
     static let kGetId          = "id = %@"
     static let kGetSportId     = "sport_id = %@"

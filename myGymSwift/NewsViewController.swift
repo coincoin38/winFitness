@@ -18,7 +18,8 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
 
     var refreshControl:UIRefreshControl!
     
-    var newsArray: Array<NewsModel> = Array<NewsModel>()
+    var FBFeed: Array<FBFeedModel>! = Array<FBFeedModel>()
+
     let newsDataManager = NewsDataManager()
     
     let kShowDetailNews = "showDetailNews"
@@ -42,16 +43,13 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     }
     
     func getNews(){
-    
-        //newsDataManager.getNewsOrdered { (newsArray) -> Void in
-          //  self.newsArray = newsArray
-            self.tableView?.reloadData()
-            let range = NSMakeRange(0, 1)
-            let sections = NSIndexSet(indexesInRange: range)
-            self.tableView?.reloadSections(sections, withRowAnimation: .Fade)
-            self.refreshControl.endRefreshing()
         
-        //}
+        FBFeed = FBManager.SharedInstance.FBFeed
+        self.tableView?.reloadData()
+        let range = NSMakeRange(0, 1)
+        let sections = NSIndexSet(indexesInRange: range)
+        self.tableView?.reloadSections(sections, withRowAnimation: .Fade)
+        self.refreshControl.endRefreshing()
     }
     
     func refresh(sender:AnyObject)
@@ -62,13 +60,13 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     // MARK: - TableView delegate
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsArray.count
+        return FBFeed.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! NewsTableViewCell
-        cell.setData(newsArray[indexPath.row])
+        cell.setData(FBFeed[indexPath.row])
         return cell
     }
     
@@ -82,7 +80,7 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
 
         if(segue.identifier == kShowDetailNews) {
             let ndvc = segue.destinationViewController as! NewsDetailsViewController
-            ndvc.news = newsArray[(tableView?.indexPathForSelectedRow?.row)!]
+            //ndvc.news = FBFeed[(tableView?.indexPathForSelectedRow?.row)!]
         }
     }
 

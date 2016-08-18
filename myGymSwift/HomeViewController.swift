@@ -16,11 +16,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         LoadingActivityIndicator.startAnimating();
-        FBManager.SharedInstance.getFBToken { (bool) in
+        FBManager.SharedInstance.FBToken { (bool) in
             
             if(bool)
             {
-                FBManager.SharedInstance.getFBNews({ (news) in
+                FBManager.SharedInstance.FBFeed({ (feed) in
                     self.showNews();
                 })
             }
@@ -36,16 +36,9 @@ class HomeViewController: UIViewController {
         self.LoadingActivityIndicator.stopAnimating();
         self.performSegueWithIdentifier(kShowNews, sender: self)
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    // MARK: - Navigation
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("wtf")
     }
 
 }

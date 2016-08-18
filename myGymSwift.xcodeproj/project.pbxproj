@@ -16,6 +16,7 @@
 		13616EB31C2C25B700DC459A /* ObjectiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13616EB21C2C25B700DC459A /* ObjectiveModel.swift */; };
 		13623BA51D65E39800F94406 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13623BA41D65E39800F94406 /* HomeViewController.swift */; };
 		13623BC51D65EF3500F94406 /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13623BC41D65EF3500F94406 /* FBManager.swift */; };
+		13623BCA1D66156600F94406 /* FBFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13623BC91D66156600F94406 /* FBFeedModel.swift */; };
 		1376A5F11C09EDE0000AA652 /* newsFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 1376A5ED1C09EDE0000AA652 /* newsFeed.json */; };
 		1376A5F21C09EDE0000AA652 /* sessionsFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 1376A5EE1C09EDE0000AA652 /* sessionsFeed.json */; };
 		1376A5F31C09EDE0000AA652 /* teachersFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 1376A5EF1C09EDE0000AA652 /* teachersFeed.json */; };
@@ -67,6 +68,7 @@
 		13616EB21C2C25B700DC459A /* ObjectiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveModel.swift; sourceTree = "<group>"; };
 		13623BA41D65E39800F94406 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		13623BC41D65EF3500F94406 /* FBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
+		13623BC91D66156600F94406 /* FBFeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBFeedModel.swift; sourceTree = "<group>"; };
 		1376A5ED1C09EDE0000AA652 /* newsFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newsFeed.json; sourceTree = "<group>"; };
 		1376A5EE1C09EDE0000AA652 /* sessionsFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sessionsFeed.json; sourceTree = "<group>"; };
 		1376A5EF1C09EDE0000AA652 /* teachersFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = teachersFeed.json; sourceTree = "<group>"; };
@@ -131,6 +133,14 @@
 				624491330B4D7EBF762ECC2D /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		13623BC61D6614DA00F94406 /* FBModels */ = {
+			isa = PBXGroup;
+			children = (
+				13623BC91D66156600F94406 /* FBFeedModel.swift */,
+			);
+			name = FBModels;
 			sourceTree = "<group>";
 		};
 		1376A5E61C09ED88000AA652 /* RealmModels */ = {
@@ -229,6 +239,7 @@
 		13CE08CE1C2AC31A009BC5E9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				13623BC61D6614DA00F94406 /* FBModels */,
 				1376A5EC1C09EDCF000AA652 /* Stubs */,
 				1376A5E61C09ED88000AA652 /* RealmModels */,
 			);
@@ -468,6 +479,7 @@
 				38F943BA1C3FA05200643571 /* ModelsConstants.swift in Sources */,
 				139595491C1481E500F43523 /* SportModel.swift in Sources */,
 				3865A52B1C4E85DA00D7F82B /* SportsDataManager.swift in Sources */,
+				13623BCA1D66156600F94406 /* FBFeedModel.swift in Sources */,
 				387B1AB41C2961C1004FAA16 /* NavBarManager.swift in Sources */,
 				380E298A1C591391005D0E4B /* ContactsViewController.swift in Sources */,
 				1376A5F61C09EE67000AA652 /* SessionModel.swift in Sources */,

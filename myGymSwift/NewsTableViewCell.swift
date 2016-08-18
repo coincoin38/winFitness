@@ -49,36 +49,33 @@ class NewsTableViewCell: UITableViewCell {
         }
     }
     
-    func setData(news: NewsModel) {
+    func setData(feed: FBFeedModel) {
         
-        titleLabel?.text      = "Bonne année"//news.title
+        dayLabel?.text   = FormaterManager.SharedInstance.formatMMddFromDate(FormaterManager.SharedInstance.formatServerDateFromString(feed.created_time!))
+
+        if (feed.message != nil)
+        {
+            titleLabel?.text  = feed.message
+        }
+        else if (feed.actions != nil)
+        {
+            titleLabel?.text  = "WinFintess a partagé :"
+        }
+        else if (feed.type != nil)
+        {
+            titleLabel?.text  = "WinFintess a ajouté :"
+        }
+        
+        if (feed._description != nil)
+        {
+            bodyLabel?.text  = feed._description
+        }
+      
+        bodyLabel?.textColor  = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.bodyNewsCellText)
         titleLabel?.textColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor)
-
-        bodyLabel?.text      = news._description
-        bodyLabel?.textColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.bodyNewsCellText)
-
-        dayLabel?.text         = FormaterManager.SharedInstance.formatMMddFromDate(news.day)
-        dayLabel?.textColor    = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.dayNewsCell)
+        dayLabel?.textColor   = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.dayNewsCell)
         
         titleLeftMarginConstraint.constant = 82
         bodyLeftMarginConstraint .constant = 82
-
-    }
-    
-    func setDataV2(news: NewsModel) {
-      
-        titleLabel?.text      = "Bienvenue à notre nouveau coach"  //news.title
-        dayLabel?.text         = FormaterManager.SharedInstance.formatMMddFromDate(news.day)
-        //titleLabel?.textColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor)
-        
-        /*bodyLabel?.text      = news._description
-        bodyLabel?.textColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.bodyNewsCellText)
-        
-        dayLabel?.text         = FormaterManager.SharedInstance.formatMMddFromDate(news.day)
-        dayLabel?.textColor    = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.dayNewsCell)
-        
-        titleLeftMarginConstraint.constant = 82
-        bodyLeftMarginConstraint .constant = 82*/
-        
     }
 }

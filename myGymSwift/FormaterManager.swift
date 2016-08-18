@@ -12,7 +12,7 @@ class FormaterManager: NSObject {
 
     static let SharedInstance = FormaterManager()
     let yyyyMMdd = "yyyy-MM-dd"
-    let formatServerDate = "yyyy-MM-dd'T'HH:mm:ss'.'SSSZ"
+    let formatServerDate = "yyyy-MM-dd'T'HH:mm:ss'+'0000"
     let EEEE_dd = "EEEE dd"
     let dd_MM = "dd/MM"
 

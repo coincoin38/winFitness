@@ -13,8 +13,9 @@ class FBManager: NSObject {
 
     static let SharedInstance = FBManager()
     var access_token : String = String()
-    
-    func getFBToken(completion:(bool:Bool)  -> Void) {
+    var FBFeed       : Array<FBFeedModel>! = Array<FBFeedModel>()
+
+    func FBToken(completion:(success:Bool)  -> Void) {
         
         let authenticationRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath : NetworkConstants.FB_auth_url,
                                                                           parameters: NetworkConstants.FB_auth_parameters)
@@ -24,18 +25,15 @@ class FBManager: NSObject {
             if ((error) != nil)
             {
                 print("Error: \(error)")
-                completion(bool: false)
+                completion(success: false)
             }
-            else
-            {
-                self.access_token = result.valueForKey(NetworkConstants.FB_access_token_key) as! String
-                completion(bool: true)
-            }
+            
+            self.access_token = result.valueForKey(NetworkConstants.FB_access_token_key) as! String
+            completion(success: true)
         })
     }
     
-    func getFBNews(completion:(news:String!)  -> Void) {
-        
+    func FBFeed(completion:(success:Bool)  -> Void) {
         
         let newsRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath    : NetworkConstants.FB_news_feed,
                                                                  parameters  : NetworkConstants.FB_news_parameters,
@@ -44,23 +42,31 @@ class FBManager: NSObject {
                                                                  HTTPMethod  : NetworkConstants.FB_get)
         
         newsRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
-            
-            var resultDictionary:NSDictionary!
 
             if ((error) != nil)
             {
                 print("Error: \(error)")
-                completion(news : nil)
+                completion(success : false)
             }
-            else
-            {
-                //print("Result: \(result)")
-                resultDictionary = result as! [String: AnyObject]
-                let test = resultDictionary.objectForKey("data")as! [[String:AnyObject]]
-                print("Test: \(test)")
-                completion(news: "youpi")
-            }
+          
+            print("Result: \(result)")
 
+            self.FBFeedModelisation(result)
+            completion(success : true)
         })
+    }
+    
+    func FBFeedModelisation(result: AnyObject){
+        
+        let resultDictionary : NSDictionary! = result as! [String: AnyObject]
+        let resultData = resultDictionary.objectForKey(ModelsConstants.kData)as! [[String:AnyObject]]
+        var feedsArray : [FBFeedModel] = []
+        
+        for feed in resultData
+        {
+            feedsArray.append(FBFeedModel.init(resultModel: feed))
+        }
+        
+        FBFeed = feedsArray
     }
 }
