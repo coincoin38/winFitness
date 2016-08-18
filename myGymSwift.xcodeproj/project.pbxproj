@@ -14,6 +14,8 @@
 		13616EAF1C2C18FF00DC459A /* sportsDescriptionsFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 13616EAE1C2C18FF00DC459A /* sportsDescriptionsFeed.json */; };
 		13616EB11C2C1D6D00DC459A /* SportDescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13616EB01C2C1D6D00DC459A /* SportDescriptionModel.swift */; };
 		13616EB31C2C25B700DC459A /* ObjectiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13616EB21C2C25B700DC459A /* ObjectiveModel.swift */; };
+		13623BA51D65E39800F94406 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13623BA41D65E39800F94406 /* HomeViewController.swift */; };
+		13623BC51D65EF3500F94406 /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13623BC41D65EF3500F94406 /* FBManager.swift */; };
 		1376A5F11C09EDE0000AA652 /* newsFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 1376A5ED1C09EDE0000AA652 /* newsFeed.json */; };
 		1376A5F21C09EDE0000AA652 /* sessionsFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 1376A5EE1C09EDE0000AA652 /* sessionsFeed.json */; };
 		1376A5F31C09EDE0000AA652 /* teachersFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 1376A5EF1C09EDE0000AA652 /* teachersFeed.json */; };
@@ -34,7 +36,6 @@
 		13CF0E0F1C09ECC100715454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CF0E0E1C09ECC100715454 /* AppDelegate.swift */; };
 		13CF0E141C09ECC100715454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CF0E121C09ECC100715454 /* Main.storyboard */; };
 		13CF0E161C09ECC100715454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CF0E151C09ECC100715454 /* Assets.xcassets */; };
-		13CF0E191C09ECC100715454 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CF0E171C09ECC100715454 /* LaunchScreen.storyboard */; };
 		13DDC52E1CD4F9F300F4C955 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DDC52D1CD4F9F300F4C955 /* NetworkConstants.swift */; };
 		13E68F561C0B8B6A00CDCDD0 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E68F551C0B8B6A00CDCDD0 /* RealmManager.swift */; };
 		380E15CF1C46A9F0006A75DD /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E15CE1C46A9F0006A75DD /* AlamofireManager.swift */; };
@@ -64,6 +65,8 @@
 		13616EAE1C2C18FF00DC459A /* sportsDescriptionsFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sportsDescriptionsFeed.json; sourceTree = "<group>"; };
 		13616EB01C2C1D6D00DC459A /* SportDescriptionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportDescriptionModel.swift; sourceTree = "<group>"; };
 		13616EB21C2C25B700DC459A /* ObjectiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveModel.swift; sourceTree = "<group>"; };
+		13623BA41D65E39800F94406 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		13623BC41D65EF3500F94406 /* FBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
 		1376A5ED1C09EDE0000AA652 /* newsFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newsFeed.json; sourceTree = "<group>"; };
 		1376A5EE1C09EDE0000AA652 /* sessionsFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sessionsFeed.json; sourceTree = "<group>"; };
 		1376A5EF1C09EDE0000AA652 /* teachersFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = teachersFeed.json; sourceTree = "<group>"; };
@@ -85,7 +88,6 @@
 		13CF0E0E1C09ECC100715454 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13CF0E131C09ECC100715454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13CF0E151C09ECC100715454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		13CF0E181C09ECC100715454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13CF0E1A1C09ECC100715454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13DDC52D1CD4F9F300F4C955 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		13E68F551C0B8B6A00CDCDD0 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		1376A5E81C09EDA7000AA652 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				13623BA41D65E39800F94406 /* HomeViewController.swift */,
 				1391636F1C1A20E8000B9ECC /* NewsViewController.swift */,
 				3865A5281C4E46B400D7F82B /* NewsDetailsViewController.swift */,
 				1376A5F91C09F1C2000AA652 /* DaysViewController.swift */,
@@ -188,6 +191,7 @@
 				380E15D01C47B5BB006A75DD /* NewsDataManager.swift */,
 				3865A52A1C4E85DA00D7F82B /* SportsDataManager.swift */,
 				3865A52C1C4E972D00D7F82B /* SportsDescriptionsDataManager.swift */,
+				13623BC41D65EF3500F94406 /* FBManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -209,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				13CF0E121C09ECC100715454 /* Main.storyboard */,
-				13CF0E171C09ECC100715454 /* LaunchScreen.storyboard */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -370,7 +373,6 @@
 			files = (
 				1376A5F21C09EDE0000AA652 /* sessionsFeed.json in Resources */,
 				130EC7031C29FA7600EE9805 /* objectivesFeed.json in Resources */,
-				13CF0E191C09ECC100715454 /* LaunchScreen.storyboard in Resources */,
 				1376A5F31C09EDE0000AA652 /* teachersFeed.json in Resources */,
 				139A94701C143CDD00CF754A /* sportsFeed.json in Resources */,
 				13CF0E161C09ECC100715454 /* Assets.xcassets in Resources */,
@@ -442,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				380E15D11C47B5BB006A75DD /* NewsDataManager.swift in Sources */,
+				13623BC51D65EF3500F94406 /* FBManager.swift in Sources */,
 				1376A5FA1C09F1C2000AA652 /* DaysViewController.swift in Sources */,
 				13616EB11C2C1D6D00DC459A /* SportDescriptionModel.swift in Sources */,
 				13E68F561C0B8B6A00CDCDD0 /* RealmManager.swift in Sources */,
@@ -468,6 +471,7 @@
 				387B1AB41C2961C1004FAA16 /* NavBarManager.swift in Sources */,
 				380E298A1C591391005D0E4B /* ContactsViewController.swift in Sources */,
 				1376A5F61C09EE67000AA652 /* SessionModel.swift in Sources */,
+				13623BA51D65E39800F94406 /* HomeViewController.swift in Sources */,
 				133AA3401CD609DE00786A12 /* DayTableViewCell.swift in Sources */,
 				3865A5291C4E46B400D7F82B /* NewsDetailsViewController.swift in Sources */,
 				1376A5FC1C09F1CE000AA652 /* DayViewController.swift in Sources */,
@@ -484,14 +488,6 @@
 				13CF0E131C09ECC100715454 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		13CF0E171C09ECC100715454 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13CF0E181C09ECC100715454 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

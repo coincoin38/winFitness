@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CgF-ig-eeg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="E2n-3g-wMy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -377,6 +377,7 @@
         <scene sceneID="bFO-iz-sW6">
             <objects>
                 <tabBarController id="CgF-ig-eeg" customClass="MainTabBarViewController" customModule="myGymSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="bfV-PJ-uQe"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="fz2-tp-Pxf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -478,11 +479,49 @@
             </objects>
             <point key="canvasLocation" x="-556" y="-787"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="FtW-9W-uOe">
+            <objects>
+                <viewController id="E2n-3g-wMy" customClass="HomeViewController" customModule="myGymSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3p7-vi-Jnl"/>
+                        <viewControllerLayoutGuide type="bottom" id="c0W-NI-GP1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eWc-7L-agq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="dd0-Gi-qpE">
+                                <rect key="frame" x="210" y="209" width="181" height="181"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="585-s4-yZf">
+                                <rect key="frame" x="290" y="390" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="585-s4-yZf" firstAttribute="top" secondItem="dd0-Gi-qpE" secondAttribute="bottom" id="0QO-4j-P8e"/>
+                            <constraint firstItem="585-s4-yZf" firstAttribute="centerX" secondItem="eWc-7L-agq" secondAttribute="centerX" id="5kE-Xm-fW4"/>
+                            <constraint firstItem="dd0-Gi-qpE" firstAttribute="centerX" secondItem="eWc-7L-agq" secondAttribute="centerX" id="5pP-hz-KE9"/>
+                            <constraint firstItem="dd0-Gi-qpE" firstAttribute="centerY" secondItem="eWc-7L-agq" secondAttribute="centerY" id="aWb-nL-Kaz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="LoadingActivityIndicator" destination="585-s4-yZf" id="ij7-6i-jTu"/>
+                        <segue destination="CgF-ig-eeg" kind="show" identifier="showNews" id="dwO-xR-8jk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbU-io-pI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1939" y="56"/>
+        </scene>
     </scenes>
     <resources>
         <image name="News_selected_V2" width="25" height="25"/>
         <image name="News_unselected_V2" width="25" height="25"/>
         <image name="Sessions" width="25" height="25"/>
+        <image name="SplashScreen" width="181" height="181"/>
         <image name="Sports_selected_V2" width="25" height="25"/>
         <image name="Sports_unselected" width="25" height="25"/>
         <image name="bandeau_win_fitness_cut" width="465" height="201"/>
