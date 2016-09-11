@@ -39,8 +39,6 @@
 		13CF0E161C09ECC100715454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CF0E151C09ECC100715454 /* Assets.xcassets */; };
 		13DDC52E1CD4F9F300F4C955 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DDC52D1CD4F9F300F4C955 /* NetworkConstants.swift */; };
 		13E68F561C0B8B6A00CDCDD0 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E68F551C0B8B6A00CDCDD0 /* RealmManager.swift */; };
-		380E15CF1C46A9F0006A75DD /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E15CE1C46A9F0006A75DD /* AlamofireManager.swift */; };
-		380E15D11C47B5BB006A75DD /* NewsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E15D01C47B5BB006A75DD /* NewsDataManager.swift */; };
 		380E298A1C591391005D0E4B /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E29891C591391005D0E4B /* ContactsViewController.swift */; };
 		38210E6F1C24177B0001A4CE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38210E6E1C24177B0001A4CE /* MainTabBarViewController.swift */; };
 		38210E711C2431210001A4CE /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38210E701C2431210001A4CE /* SportsViewController.swift */; };
@@ -93,8 +91,6 @@
 		13CF0E1A1C09ECC100715454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13DDC52D1CD4F9F300F4C955 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		13E68F551C0B8B6A00CDCDD0 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		380E15CE1C46A9F0006A75DD /* AlamofireManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
-		380E15D01C47B5BB006A75DD /* NewsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDataManager.swift; sourceTree = "<group>"; };
 		380E29891C591391005D0E4B /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		38210E6E1C24177B0001A4CE /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		38210E701C2431210001A4CE /* SportsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
@@ -197,8 +193,6 @@
 				13A6B1D01C131FC800F93232 /* FormaterManager.swift */,
 				13E68F551C0B8B6A00CDCDD0 /* RealmManager.swift */,
 				387B1AB31C2961C1004FAA16 /* NavBarManager.swift */,
-				380E15CE1C46A9F0006A75DD /* AlamofireManager.swift */,
-				380E15D01C47B5BB006A75DD /* NewsDataManager.swift */,
 				3865A52A1C4E85DA00D7F82B /* SportsDataManager.swift */,
 				3865A52C1C4E972D00D7F82B /* SportsDescriptionsDataManager.swift */,
 				13623BC41D65EF3500F94406 /* FBManager.swift */,
@@ -454,7 +448,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				380E15D11C47B5BB006A75DD /* NewsDataManager.swift in Sources */,
 				13623BC51D65EF3500F94406 /* FBManager.swift in Sources */,
 				1376A5FA1C09F1C2000AA652 /* DaysViewController.swift in Sources */,
 				13616EB11C2C1D6D00DC459A /* SportDescriptionModel.swift in Sources */,
@@ -487,7 +480,6 @@
 				133AA3401CD609DE00786A12 /* DayTableViewCell.swift in Sources */,
 				3865A5291C4E46B400D7F82B /* NewsDetailsViewController.swift in Sources */,
 				1376A5FC1C09F1CE000AA652 /* DayViewController.swift in Sources */,
-				380E15CF1C46A9F0006A75DD /* AlamofireManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +592,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = julieng38.myGymSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -614,6 +607,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = julieng38.myGymSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

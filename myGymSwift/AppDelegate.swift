@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import JLToast
-import Alamofire
 import FBSDKCoreKit
 
 @UIApplicationMain
@@ -20,8 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         // RealmManager.SharedInstance.cleanDb()
         RealmManager.SharedInstance.startFeed()
-        //AlamofireManager.SharedInstance.setChallenge()
-        JLToastView.setDefaultValue(50, forAttributeName: JLToastViewPortraitOffsetYAttributeName, userInterfaceIdiom: .Phone)
 
         //returnUserData();
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 import SwiftyJSON
 
 class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
@@ -19,8 +18,6 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     var refreshControl:UIRefreshControl!
     
     var FBFeed: Array<FBFeedModel>! = Array<FBFeedModel>()
-
-    let newsDataManager = NewsDataManager()
     
     let kShowDetailNews = "showDetailNews"
 
@@ -79,7 +76,7 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
         if(segue.identifier == kShowDetailNews) {
-            let ndvc = segue.destinationViewController as! NewsDetailsViewController
+            //let ndvc = segue.destinationViewController as! NewsDetailsViewController
             //ndvc.news = FBFeed[(tableView?.indexPathForSelectedRow?.row)!]
         }
     }

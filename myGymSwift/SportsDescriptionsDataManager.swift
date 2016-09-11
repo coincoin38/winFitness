@@ -12,23 +12,9 @@ class SportsDescriptionsDataManager: NSObject {
     
     func getSportsDescriptions(completion: (isOk:Bool) -> Void){
         
-        // Récupération du token
-        AlamofireManager.SharedInstance.getToken { (isTokenOK) -> Void in
-            
-            /*if isTokenOK{
-                
-                AlamofireManager.SharedInstance.downloadSportsDescriptions({ (sportsDescriptions) -> Void in
-                    self.feedDBWithDownloadedSportsDescriptions(sportsDescriptions, completion: { (isOk) -> Void in
-                        completion(isOk: isOk)
-                    })
-                })
-            }
-            else{*/
-                self.getSportsDescriptionsfromDB({ (isOk) -> Void in
-                    completion(isOk: isOk)
-                })
-            //}
-        }
+        self.getSportsDescriptionsfromDB({ (isOk) -> Void in
+            completion(isOk: isOk)
+        })
     }
     
     func feedDBWithDownloadedSportsDescriptions(sports: JSON,completion: (isOk:Bool) -> Void){
