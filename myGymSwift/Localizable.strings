@@ -13,3 +13,6 @@
 "CLOSE" = "Fermer";
 "MINUTES_SHORT" = "min";
 "PULL_TO_REFRESH" = "Relâcher pour rafraîchir";
+"WINFITNESS_HAS_SHARED" = "WinFintess a partagé";
+"WINFITNESS_HAS_ADDED" = "WinFintess a ajouté";
+"WINFITNESS_HAS_ADDED_PHOTO" = "WinFintess a ajouté une photo";

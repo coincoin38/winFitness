@@ -59,6 +59,7 @@ struct ModelsConstants {
     static let kData           = "data"
     static let kMessage        = "message"
     static let kType           = "type"
+    static let kShare          = "Share"
 
     static let kGetDay         = "day = %@"
     static let kGetId          = "id = %@"
