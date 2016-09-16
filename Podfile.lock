@@ -1,4 +1,7 @@
 PODS:
+  - Alamofire (3.5.0)
+  - AlamofireImage (2.5.0):
+    - Alamofire (~> 3.5)
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
@@ -15,15 +18,20 @@ PODS:
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - FBSDKCoreKit (~> 4.14)
-  - RealmSwift (~> 0.96)
-  - SwiftyJSON (~> 2.3)
+  - AlamofireImage
+  - FBSDKCoreKit
+  - RealmSwift
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
+  AlamofireImage: 2d34936e5201270bb17a316a786e90e83b4a249d
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   FBSDKCoreKit: fc7fa53d16b095ee3fd53f0cd59f1df8bcbb634d
   Realm: 448f0416079fe5b0ed947e7d86f3c4e1c75826cb
   RealmSwift: 8a45cc8f02dfac093b72a3b5a01d567e27e15891
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: b57f5c7319546c541c8c62bec0b8f04c31d92b87
+
+COCOAPODS: 1.0.1

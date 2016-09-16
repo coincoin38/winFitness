@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import AlamofireImage
 
 class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
@@ -64,6 +65,11 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! NewsTableViewCell
         cell.setData(FBFeed[indexPath.row])
+        
+        if let urlString = FBFeed[indexPath.row].full_picture {
+            cell.newsImage.af_setImageWithURL(NSURL(string: urlString)!,placeholderImage: UIImage(named: "logo_winfitness"))
+        }
+        
         return cell
     }
     

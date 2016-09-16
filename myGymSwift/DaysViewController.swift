@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import JLToast
 
 class DaysViewController: UIViewController {
 

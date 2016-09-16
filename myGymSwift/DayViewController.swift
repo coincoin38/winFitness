@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import JLToast
 
 class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -76,8 +75,8 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
             }
             else{
                 if(!self.timer.valid){
-                    self.timer = NSTimer.scheduledTimerWithTimeInterval(JLToastDelay.ShortDelay+1.0, target: self, selector: #selector(DayViewController.countUp), userInfo: nil, repeats: false)
-                    JLToast.makeText(NSLocalizedString("NOTHING", comment:"")+"\n"+FormaterManager.SharedInstance.formatWeekDayAndDate(newDate), duration: JLToastDelay.ShortDelay).show()
+                    /*self.timer = NSTimer.scheduledTimerWithTimeInterval(JLToastDelay.ShortDelay+1.0, target: self, selector: #selector(DayViewController.countUp), userInfo: nil, repeats: false)
+                    JLToast.makeText(NSLocalizedString("NOTHING", comment:"")+"\n"+FormaterManager.SharedInstance.formatWeekDayAndDate(newDate), duration: JLToastDelay.ShortDelay).show()*/
                 }
             }
         }

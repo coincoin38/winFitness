@@ -13,11 +13,15 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var dayLabel: UILabel!
-    @IBOutlet weak var titleLeftMarginConstraint: NSLayoutConstraint!
-    @IBOutlet weak var bodyLeftMarginConstraint: NSLayoutConstraint!
+    @IBOutlet weak var newsImage: UIImageView!
+
+    //@IBOutlet weak var titleLeftMarginConstraint: NSLayoutConstraint!
+    //@IBOutlet weak var bodyLeftMarginConstraint: NSLayoutConstraint!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.layoutMargins = UIEdgeInsetsZero
+        self.separatorInset = UIEdgeInsetsZero
         // Initialization code
         /*let border = CALayer()
         let width = CGFloat(1.0)
@@ -41,12 +45,12 @@ class NewsTableViewCell: UITableViewCell {
     
     override func setHighlighted(highlighted: Bool, animated: Bool) {
         super.setHighlighted(highlighted, animated: animated)
-        if highlighted{
+        /*if highlighted{
             backgroundColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.bodyNewsCellBackgroundSelection)
         }
         else{
             backgroundColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.bodyNewsCellBackgroundDefault)
-        }
+        }*/
     }
     
     func setData(feed: FBFeedModel) {
@@ -75,7 +79,8 @@ class NewsTableViewCell: UITableViewCell {
         titleLabel?.textColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor)
         dayLabel?.textColor   = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.dayNewsCell)
         
-        titleLeftMarginConstraint.constant = 82
-        bodyLeftMarginConstraint .constant = 82
+        //titleLeftMarginConstraint.constant = 82
+        //bodyLeftMarginConstraint .constant = 82
+
     }
 }
