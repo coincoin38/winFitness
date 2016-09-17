@@ -10,7 +10,7 @@ import UIKit
 
 class NewsDetailsViewController: UIViewController {
     
-    var news: NewsModel = NewsModel()
+    var news: FBFeedModel!
     @IBOutlet weak var bodytNewsTextView: UITextView!
     @IBOutlet weak var dateNewsLabel: UILabel!
 
@@ -21,7 +21,7 @@ class NewsDetailsViewController: UIViewController {
     
     func setIHM(){
         bodytNewsTextView.scrollEnabled = false
-        title = news.title
+        title = "News du "+FormaterManager.SharedInstance.formatMMddFromDate(FormaterManager.SharedInstance.formatServerDateFromString(news.created_time!))
         bodytNewsTextView.text = news._description
         NavBarManager.SharedInstance.configureNavBarWithColors(navigationController!, backgroundColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor)
 , textColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor))
@@ -29,7 +29,7 @@ class NewsDetailsViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: true)
+            navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func viewDidAppear(animated: Bool) {

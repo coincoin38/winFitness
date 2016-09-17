@@ -82,8 +82,8 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
         if(segue.identifier == kShowDetailNews) {
-            //let ndvc = segue.destinationViewController as! NewsDetailsViewController
-            //ndvc.news = FBFeed[(tableView?.indexPathForSelectedRow?.row)!]
+            let ndvc = segue.destinationViewController as! NewsDetailsViewController
+            ndvc.news = FBFeed[(tableView?.indexPathForSelectedRow?.row)!]
         }
     }
 

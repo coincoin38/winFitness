@@ -24,7 +24,7 @@ class FBManager: NSObject {
             
             if ((error) != nil)
             {
-                print("Error: \(error)")
+                //print("Error: \(error)")
                 completion(success: false)
             }
             
