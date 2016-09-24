@@ -19,9 +19,9 @@ class SessionModel: Object {
     dynamic var location = ""
     dynamic var teacher_id = ""
     dynamic var attendance = ""
-    dynamic var day = NSDate()
+    dynamic var day = Date()
     
-    func setData(dictionary: JSON) -> SessionModel{
+    func setData(_ dictionary: JSON) -> SessionModel{
         
         // Format string to date
         let date = FormaterManager.SharedInstance.formatyyyMMddFromString(dictionary[ModelsConstants.kDay].stringValue)

@@ -12,13 +12,13 @@ class NavBarManager: NSObject {
     
     static let SharedInstance = NavBarManager()
 
-    func resetNavBar(navigationController:UINavigationController){
+    func resetNavBar(_ navigationController:UINavigationController){
         navigationController.navigationBar.tintColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextDefaultColor)
         navigationController.navigationBar.barTintColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarBackgroundColor)
         navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextDefaultColor)]
     }
     
-    func configureNavBarWithColors(navigationController:UINavigationController, backgroundColor: UIColor, textColor:UIColor){
+    func configureNavBarWithColors(_ navigationController:UINavigationController, backgroundColor: UIColor, textColor:UIColor){
         navigationController.navigationBar.tintColor = textColor
         navigationController.navigationBar.barTintColor = backgroundColor
         navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: textColor]

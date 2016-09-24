@@ -20,7 +20,7 @@ class NewsDetailsViewController: UIViewController {
     }
     
     func setIHM(){
-        bodytNewsTextView.scrollEnabled = false
+        bodytNewsTextView.isScrollEnabled = false
         title = "News du "+FormaterManager.SharedInstance.formatMMddFromDate(FormaterManager.SharedInstance.formatServerDateFromString(news.created_time!))
         bodytNewsTextView.text = news._description
         NavBarManager.SharedInstance.configureNavBarWithColors(navigationController!, backgroundColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor)
@@ -28,18 +28,18 @@ class NewsDetailsViewController: UIViewController {
 
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
             navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         //Fix pour empêcher le scroll to bottom par défaut
-        bodytNewsTextView.scrollEnabled = true
+        bodytNewsTextView.isScrollEnabled = true
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: true)
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
+        navigationController?.setNavigationBarHidden(navigationController?.isNavigationBarHidden == false, animated: true)
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
 }

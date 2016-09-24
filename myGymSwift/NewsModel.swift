@@ -15,9 +15,9 @@ class NewsModel: Object {
     dynamic var id = ""
     dynamic var title = ""
     dynamic var _description = ""
-    dynamic var day = NSDate()
+    dynamic var day = Date()
     
-    func setData(dictionary: JSON) -> NewsModel{
+    func setData(_ dictionary: JSON) -> NewsModel{
         
         let date = FormaterManager.SharedInstance.formatServerDateFromString(dictionary[ModelsConstants.kDay].stringValue)
         id            = dictionary[ModelsConstants.kId].stringValue

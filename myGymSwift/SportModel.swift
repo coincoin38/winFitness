@@ -18,7 +18,7 @@ class SportModel: Object {
     dynamic var color = ""
     dynamic var image = ""
     
-    func setData(dictionary: JSON) -> SportModel{
+    func setData(_ dictionary: JSON) -> SportModel{
         
         id             = dictionary[ModelsConstants.kId].stringValue
         name           = dictionary[ModelsConstants.kName].stringValue

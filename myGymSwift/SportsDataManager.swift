@@ -10,34 +10,34 @@ import SwiftyJSON
 
 class SportsDataManager: NSObject {
     
-    func getSports(completion: (sportsArray: Array<SportModel>) -> Void){
+    func getSports(_ completion: @escaping (_ sportsArray: Array<SportModel>) -> Void){
         
         self.getSportsfromDB({ (sportsFromDB) -> Void in
-            completion(sportsArray: sportsFromDB)
+            completion(sportsFromDB)
         })
     }
     
-    func feedDBWithDownloadedSports(sports: JSON,completion: (newsArray: Array<SportModel>) -> Void){
+    func feedDBWithDownloadedSports(_ sports: JSON,completion: @escaping (_ newsArray: Array<SportModel>) -> Void){
         
         RealmManager.SharedInstance.writeDataFromWS(2, json: sports, completion: { (isOk) -> Void in
             
             if isOk{
                 self.getSportsfromDB({ (newsFromDB) -> Void in
-                    completion(newsArray: newsFromDB)
+                    completion(newsFromDB)
                 })
             }
         })
     }
     
-    func getSportsfromDB(completion: (sportsArray: Array<SportModel>) -> Void){
+    func getSportsfromDB(_ completion: @escaping (_ sportsArray: Array<SportModel>) -> Void){
         
         RealmManager.SharedInstance.getAllSportsFromDB { (sports) -> Void in
-            completion(sportsArray:sports)
+            completion(sports)
 
         }
     }
     
-    func getObjectivesFromDB(sport:SportModel, completion: (objectives: Array<ObjectiveModel>) -> Void){
+    func getObjectivesFromDB(_ sport:SportModel, completion: @escaping (_ objectives: Array<ObjectiveModel>) -> Void){
         
         RealmManager.SharedInstance.getObjectivesWithSportId(sport.id, completion: { (objectives) -> Void in
             
@@ -48,7 +48,7 @@ class SportsDataManager: NSObject {
                 objectivesArray.append(objective)
                 
             }
-            completion(objectives: objectivesArray)
+            completion(objectivesArray)
         })
     }
    

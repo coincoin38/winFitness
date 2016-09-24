@@ -20,7 +20,7 @@ class TeacherModel: Object {
     dynamic var photo = ""
     dynamic var agency = ""
     
-    func setData(dictionary: JSON) -> TeacherModel{
+    func setData(_ dictionary: JSON) -> TeacherModel{
         
         id           = dictionary[ModelsConstants.kId].stringValue
         name         = dictionary[ModelsConstants.kName].stringValue

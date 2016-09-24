@@ -12,17 +12,17 @@ class StorageManager: NSObject {
 
     static let SharedInstance = StorageManager()
     
-    func loadImageAsync(stringURL: String, completion: (UIImage!, NSError!) -> ())
+    func loadImageAsync(_ stringURL: String, completion: @escaping (UIImage?, NSError?) -> ())
     {
-        let url     = NSURL(string: stringURL)
-        let request = NSURLRequest(URL: url!)
-        let config  = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let session = NSURLSession(configuration: config)
+        let url     = URL(string: stringURL)
+        let request = URLRequest(url: url!)
+        let config  = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
         
-        let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
+        let task = session.dataTask(with: request, completionHandler: {(data, response, error) in
             
             if error != nil {
-                completion(nil, error)
+                completion(nil, error as NSError!)
             } else {
                 completion(UIImage(data: data!), nil)
             }

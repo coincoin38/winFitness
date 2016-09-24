@@ -1,4 +1,4 @@
-platform :ios, '8.3'
+platform :ios, '9.1'
 
 target 'myGymSwift' do
 use_frameworks!
@@ -6,4 +6,5 @@ pod 'RealmSwift'
 pod 'SwiftyJSON'
 pod 'FBSDKCoreKit'
 pod 'AlamofireImage'
+pod 'Alamofire', '~> 4.0'
 end

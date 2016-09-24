@@ -18,13 +18,13 @@ class DaysViewController: UIViewController {
     let cellXib = "DayTableViewCell"
 
     var selectedDay: String = String()
-    var selectedDate: NSDate = NSDate()
+    var selectedDate: Date = Date()
     
     // MARK: - Init
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView?.registerNib(UINib(nibName: cellXib, bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        tableView?.register(UINib(nibName: cellXib, bundle: nil), forCellReuseIdentifier: cellIdentifier)
 
         //getSports()
     }
@@ -38,11 +38,11 @@ class DaysViewController: UIViewController {
     
     // MARK: - Navigation
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         if(segue.identifier == kShowDetailDay) {
             
-            let svc = segue.destinationViewController as! DayViewController
+            let svc = segue.destination as! DayViewController
             svc.selectedDay   = selectedDay
             svc.selectedDate  = selectedDate
         }
@@ -50,19 +50,19 @@ class DaysViewController: UIViewController {
     
     // MARK: - TableView delegate
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return daysArray.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! DayTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! DayTableViewCell
 
-        cell.dayLabel?.text = daysArray[indexPath.row]
+        cell.dayLabel?.text = daysArray[(indexPath as NSIndexPath).row]
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
         
     }
     

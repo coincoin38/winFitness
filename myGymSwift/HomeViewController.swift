@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
     func showNews()
     {
         self.LoadingActivityIndicator.stopAnimating();
-        self.performSegueWithIdentifier(kShowNews, sender: self)
+        self.performSegue(withIdentifier: kShowNews, sender: self)
     }
 
     override func didReceiveMemoryWarning() {

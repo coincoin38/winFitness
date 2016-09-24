@@ -22,7 +22,7 @@ class ContactsViewController: UIViewController,UIGestureRecognizerDelegate{
         tap.delegate = self
     }
     
-    func openPlan(gr:UITapGestureRecognizer)
+    func openPlan(_ gr:UITapGestureRecognizer)
     {
         let lat1 : NSString = "45.744127"
         let lng1 : NSString = "4.871262"
@@ -34,13 +34,13 @@ class ContactsViewController: UIViewController,UIGestureRecognizerDelegate{
         let coordinates = CLLocationCoordinate2DMake(latitute, longitute)
         let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
         let options = [
-            MKLaunchOptionsMapCenterKey: NSValue(MKCoordinate: regionSpan.center),
-            MKLaunchOptionsMapSpanKey: NSValue(MKCoordinateSpan: regionSpan.span)
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
         ]
         let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = "WIN FITNESS"
-        mapItem.openInMapsWithLaunchOptions(options)
+        mapItem.openInMaps(launchOptions: options)
         
     }
 

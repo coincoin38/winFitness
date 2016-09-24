@@ -17,7 +17,7 @@ class ObjectiveModel: Object {
     dynamic var secondPart = ""
     dynamic var sport_id = ""
     
-    func setData(dictionary: JSON) -> ObjectiveModel{
+    func setData(_ dictionary: JSON) -> ObjectiveModel{
         
         id         = dictionary[ModelsConstants.kId].stringValue
         firstPart  = dictionary[ModelsConstants.kFirstPart].stringValue
