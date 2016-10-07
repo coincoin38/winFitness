@@ -15,7 +15,7 @@ class SportDetailsViewController: UIViewController,UIGestureRecognizerDelegate,U
     @IBOutlet weak var objectivesCollectionView: UICollectionView?
     fileprivate let reuseIdentifier = "ObjectiveIdentifier"
     var objectivesArray: Array<ObjectiveModel> = Array<ObjectiveModel>()
-
+    let navBar = NavBarManager()
 
     // MARK: - Init
 
@@ -53,7 +53,7 @@ class SportDetailsViewController: UIViewController,UIGestureRecognizerDelegate,U
         
         //NavBar
         title = sport.name
-        NavBarManager.SharedInstance.configureNavBarWithColors(navigationController!, backgroundColor: FormaterManager.SharedInstance.uicolorFromHexa(sport.color), textColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor))
+        navBar.configureNavBarWithColors(navigationController!, backgroundColor: FormaterManager.SharedInstance.uicolorFromHexa(sport.color), textColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor))
         navigationController?.interactivePopGestureRecognizer?.delegate = self
         
         //Back button
@@ -61,7 +61,6 @@ class SportDetailsViewController: UIViewController,UIGestureRecognizerDelegate,U
         newBackButton.setTitleTextAttributes([NSForegroundColorAttributeName: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor),NSFontAttributeName:UIFont.systemFont(ofSize: 15, weight: 0)], for: UIControlState())
 
         self.navigationItem.leftBarButtonItem = newBackButton;
-        
         
         //StatusBar
         UIApplication.shared.statusBarStyle = .lightContent

@@ -8,37 +8,39 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, AlertViewControllerUtilProtocol {
 
     @IBOutlet weak var LoadingActivityIndicator: UIActivityIndicatorView!
     let kShowNews = "showNews"
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         LoadingActivityIndicator.startAnimating();
-        FBManager.SharedInstance.FBToken { (bool) in
+        
+        FBTokenManager.SharedInstance.FBToken { (success) in
             
-            if(bool)
-            {
-                FBManager.SharedInstance.FBFeed({ (feed) in
-                    self.showNews();
-                })
-            }
-            else
+            if(success)
             {
                 self.showNews();
             }
+            else
+            {
+                let alert = AlertViewControllerUtil()
+                alert.delegate = self
+                self.present(alert.FBTokenErrorAlertController(), animated: true, completion:nil)
+            }
         }
     }
-
+    
+    func didClickFirstButton()
+    {
+        self.showNews();
+    }
+    
     func showNews()
     {
         self.LoadingActivityIndicator.stopAnimating();
         self.performSegue(withIdentifier: kShowNews, sender: self)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
 }

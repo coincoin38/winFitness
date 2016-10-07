@@ -8,10 +8,8 @@
 
 import UIKit
 
-class NavBarManager: NSObject {
+class NavBarManager {
     
-    static let SharedInstance = NavBarManager()
-
     func resetNavBar(_ navigationController:UINavigationController){
         navigationController.navigationBar.tintColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextDefaultColor)
         navigationController.navigationBar.barTintColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarBackgroundColor)

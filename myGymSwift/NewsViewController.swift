@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 import AlamofireImage
 
-class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, FBAPIControllerProtocol {
 
     let cellIdentifier = "newsIdentifier"
     let cellXib = "NewsTableViewCell"
@@ -21,17 +21,21 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
     var FBFeed: Array<FBFeedModel>! = Array<FBFeedModel>()
     
     let kShowDetailNews = "showDetailNews"
+    
+    let api = FBAPIController()
 
     @IBOutlet weak var tableView: UITableView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        api.delegate = self
         setIHM()
-        getNews()
+        api.FBFeed()
     }
     
     func setIHM(){
         
+        tableView?.isHidden = true
         navigationController?.setNavigationBarHidden(navigationController?.isNavigationBarHidden == false, animated: true)
         tableView?.register(UINib(nibName: cellXib, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         self.refreshControl = UIRefreshControl()
@@ -40,19 +44,27 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         tableView?.addSubview(refreshControl)
     }
     
-    func getNews(){
-        
-        FBFeed = FBManager.SharedInstance.FBFeed
-        self.tableView?.reloadData()
-        let range = NSMakeRange(0, 1)
-        let sections = IndexSet(integersIn: range.toRange() ?? 0..<0)
-        self.tableView?.reloadSections(sections, with: .fade)
-        self.refreshControl.endRefreshing()
+    func didReceiveAPIResults(results: Array<FBFeedModel>)
+    {
+        DispatchQueue.main.async {
+            
+            if (self.tableView?.isHidden)!
+            {
+                self.tableView?.isHidden = false
+            }
+            
+            self.FBFeed = results
+            self.tableView?.reloadData()
+            let range = NSMakeRange(0, 1)
+            let sections = IndexSet(integersIn: range.toRange() ?? 0..<0)
+            self.tableView?.reloadSections(sections, with: .fade)
+            self.refreshControl.endRefreshing()
+        }
     }
     
     func refresh(_ sender:AnyObject)
     {
-        getNews()
+        api.FBFeed()
     }
     
     // MARK: - TableView delegate
@@ -73,7 +85,9 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        navigationItem.title = ""
         self.performSegue(withIdentifier: kShowDetailNews, sender: self)
     }
     

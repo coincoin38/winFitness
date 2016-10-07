@@ -13,7 +13,8 @@ class NewsDetailsViewController: UIViewController {
     var news: FBFeedModel!
     @IBOutlet weak var bodytNewsTextView: UITextView!
     @IBOutlet weak var dateNewsLabel: UILabel!
-
+    let navBar = NavBarManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setIHM()
@@ -21,15 +22,18 @@ class NewsDetailsViewController: UIViewController {
     
     func setIHM(){
         bodytNewsTextView.isScrollEnabled = false
+        
         title = "News du "+FormaterManager.SharedInstance.formatMMddFromDate(FormaterManager.SharedInstance.formatServerDateFromString(news.created_time!))
         bodytNewsTextView.text = news._description
-        NavBarManager.SharedInstance.configureNavBarWithColors(navigationController!, backgroundColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor)
+        navBar.configureNavBarWithColors(navigationController!, backgroundColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor)
 , textColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor))
 
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-            navigationController?.setNavigationBarHidden(false, animated: true)
+    override func viewWillAppear(_ animated: Bool)
+    {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
