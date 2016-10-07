@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.0.1)
   - AlamofireImage (3.1.0):
     - Alamofire (~> 4.0)
+  - APESuperHUD (1.1.1)
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
@@ -15,11 +16,12 @@ PODS:
   - Realm/Headers (2.0.2)
   - RealmSwift (2.0.2):
     - Realm (= 2.0.2)
-  - SwiftyJSON (3.1.0)
+  - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - AlamofireImage
+  - APESuperHUD (~> 1.1)
   - FBSDKCoreKit
   - RealmSwift
   - SwiftyJSON
@@ -27,12 +29,13 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   AlamofireImage: bb8c8351c51cb1633bb6be69b6dbbaff37ce65b7
+  APESuperHUD: 3d0fe905b5518740796db8af4796e52d47d44153
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   FBSDKCoreKit: 7a6baaed4a2b2a244ba253346713bdbc74df135b
   Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
   RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
-  SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-PODFILE CHECKSUM: 0778b572c7077ac67b24bd0a3eb93554c510afbc
+PODFILE CHECKSUM: ab4a77ec0461a0ec68b3badd0f06b91edf1dad9f
 
 COCOAPODS: 1.0.1

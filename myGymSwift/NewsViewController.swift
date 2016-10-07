@@ -6,29 +6,30 @@
 //  Copyright © 2015 julien gimenez. All rights reserved.
 //
 
-import UIKit
 import SwiftyJSON
 import AlamofireImage
+import APESuperHUD
 
-class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource, FBAPIControllerProtocol {
+class NewsViewController: RootViewController,UITableViewDelegate, UITableViewDataSource, FBAPIControllerProtocol {
 
     let cellIdentifier = "newsIdentifier"
     let cellXib = "NewsTableViewCell"
     let cellXibV2 = "NewsTableViewCellV2"
-
-    var refreshControl:UIRefreshControl!
+    let kShowDetailNews = "showDetailNews"
+    let api = FBAPIController()
     
+    var refreshControl:UIRefreshControl!
     var FBFeed: Array<FBFeedModel>! = Array<FBFeedModel>()
     
-    let kShowDetailNews = "showDetailNews"
-    
-    let api = FBAPIController()
-
     @IBOutlet weak var tableView: UITableView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         api.delegate = self
+
+        APESuperHUDDefault()
+        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: NSLocalizedString("LOADING_NEWS", comment:""), presentingView: self.view)
+        
         setIHM()
         api.FBFeed()
     }
@@ -51,6 +52,7 @@ class NewsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
             if (self.tableView?.isHidden)!
             {
                 self.tableView?.isHidden = false
+                APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion:nil)
             }
             
             self.FBFeed = results

@@ -14,6 +14,8 @@
 "MINUTES_SHORT" = "min";
 "PULL_TO_REFRESH" = "Relâcher pour rafraîchir";
 "FACEBOOK" = "Facebook";
+"LOADING_NEWS" = "Chargement des dernières actualités";
+"CATCH_PHRASE" ="L'excellence de la forme à prix mini";
 
 //ERRORS
 "ERROR_TOKEN" = "Erreur lors de la récupération du Token";

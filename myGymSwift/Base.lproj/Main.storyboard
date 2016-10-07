@@ -231,10 +231,10 @@
                                 <color key="backgroundColor" red="0.47058823529411764" green="0.4392156862745098" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sessionIdentifier" id="oL7-FK-I9K" customClass="SessionTableViewCell" customModule="myGymSwift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="28" width="1000" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oL7-FK-I9K" id="n2f-uI-Oeb">
-                                            <frame key="frameInset" width="375" height="60"/>
+                                            <frame key="frameInset" width="1000" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -476,22 +476,9 @@
                     <view key="view" contentMode="scaleToFill" id="eWc-7L-agq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="dd0-Gi-qpE">
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="585-s4-yZf"/>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="585-s4-yZf" firstAttribute="top" secondItem="dd0-Gi-qpE" secondAttribute="bottom" id="0QO-4j-P8e"/>
-                            <constraint firstItem="585-s4-yZf" firstAttribute="centerX" secondItem="eWc-7L-agq" secondAttribute="centerX" id="5kE-Xm-fW4"/>
-                            <constraint firstItem="dd0-Gi-qpE" firstAttribute="centerX" secondItem="eWc-7L-agq" secondAttribute="centerX" id="5pP-hz-KE9"/>
-                            <constraint firstItem="dd0-Gi-qpE" firstAttribute="centerY" secondItem="eWc-7L-agq" secondAttribute="centerY" id="aWb-nL-Kaz"/>
-                        </constraints>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="LoadingActivityIndicator" destination="585-s4-yZf" id="ij7-6i-jTu"/>
                         <segue destination="CgF-ig-eeg" kind="show" identifier="showNews" id="dwO-xR-8jk"/>
                     </connections>
                 </viewController>
@@ -504,7 +491,6 @@
         <image name="News_selected_V2" width="25" height="25"/>
         <image name="News_unselected_V2" width="25" height="25"/>
         <image name="Sessions" width="25" height="25"/>
-        <image name="SplashScreen" width="181" height="181"/>
         <image name="Sports_selected_V2" width="25" height="25"/>
         <image name="Sports_unselected" width="25" height="25"/>
         <image name="bandeau_win_fitness_cut" width="465" height="201"/>

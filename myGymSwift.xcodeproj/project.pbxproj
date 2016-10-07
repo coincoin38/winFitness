@@ -54,6 +54,7 @@
 		388F7DA71D8AE53F00AC0B39 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F7DA61D8AE53F00AC0B39 /* NetworkConstants.swift */; };
 		388F7DA91D8AE6CC00AC0B39 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F7DA81D8AE6CC00AC0B39 /* StorageManager.swift */; };
 		38985AEC1DA7A5B900F4E375 /* AlertViewControllerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985AEB1DA7A5B900F4E375 /* AlertViewControllerUtil.swift */; };
+		38D3C0A01DA7F0FE006BBA23 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D3C09F1DA7F0FE006BBA23 /* RootViewController.swift */; };
 		38F943571C3D2A3900643571 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F943561C3D2A3900643571 /* NewsModel.swift */; };
 		38F943BA1C3FA05200643571 /* ModelsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F943B91C3FA05200643571 /* ModelsConstants.swift */; };
 		CE6791709A58BE84782420AF /* Pods_myGymSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A24D320B1CEC4F09FA47B2 /* Pods_myGymSwift.framework */; };
@@ -112,6 +113,7 @@
 		388F7DA61D8AE53F00AC0B39 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		388F7DA81D8AE6CC00AC0B39 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		38985AEB1DA7A5B900F4E375 /* AlertViewControllerUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewControllerUtil.swift; sourceTree = "<group>"; };
+		38D3C09F1DA7F0FE006BBA23 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		38F943561C3D2A3900643571 /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		38F943B91C3FA05200643571 /* ModelsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelsConstants.swift; sourceTree = "<group>"; };
 		645A1990FAF170CC8B1D4F43 /* Pods-myGymSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myGymSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		1376A5E81C09EDA7000AA652 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				38D3C09F1DA7F0FE006BBA23 /* RootViewController.swift */,
 				13623BA41D65E39800F94406 /* HomeViewController.swift */,
 				1391636F1C1A20E8000B9ECC /* NewsViewController.swift */,
 				3865A5281C4E46B400D7F82B /* NewsDetailsViewController.swift */,
@@ -484,6 +487,7 @@
 				38F943571C3D2A3900643571 /* NewsModel.swift in Sources */,
 				3810B3281DA78B84000F91B8 /* FBAPIController.swift in Sources */,
 				3825E6781C24515C00F589FA /* SportCollectionViewCell.swift in Sources */,
+				38D3C0A01DA7F0FE006BBA23 /* RootViewController.swift in Sources */,
 				13CE08CA1C2ABFB6009BC5E9 /* ImagesConstants.swift in Sources */,
 				139163701C1A20E8000B9ECC /* NewsViewController.swift in Sources */,
 				138C3F771C3F049600470ACB /* NewsTableViewCell.swift in Sources */,

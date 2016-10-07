@@ -15,4 +15,5 @@ pod 'SwiftyJSON'
 pod 'FBSDKCoreKit'
 pod 'AlamofireImage'
 pod 'Alamofire', '~> 4.0'
+pod 'APESuperHUD', '~> 1.1'
 end

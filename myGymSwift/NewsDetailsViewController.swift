@@ -12,11 +12,8 @@ class NewsDetailsViewController: UIViewController {
     
     var news: FBFeedModel!
     var loaded : Bool = true
-    
-    @IBOutlet weak var bodytNewsTextView: UITextView!
-    @IBOutlet weak var dateNewsLabel: UILabel!
     let navBar = NavBarManager()
-    
+    @IBOutlet weak var bodytNewsTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +39,8 @@ class NewsDetailsViewController: UIViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool)
+    {
         //Fix pour empêcher le scroll to bottom par défaut
         bodytNewsTextView.isScrollEnabled = true
     }

@@ -6,31 +6,33 @@
 //  Copyright © 2016 julien gimenez. All rights reserved.
 //
 
-import UIKit
+import APESuperHUD
 
-class HomeViewController: UIViewController, AlertViewControllerUtilProtocol {
+class HomeViewController: RootViewController, AlertViewControllerUtilProtocol {
 
-    @IBOutlet weak var LoadingActivityIndicator: UIActivityIndicatorView!
     let kShowNews = "showNews"
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        LoadingActivityIndicator.startAnimating();
-        
-        FBTokenManager.SharedInstance.FBToken { (success) in
+ 
+        APESuperHUDSplashScreen()
+        APESuperHUD.showOrUpdateHUD(icon: UIImage(named: "winfitnesslogo")!, message: NSLocalizedString("CATCH_PHRASE", comment:""), presentingView: self.view, completion: {
             
-            if(success)
-            {
-                self.showNews();
+            FBTokenManager.SharedInstance.FBToken { (success) in
+                
+                if(success)
+                {
+                    self.showNews();
+                }
+                else
+                {
+                    let alert = AlertViewControllerUtil()
+                    alert.delegate = self
+                    self.present(alert.FBTokenErrorAlertController(), animated: true, completion:nil)
+                }
             }
-            else
-            {
-                let alert = AlertViewControllerUtil()
-                alert.delegate = self
-                self.present(alert.FBTokenErrorAlertController(), animated: true, completion:nil)
-            }
-        }
+        })
     }
     
     func didClickFirstButton()
@@ -40,7 +42,6 @@ class HomeViewController: UIViewController, AlertViewControllerUtilProtocol {
     
     func showNews()
     {
-        self.LoadingActivityIndicator.stopAnimating();
         self.performSegue(withIdentifier: kShowNews, sender: self)
     }
 }
