@@ -30,4 +30,24 @@ class FBFeedModel: NSObject {
         type         = resultModel[ModelsConstants.kType]as? String
         actions      = resultModel[ModelsConstants.kActions]as? Array<[String: AnyObject]>
     }
+    
+    func feedBody()->String
+    {
+        if (self.message != nil && self._description != nil)
+        {
+            return self.message! + "\n" + self._description!
+        }
+        
+        if (self.message != nil)
+        {
+            return self.message!
+        }
+        
+        if (self._description != nil)
+        {
+            return self._description!
+        }
+        
+        return ""
+    }
 }

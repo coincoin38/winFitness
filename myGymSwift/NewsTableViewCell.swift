@@ -33,28 +33,8 @@ class NewsTableViewCell: UITableViewCell {
     func setData(_ feed: FBFeedModel)
     {
         dayLabel?.text   = FormaterManager.SharedInstance.formatMMddFromDate(FormaterManager.SharedInstance.formatServerDateFromString(feed.created_time!))
-        bodyTextView?.text  = feedBody(feed)
+        bodyTextView?.text  = feed.feedBody()
         bodyTextView?.textColor  = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.bodyNewsCellText)
         dayLabel?.textColor   = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.dayNewsCell)
-    }
-    
-    func feedBody(_ feed: FBFeedModel)->String
-    {
-        if (feed.message != nil && feed._description != nil)
-        {
-            return feed.message! + "\n" + feed._description!
-        }
-        
-        if (feed.message != nil)
-        {
-            return feed.message!
-        }
-        
-        if (feed._description != nil)
-        {
-            return feed._description!
-        }
-
-        return ""
     }
 }

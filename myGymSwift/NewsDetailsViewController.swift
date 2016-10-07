@@ -11,9 +11,12 @@ import UIKit
 class NewsDetailsViewController: UIViewController {
     
     var news: FBFeedModel!
+    var loaded : Bool = true
+    
     @IBOutlet weak var bodytNewsTextView: UITextView!
     @IBOutlet weak var dateNewsLabel: UILabel!
     let navBar = NavBarManager()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,16 +27,19 @@ class NewsDetailsViewController: UIViewController {
         bodytNewsTextView.isScrollEnabled = false
         
         title = "News du "+FormaterManager.SharedInstance.formatMMddFromDate(FormaterManager.SharedInstance.formatServerDateFromString(news.created_time!))
-        bodytNewsTextView.text = news._description
-        navBar.configureNavBarWithColors(navigationController!, backgroundColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor)
-, textColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor))
-
+        bodytNewsTextView.text = news.feedBody()
+        navBar.configureNavBarWithColors(navigationController!,
+                                         backgroundColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor),
+                                         textColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor))
     }
     
     override func viewWillAppear(_ animated: Bool)
     {
-        navigationController?.setNavigationBarHidden(false, animated: true)
-        
+        navigationController?.setNavigationBarHidden(false, animated: loaded)
+        UIApplication.shared.statusBarStyle = .lightContent
+        if loaded {
+            loaded = false
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,6 +50,6 @@ class NewsDetailsViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(navigationController?.isNavigationBarHidden == false, animated: true)
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
+        UIApplication.shared.statusBarStyle = .default
     }
 }
