@@ -15,6 +15,7 @@ class NewsDetailsViewController: UIViewController, UIWebViewDelegate {
     var loaded : Bool = true
     let navBar = NavBarManager()
     @IBOutlet weak var bodyNewsWebView: UIWebView!
+    @IBOutlet weak var facebookButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,5 +59,18 @@ class NewsDetailsViewController: UIViewController, UIWebViewDelegate {
     
     func webViewDidFinishLoad(_ webView : UIWebView) {
         APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion:nil)
+        facebookButton.isHidden = false
+    }
+    
+    @IBAction func openFacebook(sender: UIButton) {
+        
+        let urlPost = URL(string:String(format: "fb://post/%@",news.id!))!
+        
+        if UIApplication.shared.canOpenURL(urlPost) {
+            UIApplication.shared.openURL(urlPost)
+        }
+        else{
+             //UIApplication.shared.openURL(URL(string: "http://www.stackoverflow.com")!)
+        }
     }
 }

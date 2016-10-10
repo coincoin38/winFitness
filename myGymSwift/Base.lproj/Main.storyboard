@@ -193,19 +193,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJY-4f-fzm">
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES"/>
                             </webView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0h-Mg-5LF">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ohm-Pn-fQZ"/>
+                                </constraints>
+                                <state key="normal" title="Retrouvez l'article sur Facebook"/>
+                                <connections>
+                                    <action selector="openFacebookWithSender:" destination="r0B-BO-moc" eventType="touchUpInside" id="2cc-zo-QHR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="mJY-4f-fzm" firstAttribute="leading" secondItem="x2L-Na-SzS" secondAttribute="leading" id="B7X-be-EW8"/>
+                            <constraint firstItem="n0h-Mg-5LF" firstAttribute="leading" secondItem="x2L-Na-SzS" secondAttribute="leading" id="Ifk-hb-9B2"/>
                             <constraint firstAttribute="trailing" secondItem="mJY-4f-fzm" secondAttribute="trailing" id="PbN-4p-nXE"/>
                             <constraint firstItem="mJY-4f-fzm" firstAttribute="top" secondItem="oKs-Zk-Ae4" secondAttribute="bottom" id="Ptc-R4-lar"/>
-                            <constraint firstItem="xIN-bU-Ouj" firstAttribute="top" secondItem="mJY-4f-fzm" secondAttribute="bottom" id="kxj-yE-oWc"/>
+                            <constraint firstAttribute="trailing" secondItem="n0h-Mg-5LF" secondAttribute="trailing" id="XFY-ix-FAs"/>
+                            <constraint firstItem="n0h-Mg-5LF" firstAttribute="top" secondItem="mJY-4f-fzm" secondAttribute="bottom" id="gr1-5K-9NB"/>
+                            <constraint firstItem="n0h-Mg-5LF" firstAttribute="top" secondItem="mJY-4f-fzm" secondAttribute="bottom" id="gxp-fg-EPw"/>
+                            <constraint firstItem="xIN-bU-Ouj" firstAttribute="top" secondItem="n0h-Mg-5LF" secondAttribute="bottom" id="oJl-Ak-zdN"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bodyNewsWebView" destination="mJY-4f-fzm" id="nZ7-pK-Ajw"/>
+                        <outlet property="facebookButton" destination="n0h-Mg-5LF" id="bXM-n0-q6d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7v-mo-rNC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -228,10 +243,10 @@
                                 <color key="backgroundColor" red="0.47058823529411764" green="0.4392156862745098" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="sessionIdentifier" id="oL7-FK-I9K" customClass="SessionTableViewCell" customModule="myGymSwift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="60"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oL7-FK-I9K" id="n2f-uI-Oeb">
-                                            <frame key="frameInset" width="1000" height="60"/>
+                                            <frame key="frameInset" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
