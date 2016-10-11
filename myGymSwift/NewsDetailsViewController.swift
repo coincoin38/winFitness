@@ -9,30 +9,33 @@
 import UIKit
 import APESuperHUD
 
-class NewsDetailsViewController: UIViewController, UIWebViewDelegate {
+class NewsDetailsViewController: UIViewController, UIWebViewDelegate, AlertViewControllerUtilProtocol {
     
     var news: FBFeedModel!
     var loaded : Bool = true
     let navBar = NavBarManager()
+    let urlPost = URL(string:String(format: NetworkConstants.FB_open_profile,NetworkConstants.FB_profile_id))!
+    let alert = AlertViewControllerUtil()
+    
     @IBOutlet weak var bodyNewsWebView: UIWebView!
     @IBOutlet weak var facebookButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        alert.delegate = self
         setIHM()
     }
     
     func setIHM(){
         
-        title = "News du "+FormaterManager.SharedInstance.formatMMddFromDate(FormaterManager.SharedInstance.formatServerDateFromString(news.created_time!))
+        title = String(format:NSLocalizedString("NEWS_TITLE", comment:""),FormaterManager.SharedInstance.formatMMddFromDate(FormaterManager.SharedInstance.formatServerDateFromString(news.created_time!)))
         
         navBar.configureNavBarWithColors(navigationController!,
                                          backgroundColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor),
                                          textColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor))
         
         
-        let bodyHtml = "<html><body style=\"margin: 0; padding: 0;\"><img src=\"%@\" style=\"width:100%%;\"><br><p style=\"text-align:justify;margin: 5; padding: 5;\">%@</p></body></html>";
-        let modifiedURLString = String(format: bodyHtml,news.full_picture!,news.feedBody())
+        let modifiedURLString = String(format: NetworkConstants.FB_webview_news_detail,news.full_picture!,news.feedBody())
         bodyNewsWebView.delegate = self
         bodyNewsWebView.loadHTMLString(modifiedURLString, baseURL: nil)
         
@@ -64,13 +67,18 @@ class NewsDetailsViewController: UIViewController, UIWebViewDelegate {
     
     @IBAction func openFacebook(sender: UIButton) {
         
-        let urlPost = URL(string:String(format: "fb://post/%@",news.id!))!
-        
         if UIApplication.shared.canOpenURL(urlPost) {
             UIApplication.shared.openURL(urlPost)
         }
-        else{
-             //UIApplication.shared.openURL(URL(string: "http://www.stackoverflow.com")!)
+        else
+        {
+            self.present(alert.FBAppstoreAlertController(), animated: true, completion:nil)
         }
+    }
+    
+    func didClickFirstButton() {}
+    
+    func didClickSecondButton() {
+        UIApplication.shared.openURL(URL (string: NetworkConstants.FB_appstore)!)
     }
 }
