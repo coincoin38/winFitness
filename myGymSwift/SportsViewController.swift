@@ -73,6 +73,7 @@ class SportsViewController: UIViewController,UICollectionViewDelegate,UICollecti
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        navigationItem.title = ""
         self.sport = self.sportsArray[(indexPath as NSIndexPath).row]
         self.sportsDataManager.getObjectivesFromDB(self.sport, completion: { (objectives) -> Void in
             self.objectivesArray = objectives

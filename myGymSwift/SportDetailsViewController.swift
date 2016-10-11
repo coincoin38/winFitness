@@ -11,6 +11,7 @@ import UIKit
 class SportDetailsViewController: UIViewController,UIGestureRecognizerDelegate,UIWebViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
 
     var sport: SportModel = SportModel()
+    var loaded : Bool = true
     @IBOutlet weak var sportDescriptionTextView: UITextView!
     @IBOutlet weak var objectivesCollectionView: UICollectionView?
     fileprivate let reuseIdentifier = "ObjectiveIdentifier"
@@ -37,16 +38,20 @@ class SportDetailsViewController: UIViewController,UIGestureRecognizerDelegate,U
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(navigationController?.isNavigationBarHidden == false, animated: true)
+        
+        navigationController?.setNavigationBarHidden(false, animated: loaded)
         configureStyleNavBar()
+        if loaded {
+            loaded = false
+        }
+        
     }
     
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(navigationController?.isNavigationBarHidden == false, animated: true)
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
-       // NavBarManager.SharedInstance.resetNavBar(navigationController!)
+        UIApplication.shared.statusBarStyle = .default
     }
 
     func configureStyleNavBar(){
@@ -54,17 +59,7 @@ class SportDetailsViewController: UIViewController,UIGestureRecognizerDelegate,U
         //NavBar
         title = sport.name
         navBar.configureNavBarWithColors(navigationController!, backgroundColor: FormaterManager.SharedInstance.uicolorFromHexa(sport.color), textColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor))
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
-        
-        //Back button
-        let newBackButton = UIBarButtonItem(title: NSLocalizedString("BACK", comment:""), style: UIBarButtonItemStyle.done, target: self, action: #selector(SportDetailsViewController.back(_:)))
-        newBackButton.setTitleTextAttributes([NSForegroundColorAttributeName: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor),NSFontAttributeName:UIFont.systemFont(ofSize: 15, weight: 0)], for: UIControlState())
-
-        self.navigationItem.leftBarButtonItem = newBackButton;
-        
-        //StatusBar
-        UIApplication.shared.statusBarStyle = .lightContent
-    }
+        }
     
     // MARK: - Actions
     

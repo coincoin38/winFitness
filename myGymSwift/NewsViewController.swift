@@ -83,6 +83,9 @@ class NewsViewController: RootViewController,UITableViewDelegate, UITableViewDat
         if let urlString = FBFeed[(indexPath as NSIndexPath).row].full_picture {
             cell.newsImage.af_setImage(withURL: URL(string: urlString)!,placeholderImage: UIImage(named: "logo_winfitness"))
         }
+        else{
+            cell.newsImage.image = UIImage(named: "logo_winfitness")
+        }
         
         return cell
     }

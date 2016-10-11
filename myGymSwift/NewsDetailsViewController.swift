@@ -34,8 +34,8 @@ class NewsDetailsViewController: UIViewController, UIWebViewDelegate, AlertViewC
                                          backgroundColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor),
                                          textColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor))
         
-        
-        let modifiedURLString = String(format: NetworkConstants.FB_webview_news_detail,news.full_picture!,news.feedBody())
+        let modifiedURLString = (news.full_picture != nil) ? String(format: NetworkConstants.FB_webview_news_detail_with_image,news.full_picture!,news.feedBody()) : String(format: NetworkConstants.FB_webview_news_detail,news.feedBody())
+   
         bodyNewsWebView.delegate = self
         bodyNewsWebView.loadHTMLString(modifiedURLString, baseURL: nil)
         
