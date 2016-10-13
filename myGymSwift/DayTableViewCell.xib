@@ -19,43 +19,65 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lo-Ic-nLf">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.9137254901960784" green="0.56862745098039214" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8Lo-Ic-nLf" firstAttribute="centerY" secondItem="jop-Zb-JRS" secondAttribute="centerY" id="DDX-da-DpW"/>
                             <constraint firstItem="8Lo-Ic-nLf" firstAttribute="centerX" secondItem="jop-Zb-JRS" secondAttribute="centerX" id="Y7U-2m-lht"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gg6-4h-GUj">
-                        <color key="backgroundColor" red="0.14117647059999999" green="0.62745098040000002" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXn-v9-Orf">
-                        <color key="backgroundColor" red="0.73333333329999995" green="0.14901960780000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHg-w2-u6b" userLabel="RPM View">
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LES_MILLS_RPM_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="NPA-NH-zk7"/>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NPA-NH-zk7" secondAttribute="trailing" constant="8" id="1b7-Ga-nOl"/>
+                            <constraint firstItem="NPA-NH-zk7" firstAttribute="top" secondItem="lHg-w2-u6b" secondAttribute="top" constant="7" id="ddb-fH-jvh"/>
+                            <constraint firstItem="NPA-NH-zk7" firstAttribute="leading" secondItem="lHg-w2-u6b" secondAttribute="leading" constant="8" id="k6i-IV-bQx"/>
+                            <constraint firstAttribute="bottom" secondItem="NPA-NH-zk7" secondAttribute="bottom" constant="7" id="z2C-Pj-Xg6"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tte-2r-wNR" userLabel="Other View">
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LES_MILLS_FAFP" translatesAutoresizingMaskIntoConstraints="NO" id="MbY-iD-l9z"/>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MbY-iD-l9z" secondAttribute="trailing" constant="8.5" id="5mH-tX-eek"/>
+                            <constraint firstItem="MbY-iD-l9z" firstAttribute="top" secondItem="Tte-2r-wNR" secondAttribute="top" constant="7" id="Mh2-Wa-1i3"/>
+                            <constraint firstItem="MbY-iD-l9z" firstAttribute="leading" secondItem="Tte-2r-wNR" secondAttribute="leading" constant="8" id="mJC-xE-hWK"/>
+                            <constraint firstAttribute="bottom" secondItem="MbY-iD-l9z" secondAttribute="bottom" constant="7" id="tBL-FL-Ppy"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Gg6-4h-GUj" secondAttribute="bottom" id="2lW-Yf-agW"/>
-                    <constraint firstAttribute="bottom" secondItem="jop-Zb-JRS" secondAttribute="bottom" id="6gc-1z-zfJ"/>
-                    <constraint firstItem="VXn-v9-Orf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6zG-4D-GqW"/>
-                    <constraint firstAttribute="bottom" secondItem="VXn-v9-Orf" secondAttribute="bottom" id="HVv-0D-WhZ"/>
-                    <constraint firstItem="Gg6-4h-GUj" firstAttribute="leading" secondItem="jop-Zb-JRS" secondAttribute="trailing" id="Hsv-su-Yw6"/>
-                    <constraint firstItem="Gg6-4h-GUj" firstAttribute="width" secondItem="jop-Zb-JRS" secondAttribute="width" id="U9w-t7-0Oa"/>
-                    <constraint firstItem="Gg6-4h-GUj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="UJW-Vf-fk5"/>
-                    <constraint firstItem="VXn-v9-Orf" firstAttribute="width" secondItem="Gg6-4h-GUj" secondAttribute="width" id="WmK-4x-WC7"/>
-                    <constraint firstItem="jop-Zb-JRS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="l20-1M-FBj"/>
-                    <constraint firstItem="jop-Zb-JRS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mIO-1z-QS7"/>
-                    <constraint firstItem="VXn-v9-Orf" firstAttribute="leading" secondItem="Gg6-4h-GUj" secondAttribute="trailing" id="p78-XK-FGE"/>
-                    <constraint firstAttribute="trailing" secondItem="VXn-v9-Orf" secondAttribute="trailing" id="xVP-4Z-OcD"/>
+                    <constraint firstItem="lHg-w2-u6b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2hh-aL-GqW"/>
+                    <constraint firstAttribute="bottom" secondItem="Tte-2r-wNR" secondAttribute="bottom" id="2wS-Ju-7Yf"/>
+                    <constraint firstItem="lHg-w2-u6b" firstAttribute="leading" secondItem="jop-Zb-JRS" secondAttribute="trailing" id="K8v-Lb-mRY"/>
+                    <constraint firstItem="lHg-w2-u6b" firstAttribute="width" secondItem="jop-Zb-JRS" secondAttribute="width" id="NUo-qz-O2h"/>
+                    <constraint firstItem="Tte-2r-wNR" firstAttribute="leading" secondItem="lHg-w2-u6b" secondAttribute="trailing" id="OuK-Gt-ZnR"/>
+                    <constraint firstItem="Tte-2r-wNR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PPV-nc-q3Z"/>
+                    <constraint firstItem="jop-Zb-JRS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Wz8-Ow-3xz"/>
+                    <constraint firstItem="jop-Zb-JRS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ao8-fk-ZE4"/>
+                    <constraint firstItem="Tte-2r-wNR" firstAttribute="width" secondItem="lHg-w2-u6b" secondAttribute="width" id="fL6-Fg-aBB"/>
+                    <constraint firstAttribute="trailing" secondItem="Tte-2r-wNR" secondAttribute="trailing" id="ff8-Hr-GfC"/>
+                    <constraint firstAttribute="bottom" secondItem="jop-Zb-JRS" secondAttribute="bottom" id="j24-rY-1ve"/>
+                    <constraint firstAttribute="bottom" secondItem="lHg-w2-u6b" secondAttribute="bottom" id="x2Q-S6-xp7"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
+                <outlet property="LESMILLSImageView" destination="MbY-iD-l9z" id="uWj-uZ-HiQ"/>
+                <outlet property="RPMImageView" destination="NPA-NH-zk7" id="NDb-2G-l8p"/>
                 <outlet property="dayLabel" destination="8Lo-Ic-nLf" id="ROv-xH-hKl"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="LES_MILLS_FAFP" width="25" height="25"/>
+        <image name="LES_MILLS_RPM_Logo" width="25" height="25"/>
+    </resources>
 </document>
