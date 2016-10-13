@@ -18,7 +18,6 @@ class NewsDetailsViewController: UIViewController, UIWebViewDelegate, AlertViewC
     let alert = AlertViewControllerUtil()
     
     @IBOutlet weak var bodyNewsWebView: UIWebView!
-    @IBOutlet weak var facebookButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,17 +27,26 @@ class NewsDetailsViewController: UIViewController, UIWebViewDelegate, AlertViewC
     
     func setIHM(){
         
-        title = String(format:NSLocalizedString("NEWS_TITLE", comment:""),FormaterManager.SharedInstance.formatMMddFromDate(FormaterManager.SharedInstance.formatServerDateFromString(news.created_time!)))
+        title = FormaterManager.SharedInstance.formatMMddFromDate(FormaterManager.SharedInstance.formatServerDateFromString(news.created_time!))
         
         navBar.configureNavBarWithColors(navigationController!,
                                          backgroundColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor),
                                          textColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor))
         
+        let button: UIButton = UIButton(type: .custom)
+        button.imageView?.contentMode = .scaleAspectFit
+        button.setImage(UIImage(named: "FB-f-Logo__white_72"), for:.normal)
+        button.addTarget(self, action:  #selector(openFacebook), for: .touchUpInside)
+        button.frame = CGRect(x:0, y:0, width:31, height:31)
+        
+        let fbButton = UIBarButtonItem(customView: button)
+        
+        navigationItem.rightBarButtonItem = fbButton
+        
         let modifiedURLString = (news.full_picture != nil) ? String(format: NetworkConstants.FB_webview_news_detail_with_image,news.full_picture!,news.feedBody()) : String(format: NetworkConstants.FB_webview_news_detail,news.feedBody())
    
         bodyNewsWebView.delegate = self
         bodyNewsWebView.loadHTMLString(modifiedURLString, baseURL: nil)
-        
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -62,10 +70,9 @@ class NewsDetailsViewController: UIViewController, UIWebViewDelegate, AlertViewC
     
     func webViewDidFinishLoad(_ webView : UIWebView) {
         APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion:nil)
-        facebookButton.isHidden = false
     }
     
-    @IBAction func openFacebook(sender: UIButton) {
+    func openFacebook() {
         
         if UIApplication.shared.canOpenURL(urlPost) {
             UIApplication.shared.openURL(urlPost)
@@ -81,4 +88,5 @@ class NewsDetailsViewController: UIViewController, UIWebViewDelegate, AlertViewC
     func didClickSecondButton() {
         UIApplication.shared.openURL(URL (string: NetworkConstants.FB_appstore)!)
     }
+    
 }

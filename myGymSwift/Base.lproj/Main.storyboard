@@ -150,7 +150,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DYl-Fk-igc" id="Xf6-tw-V3l">
-                                            <frame key="frameInset" width="375" height="74"/>
+                                            <frame key="frameInset" width="375" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -195,32 +195,17 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES"/>
                             </webView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0h-Mg-5LF">
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Ohm-Pn-fQZ"/>
-                                </constraints>
-                                <state key="normal" title="Retrouvez l'article sur Facebook"/>
-                                <connections>
-                                    <action selector="openFacebookWithSender:" destination="r0B-BO-moc" eventType="touchUpInside" id="2cc-zo-QHR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mJY-4f-fzm" firstAttribute="leading" secondItem="x2L-Na-SzS" secondAttribute="leading" id="B7X-be-EW8"/>
-                            <constraint firstItem="n0h-Mg-5LF" firstAttribute="leading" secondItem="x2L-Na-SzS" secondAttribute="leading" id="Ifk-hb-9B2"/>
-                            <constraint firstAttribute="trailing" secondItem="mJY-4f-fzm" secondAttribute="trailing" id="PbN-4p-nXE"/>
-                            <constraint firstItem="mJY-4f-fzm" firstAttribute="top" secondItem="oKs-Zk-Ae4" secondAttribute="bottom" id="Ptc-R4-lar"/>
-                            <constraint firstAttribute="trailing" secondItem="n0h-Mg-5LF" secondAttribute="trailing" id="XFY-ix-FAs"/>
-                            <constraint firstItem="n0h-Mg-5LF" firstAttribute="top" secondItem="mJY-4f-fzm" secondAttribute="bottom" id="gr1-5K-9NB"/>
-                            <constraint firstItem="n0h-Mg-5LF" firstAttribute="top" secondItem="mJY-4f-fzm" secondAttribute="bottom" id="gxp-fg-EPw"/>
-                            <constraint firstItem="xIN-bU-Ouj" firstAttribute="top" secondItem="n0h-Mg-5LF" secondAttribute="bottom" id="oJl-Ak-zdN"/>
+                            <constraint firstItem="mJY-4f-fzm" firstAttribute="top" secondItem="oKs-Zk-Ae4" secondAttribute="bottom" id="N8H-es-PlX"/>
+                            <constraint firstItem="xIN-bU-Ouj" firstAttribute="top" secondItem="mJY-4f-fzm" secondAttribute="bottom" id="Sh7-Bg-Kaz"/>
+                            <constraint firstAttribute="trailing" secondItem="mJY-4f-fzm" secondAttribute="trailing" id="TcD-81-TTG"/>
+                            <constraint firstItem="mJY-4f-fzm" firstAttribute="leading" secondItem="x2L-Na-SzS" secondAttribute="leading" id="oJr-cE-Rh9"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bodyNewsWebView" destination="mJY-4f-fzm" id="nZ7-pK-Ajw"/>
-                        <outlet property="facebookButton" destination="n0h-Mg-5LF" id="bXM-n0-q6d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7v-mo-rNC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -345,7 +330,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iMc-Pd-wKh" id="K0G-Zh-qAd">
-                                            <frame key="frameInset" width="375" height="74"/>
+                                            <frame key="frameInset" width="375" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
