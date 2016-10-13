@@ -108,4 +108,12 @@ class FormaterManager: NSObject {
         
         return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
+    
+    func getDayOfWeek()->Int? {
+        
+        let date = Date()
+        let calendar = Calendar.current
+        
+        return calendar.component(.weekday, from: date)
+    }
 }

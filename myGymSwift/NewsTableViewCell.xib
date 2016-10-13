@@ -43,7 +43,7 @@
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J6z-ci-51a" secondAttribute="trailing" constant="2" id="FaD-YH-zzf"/>
                             <constraint firstItem="J6z-ci-51a" firstAttribute="top" secondItem="5bs-q2-iLY" secondAttribute="top" constant="1" id="pYh-H6-Bs1"/>
                             <constraint firstItem="oLO-bR-Pyi" firstAttribute="top" secondItem="5bs-q2-iLY" secondAttribute="top" constant="13" id="v0X-Rm-MpU"/>
-                            <constraint firstAttribute="trailing" secondItem="oLO-bR-Pyi" secondAttribute="trailing" constant="8" id="wl8-04-yXg"/>
+                            <constraint firstAttribute="trailing" secondItem="oLO-bR-Pyi" secondAttribute="trailing" constant="2" id="wl8-04-yXg"/>
                         </constraints>
                     </view>
                 </subviews>

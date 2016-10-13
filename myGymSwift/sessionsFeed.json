@@ -7,7 +7,7 @@
                  "sport_id": "569e3ecb521460e108c92459",
                  "from": "9.30",
                  "duration": "30",
-                 "day": "2016-01-31",
+                 "day": "2016-10-12",
                  "location": "Salle 1",
                  "teacher_id": "1",
                  "attendance": "1"
@@ -17,7 +17,7 @@
                  "sport_id": "569e3ecb521460e108c92459",
                  "from": "10.30",
                  "duration": "45",
-                 "day": "2016-01-31",
+                 "day": "2016-10-12",
                  "location": "Salle 1",
                  "teacher_id": "2",
                  "attendance": "0"
@@ -27,7 +27,7 @@
                  "sport_id": "569e3ecb521460e108c9245a",
                  "from": "11.30",
                  "duration": "30",
-                 "day": "2016-01-31",
+                 "day": "2016-10-12",
                  "location": "Salle 1",
                  "teacher_id": "3",
                  "attendance": "1"
@@ -37,7 +37,7 @@
                  "sport_id": "569e3ecb521460e108c9245b",
                  "from": "12.30",
                  "duration": "45",
-                 "day": "2016-01-31",
+                 "day": "2016-10-12",
                  "location": "Salle 1",
                  "teacher_id": "4",
                  "attendance": "0"
@@ -47,7 +47,7 @@
                  "sport_id": "569e3ecb521460e108c9245c",
                  "from": "13.30",
                  "duration": "30",
-                 "day": "2016-01-31",
+                 "day": "2016-10-12",
                  "location": "Salle 1",
                  "teacher_id": "2",
                  "attendance": "1"
@@ -127,7 +127,7 @@
                  "sport_id": "569e3ecb521460e108c92460",
                  "from": "9.30",
                  "duration": "45",
-                 "day": "2016-01-31",
+                 "day": "2016-10-12",
                  "location": "Salle 1",
                  "teacher_id": "3",
                  "attendance": "0"
@@ -137,7 +137,7 @@
                  "sport_id": "569e3e9b521460e108c92458",
                  "from": "10.30",
                  "duration": "30",
-                 "day": "2016-01-31",
+                 "day": "2016-10-12",
                  "location": "Salle 1",
                  "teacher_id": "4",
                  "attendance": "1"
@@ -147,7 +147,7 @@
                  "sport_id": "569e3e9b521460e108c92458",
                  "from": "13.30",
                  "duration": "45",
-                 "day": "2016-01-31",
+                 "day": "2016-10-12",
                  "location": "Salle 1",
                  "teacher_id": "1",
                  "attendance": "0"
@@ -157,7 +157,7 @@
                  "sport_id": "569e3ecb521460e108c92459",
                  "from": "14.00",
                  "duration": "30",
-                 "day": "2016-01-31",
+                 "day": "2016-10-12",
                  "location": "Salle 1",
                  "teacher_id": "2",
                  "attendance": "1"
@@ -167,7 +167,7 @@
                  "sport_id": "569e3ecb521460e108c9245b",
                  "from": "16.30",
                  "duration": "45",
-                 "day": "2016-01-31",
+                 "day": "2016-10-12",
                  "location": "Salle 3",
                  "teacher_id": "3",
                  "attendance": "0"

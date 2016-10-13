@@ -14,13 +14,29 @@ class DayTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.layoutMargins = UIEdgeInsets.zero
+        self.separatorInset = UIEdgeInsets.zero
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
+    func setData(dayOfTheWeek: String, index: Int)
+    {
+        dayLabel?.text = dayOfTheWeek
+        
+        let currentDay : Int = FormaterManager.SharedInstance.getDayOfWeek()!
+        let trueIndex : Int = index+2
+        
+        if (currentDay == trueIndex)
+        {
+            dayLabel?.textColor = UIColor.red
+        }
+        else if(currentDay > trueIndex)
+        {
+            dayLabel?.textColor = UIColor.lightGray
+        }
+    }
 }
