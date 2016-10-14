@@ -22,17 +22,6 @@ class FormaterManager: NSObject {
     let diez    = "#"
 
     // MARK: - Dates
-
-    func formatyyyMMddFromString(_ dateString: String) -> Date {
-
-        let formatter = DateFormatter()
-        formatter.dateFormat = yyyyMMdd
-        //formatter.timeZone = NSTimeZone(abbreviation: "UTC")
-
-        let dateFromString: Date = formatter.date(from: dateString)!
-        
-        return dateFromString
-    }
     
     func formatServerDateFromString(_ dateString: String) -> Date {
         
@@ -65,22 +54,6 @@ class FormaterManager: NSObject {
         let newDay =  dateFormatter.string(from: aDate).capitalized
         
         return newDay
-    }
-
-    
-    func isSameDayWithDate1(_ date1: Date, date2: Date) -> Bool {
-        
-        let cal = Calendar.current
-        var components = (cal as NSCalendar).components([.era, .year, .month, .day], from: date1)
-        let today = cal.date(from: components)!
-        
-        components = (cal as NSCalendar).components([.era, .year, .month, .day], from:date2);
-        let otherDate = cal.date(from: components)!
-        
-        if(today == otherDate) {
-            return true
-        }
-        return false
     }
     
     // MARK: - Colors

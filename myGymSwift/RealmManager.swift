@@ -19,7 +19,6 @@ class RealmManager: NSObject {
     // MARK: - Generateur d'objets
     
     func startFeed(){
-        //for var index = 0; index < 6; index += 1 {
         for index in 0 ..< 6 {
             RealmManager.SharedInstance.feedDataBaseWithFile(index)
         }
@@ -67,10 +66,7 @@ class RealmManager: NSObject {
                 //print(self.getAllSportsDescriptions())
             case ModelsConstants.stub_objectives:
                 self.writeObjectivesInDB(json)
-            case ModelsConstants.stub_news:
-                self.writeNewsInDB(json)
-                completion(true)
-                //print(self.getAllNews())
+                //print(self.getAllObjectives())
             default:
                 //print("no ws for key %@",key)
                 completion(false)
@@ -123,17 +119,6 @@ class RealmManager: NSObject {
         }
     }
     
-    func writeNewsInDB(_ result: JSON) {
-        for object in result {
-            let newObject = self.generateNews(object.1)
-            getNewsWithId(newObject.id, completion: { (new) -> Void in
-                if (new.count==0){
-                    self.writeData(newObject)
-                }
-            })
-        }
-    }
-    
     func writeData(_ object:Object){
         try! self.realm.write {
             self.realm.add(object)
@@ -158,10 +143,6 @@ class RealmManager: NSObject {
         return ObjectiveModel().setData(dictionary)
     }
     
-    func generateNews(_ dictionary: JSON) -> NewsModel {
-        return NewsModel().setData(dictionary)
-    }
-    
     // MARK: - Récupération d'objets
 
     func getAllSessions() -> Results<(SessionModel)> {
@@ -182,10 +163,6 @@ class RealmManager: NSObject {
     
     func getAllObjectives()->Results<(ObjectiveModel)>{
         return realm.objects(ObjectiveModel.self)
-    }
-    
-    func getAllNewsFromDB(_ completion: (_ news: Array<NewsModel>) -> Void) {
-        completion(Array<NewsModel>(realm.objects(NewsModel.self)))
     }
     
     // MARK : - Recherches
@@ -214,10 +191,6 @@ class RealmManager: NSObject {
         completion(realm.objects(ObjectiveModel.self).filter(ModelsConstants.kGetSportId, sport_id))
     }
     
-    func getNewsWithId(_ news_id: String, completion: (_ news: Results<(NewsModel)>) -> Void) {
-        completion(realm.objects(NewsModel.self).filter(ModelsConstants.kGetId, news_id))
-    }
-    
     // MARK: - Suppression de la base de données
 
     func cleanDb() {
@@ -240,8 +213,6 @@ class RealmManager: NSObject {
             completion(ModelsConstants.kSportsDescritpionsStub, ModelsConstants.kSportsDescriptionsObject);
         case ModelsConstants.stub_objectives:
             completion(ModelsConstants.kObjectivesStub, ModelsConstants.kObjectivesObject);
-        case ModelsConstants.stub_news:
-            completion(ModelsConstants.kNewsStub, ModelsConstants.kNewsObject);
         default:
             completion("", "");
         }
