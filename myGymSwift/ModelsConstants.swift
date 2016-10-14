@@ -10,21 +10,18 @@ struct ModelsConstants {
     
     // MODELS
     static let stub_sessions          = 0
-    static let stub_teachers          = 1
     static let stub_sports            = 2
     static let stub_sportsDescription = 3
     static let stub_objectives        = 4
     static let stub_news              = 5
     
     static let kSessionsStub           = "sessionsFeed"
-    static let kTeachersStub           = "teachersFeed"
     static let kSportsStub             = "sportsFeed"
     static let kSportsDescritpionsStub = "sportsDescriptionsFeed"
     static let kObjectivesStub         = "objectivesFeed"
     static let kNewsStub               = "newsFeed"
     
     static let kSessionsObject           = "sessions"
-    static let kTeachersObject           = "teachers"
     static let kSportsObject             = "sports"
     static let kSportsDescriptionsObject = "descriptions"
     static let kObjectivesObject         = "objectives"
@@ -36,7 +33,6 @@ struct ModelsConstants {
     static let kFrom           = "from"
     static let kDuration       = "duration"
     static let kLocation       = "location"
-    static let kTeacher_id     = "teacher_id"
     static let kAttendance     = "attendance"
     static let kName           = "name"
     static let kFirst_name     = "first_name"

@@ -40,8 +40,6 @@ class RealmManager: NSObject {
                     self.writeSportsDescriptionsInDB(result)
                 case ModelsConstants.stub_sessions:
                     self.writeSessionsInDB(result)
-                case ModelsConstants.stub_teachers:
-                    self.writeTeachersInDB(result)
                 case ModelsConstants.stub_objectives:
                     self.writeObjectivesInDB(result)
                 default:
@@ -59,9 +57,6 @@ class RealmManager: NSObject {
             case ModelsConstants.stub_sessions:
                 self.writeSessionsInDB(json)
                 //print(self.getAllSessions())
-            case ModelsConstants.stub_teachers:
-                self.writeTeachersInDB(json)
-                //print(self.getAllTeachers())
             case ModelsConstants.stub_sports:
                 self.writeSportsInDB(json)
                 completion(true)
@@ -88,17 +83,6 @@ class RealmManager: NSObject {
         for object in result {
             let newObject = self.generateSession(object.1)
             getSessionWithId(newObject.id, completion: { (new) -> Void in
-                if (new.count==0){
-                    self.writeData(newObject)
-                }
-            })
-        }
-    }
-    
-    func writeTeachersInDB(_ result: JSON) {
-        for object in result {
-            let newObject = self.generateTeacher(object.1)
-            getTeacherWithId(newObject.id, completion: { (new) -> Void in
                 if (new.count==0){
                     self.writeData(newObject)
                 }
@@ -161,11 +145,7 @@ class RealmManager: NSObject {
     func generateSession(_ dictionary: JSON) -> SessionModel {
         return SessionModel().setData(dictionary)
     }
-    
-    func generateTeacher(_ dictionary: JSON) -> TeacherModel {
-        return TeacherModel().setData(dictionary)
-    }
-    
+
     func generateSport(_ dictionary: JSON) -> SportModel {
         return SportModel().setData(dictionary)
     }
@@ -183,11 +163,7 @@ class RealmManager: NSObject {
     }
     
     // MARK: - Récupération d'objets
-    
-    func getAllTeachers() -> Results<(TeacherModel)> {
-        return realm.objects(TeacherModel.self)
-    }
-    
+
     func getAllSessions() -> Results<(SessionModel)> {
         return realm.objects(SessionModel.self)
     }
@@ -226,10 +202,6 @@ class RealmManager: NSObject {
         completion(realm.objects(SportModel.self).filter(ModelsConstants.kGetId, id))
     }
     
-    func getTeacherWithId(_ id: String, completion: (_ teacher: Results<(TeacherModel)>) -> Void) {
-        completion(realm.objects(TeacherModel.self).filter(ModelsConstants.kGetId, id))
-    }
-    
     func getSportDescriptionWithId(_ _id: String, completion: (_ description: Results<(SportDescriptionModel)>) -> Void) {
         completion(realm.objects(SportDescriptionModel.self).filter(ModelsConstants.kGetKey_sport, _id))
     }
@@ -262,8 +234,6 @@ class RealmManager: NSObject {
             
         case ModelsConstants.stub_sessions:
             completion(ModelsConstants.kSessionsStub, ModelsConstants.kSessionsObject);
-        case ModelsConstants.stub_teachers:
-            completion(ModelsConstants.kTeachersStub, ModelsConstants.kTeachersObject);
         case ModelsConstants.stub_sports:
             completion(ModelsConstants.kSportsStub, ModelsConstants.kSportsObject);
         case ModelsConstants.stub_sportsDescription:
