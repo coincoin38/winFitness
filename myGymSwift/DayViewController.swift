@@ -12,8 +12,6 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
 
     var sessionsArray: Array<SessionModel> = Array<SessionModel>()
     var selectedDay: String = String()
-    var selectedDate : Date = Date()
-    var timer = Timer()
 
     let cellIdentifier = "sessionIdentifier"
     let cellXib = "SessionTableViewCell"
@@ -28,6 +26,16 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         super.viewDidLoad()
         tableView?.register(UINib(nibName: cellXib, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         dateLabel?.text = selectedDay
+        
+        RealmManager.SharedInstance.isSessionWithDate(selectedDay) { (sessions) -> Void in
+            
+            if(sessions.count>0){
+                
+                for session in sessions {
+                    self.sessionsArray.append(session)
+                }
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,7 +57,7 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     func updateDataWithAnotherDay(_ newDate:Date,isNext:Bool){
         
-        RealmManager.SharedInstance.isSessionWithDate(newDate) { (sessions) -> Void in
+       /* RealmManager.SharedInstance.isSessionWithDate(newDate) { (sessions) -> Void in
             
             if(sessions.count>0){
                 
@@ -69,21 +77,16 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
                     }
                     self.selectedDay  = FormaterManager.SharedInstance.formatWeekDayAndDate(newDate)
                     self.dateLabel?.text = self.selectedDay
-                    self.selectedDate = newDate
                     self.animateTable()
                 }
             }
             else{
                 if(!self.timer.isValid){
-                    /*self.timer = NSTimer.scheduledTimerWithTimeInterval(JLToastDelay.ShortDelay+1.0, target: self, selector: #selector(DayViewController.countUp), userInfo: nil, repeats: false)
-                    JLToast.makeText(NSLocalizedString("NOTHING", comment:"")+"\n"+FormaterManager.SharedInstance.formatWeekDayAndDate(newDate), duration: JLToastDelay.ShortDelay).show()*/
+                    self.timer = NSTimer.scheduledTimerWithTimeInterval(JLToastDelay.ShortDelay+1.0, target: self, selector: #selector(DayViewController.countUp), userInfo: nil, repeats: false)
+                    JLToast.makeText(NSLocalizedString("NOTHING", comment:"")+"\n"+FormaterManager.SharedInstance.formatWeekDayAndDate(newDate), duration: JLToastDelay.ShortDelay).show()
                 }
             }
-        }
-    }
-    
-    func countUp() {
-        timer.invalidate()
+        }*/
     }
     
     func animateTable() {

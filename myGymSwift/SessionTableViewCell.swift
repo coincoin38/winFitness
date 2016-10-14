@@ -34,12 +34,7 @@ class SessionTableViewCell: UITableViewCell {
                 self.sessionLabel?.text      = sport[0].name
             }
         }
-        RealmManager.SharedInstance.getTeacherWithId(session.teacher_id) { (teacher) -> Void in
-            if(teacher.count>0){
-                self.coachLabel?.text        = teacher[0].name + " " + teacher[0].first_name
-            }
-        }
-        
+
         fromLabel?.text         = session.from
         durationLabel?.text     = session.duration+NSLocalizedString("MINUTES_SHORT", comment:"")
 

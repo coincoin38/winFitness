@@ -20,6 +20,7 @@
 "LOADING_NEW" = "Chargement de l'actualité";
 "CATCH_PHRASE" ="L'excellence de la forme à prix mini";
 "NEWS_TITLE" = "News du %@";
+"WARNING_PLANING" = "Le planing peut faire l'objet de modifications afin d'améliorer le service.";
 
 //ALERTS
 "FB_INSTALLATION" = "Souhaitez-vous installer l'application Facebook ?";

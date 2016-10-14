@@ -214,8 +214,8 @@ class RealmManager: NSObject {
     
     // MARK : - Recherches
     
-    func isSessionWithDate(_ date: Date, completion: (_ sessions: Results<(SessionModel)>) -> Void) {
-        completion(realm.objects(SessionModel.self).filter(ModelsConstants.kGetDay, date))
+    func isSessionWithDate(_ day: String, completion: (_ sessions: Results<(SessionModel)>) -> Void) {
+        completion(realm.objects(SessionModel.self).filter(ModelsConstants.kGetDay, day))
     }
     
     func getSessionWithId(_ id: String, completion: (_ session: Results<(SessionModel)>) -> Void) {

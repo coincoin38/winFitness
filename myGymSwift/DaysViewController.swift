@@ -8,11 +8,12 @@
 
 import UIKit
 
-class DaysViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DaysViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DayTableViewCellProtocol {
 
-    var daysArray: [String] = ["LUNDI","MARDI","MERCREDI","JEUDI","VENDREDI","SAMEDI"]
+    var daysArray: [String] = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"]
     @IBOutlet weak var tableView: UITableView?
-    
+    @IBOutlet weak var warningLabel: UILabel?
+
     let kShowDetailDay = "showDetailDay"
     let cellIdentifier = "dayIdentifier"
     let cellXib = "DayTableViewCell"
@@ -27,7 +28,8 @@ class DaysViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         tableView?.register(UINib(nibName: cellXib, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         tableView?.tableFooterView = UIView(frame: .zero)
-        cellSize = (view.frame.size.height-UIApplication.shared.statusBarFrame.size.height-(self.tabBarController?.tabBar.frame.height)!)/CGFloat(daysArray.count)
+        cellSize = (view.frame.size.height-UIApplication.shared.statusBarFrame.size.height-(self.tabBarController?.tabBar.frame.height)!-50)/CGFloat(daysArray.count)
+        warningLabel?.text = NSLocalizedString("WARNING_PLANING", comment:"")
         animateTable()
     }
     
@@ -62,7 +64,6 @@ class DaysViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             let svc = segue.destination as! DayViewController
             svc.selectedDay   = selectedDay
-            svc.selectedDate  = selectedDate
         }
     }
     
@@ -76,6 +77,7 @@ class DaysViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! DayTableViewCell
         cell.setData(dayOfTheWeek: daysArray[(indexPath as NSIndexPath).row], index: (indexPath as NSIndexPath).row)
+        cell.delegate = self
         return cell
     }
     
@@ -86,6 +88,18 @@ class DaysViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
         return cellSize
+    }
+    
+    func didTouchRPM(day: String)
+    {
+        selectedDay = day
+        self.performSegue(withIdentifier: kShowDetailDay, sender: self)
+    }
+    
+    func didTouchLESMILLS(day: String)
+    {
+        selectedDay = day
+        self.performSegue(withIdentifier: kShowDetailDay, sender: self)
     }
     
     // MARK: - Memory

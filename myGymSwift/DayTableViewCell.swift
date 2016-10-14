@@ -8,8 +8,17 @@
 
 import UIKit
 
-class DayTableViewCell: UITableViewCell {
+protocol DayTableViewCellProtocol {
+    func didTouchRPM(day: String)
+    func didTouchLESMILLS(day: String)
+}
 
+class DayTableViewCell: UITableViewCell {
+    
+    var delegate: DayTableViewCellProtocol?
+    
+    let kShowDetailDay = "showDetailDay"
+    
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var RPMImageView: UIImageView!
     @IBOutlet weak var LESMILLSImageView: UIImageView!
@@ -27,16 +36,15 @@ class DayTableViewCell: UITableViewCell {
     }
 
     func openRPM(){
-        print("open RPM")
+        delegate?.didTouchRPM(day: (dayLabel?.text)!)
     }
     
     func openLESMILLS(){
-        print("open LESMILLS")
+        delegate?.didTouchLESMILLS(day: (dayLabel?.text)!)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
     }
     
     func setData(dayOfTheWeek: String, index: Int)
@@ -48,11 +56,11 @@ class DayTableViewCell: UITableViewCell {
         
         if (currentDay == trueIndex)
         {
-            dayLabel?.textColor = UIColor.black
+            dayLabel?.textColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor)
         }
         else if(currentDay > trueIndex)
         {
-            dayLabel?.textColor = UIColor.darkGray
+            dayLabel?.textColor = UIColor.lightGray
         }
     }
 }

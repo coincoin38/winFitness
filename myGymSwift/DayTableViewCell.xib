@@ -15,15 +15,15 @@
                 <frame key="frameInset" width="320" height="69"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jop-Zb-JRS" userLabel="Day view">
+                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jop-Zb-JRS" userLabel="Day view">
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Lo-Ic-nLf">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.9137254901960784" green="0.56862745098039214" blue="0.23137254901960785" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8Lo-Ic-nLf" firstAttribute="centerY" secondItem="jop-Zb-JRS" secondAttribute="centerY" id="DDX-da-DpW"/>
                             <constraint firstItem="8Lo-Ic-nLf" firstAttribute="centerX" secondItem="jop-Zb-JRS" secondAttribute="centerX" id="Y7U-2m-lht"/>
