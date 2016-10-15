@@ -32,8 +32,6 @@ class SportDetailsViewController: UIViewController,UIGestureRecognizerDelegate,U
             }
         })
         
-        sportDescriptionTextView.textAlignment = .justified
-        sportDescriptionTextView.font = UIFont.systemFont(ofSize: 14, weight: 0)
         objectivesCollectionView?.register(UINib(nibName: "ObjectiveCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
     }
     
