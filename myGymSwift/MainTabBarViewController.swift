@@ -32,10 +32,10 @@ class MainTabBarViewController: UITabBarController {
         thirdTabBarItem.image  = UIImage(named: ImagesConstants.tabBarDefaultImage2)
         fourthTabBarItem.image  = UIImage(named: ImagesConstants.tabBarDefaultImage3)
 
-        firstTabBarItem.setTitleTextAttributes([NSFontAttributeName:UIFont.systemFontOfSize(13, weight: 2)], forState: .Normal)
-        secondTabBarItem.setTitleTextAttributes([NSFontAttributeName:UIFont.systemFontOfSize(13, weight: 2)], forState: .Normal)
-        thirdTabBarItem.setTitleTextAttributes([NSFontAttributeName:UIFont.systemFontOfSize(13, weight: 2)], forState: .Normal)
-        fourthTabBarItem.setTitleTextAttributes([NSFontAttributeName:UIFont.systemFontOfSize(13, weight: 2)], forState: .Normal)
+        firstTabBarItem.setTitleTextAttributes([NSFontAttributeName:UIFont.systemFont(ofSize: 13, weight: 2)], for: UIControlState())
+        secondTabBarItem.setTitleTextAttributes([NSFontAttributeName:UIFont.systemFont(ofSize: 13, weight: 2)], for: UIControlState())
+        thirdTabBarItem.setTitleTextAttributes([NSFontAttributeName:UIFont.systemFont(ofSize: 13, weight: 2)], for: UIControlState())
+        fourthTabBarItem.setTitleTextAttributes([NSFontAttributeName:UIFont.systemFont(ofSize: 13, weight: 2)], for: UIControlState())
 
     }
 

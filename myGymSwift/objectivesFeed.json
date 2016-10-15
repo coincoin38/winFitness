@@ -5,136 +5,136 @@
                    "id": "1",
                    "firstPart": "Increase",
                    "secondPart": "CORE STRENGTH",
-                   "sport_id": "569e3e9b521460e108c92458"
+                   "sport_id": "1"
                    }, {
                    "id": "2",
                    "firstPart": "Tone",
                    "secondPart": "ABS, BUTT & LEGS",
-                   "sport_id": "569e3e9b521460e108c92458"
+                   "sport_id": "1"
                    }, {
                    "id": "3",
                    "firstPart": "Improve",
                    "secondPart": "POSTURE",
-                   "sport_id": "569e3e9b521460e108c92458"
+                   "sport_id": "1"
                    }, {
                    "id": "4",
                    "firstPart": "Feel",
                    "secondPart": "UPLIFTED",
-                   "sport_id": "569e3ecb521460e108c92459"
+                   "sport_id": "2"
                    }, {
                    "id": "5",
                    "firstPart": "Tone",
                    "secondPart": "GLUTES & LEGS",
-                   "sport_id": "569e3ecb521460e108c92459"
+                   "sport_id": "2"
                    }, {
                    "id": "6",
                    "firstPart": "Build",
                    "secondPart": "STAMINA",
-                   "sport_id": "569e3ecb521460e108c92459"
+                   "sport_id": "2"
                    }, {
                    "id": "7",
                    "firstPart": "Improve",
                    "secondPart": "FITNESS",
-                   "sport_id": "569e3ecb521460e108c9245a"
+                   "sport_id": "3"
                    }, {
                    "id": "8",
                    "firstPart": "Feel the",
                    "secondPart": "ENERGY",
-                   "sport_id": "569e3ecb521460e108c9245a"
+                   "sport_id": "3"
                    }, {
                    "id": "9",
                    "firstPart": "Maximize",
                    "secondPart": "CARDIO STAMINA",
-                   "sport_id": "569e3ecb521460e108c9245a"
+                   "sport_id": "3"
                    }, {
                    "id": "10",
                    "firstPart": "Improve",
                    "secondPart": "FLEXIBILITY",
-                   "sport_id": "569e3ecb521460e108c9245b"
+                   "sport_id": "4"
                    }, {
                    "id": "11",
                    "firstPart": "Feel",
                    "secondPart": "SERENE & RELAXED",
-                   "sport_id": "569e3ecb521460e108c9245b"
+                   "sport_id": "4"
                    }, {
                    "id": "12",
                    "firstPart": "Build",
                    "secondPart": "STRENGTH",
-                   "sport_id": "569e3ecb521460e108c9245b"
+                   "sport_id": "4"
                    }, {
                    "id": "13",
                    "firstPart": "Learn",
                    "secondPart": "PUNCH & KICK",
-                   "sport_id": "569e3ecb521460e108c9245c"
+                   "sport_id": "5"
                    }, {
                    "id": "14",
                    "firstPart": "Feel",
                    "secondPart": "EMPOWERED",
-                   "sport_id": "569e3ecb521460e108c9245c"
+                   "sport_id": "5"
                    }, {
                    "id": "15",
                    "firstPart": "Fuel",
                    "secondPart": "CARDIO FITNESS",
-                   "sport_id": "569e3ecb521460e108c9245c"
+                   "sport_id": "5"
                    }, {
                    "id": "16",
                    "firstPart": "Build",
                    "secondPart": "STRENGTH",
-                   "sport_id": "569e3ecb521460e108c9245d"
+                   "sport_id": "6"
                    }, {
                    "id": "17",
                    "firstPart": "Get",
                    "secondPart": "LEAN & TONED",
-                   "sport_id": "569e3ecb521460e108c9245d"
+                   "sport_id": "6"
                    }, {
                    "id": "18",
                    "firstPart": "Work",
                    "secondPart": "ALL MAJOR MUSCLES",
-                   "sport_id": "569e3ecb521460e108c9245d"
+                   "sport_id": "6"
                    }, {
                    "id": "19",
                    "firstPart": "Increase",
                    "secondPart": "ENERGY",
-                   "sport_id": "569e3ecb521460e108c9245e"
+                   "sport_id": "7"
                    }, {
                    "id": "20",
                    "firstPart": "Get",
                    "secondPart": "LEAN & TONED",
-                   "sport_id": "569e3ecb521460e108c9245e"
+                   "sport_id": "7"
                    }, {
                    "id": "21",
                    "firstPart": "Maximize",
                    "secondPart": "CARDIO STAMINA",
-                   "sport_id": "569e3ecb521460e108c9245e"
+                   "sport_id": "7"
                    }, {
                    "id": "22",
                    "firstPart": "Build",
                    "secondPart": "AEROBIC FITNESS",
-                   "sport_id": "569e3ecb521460e108c9245f"
+                   "sport_id": "8"
                    }, {
                    "id": "23",
                    "firstPart": "Get",
                    "secondPart": "LEAN",
-                   "sport_id": "569e3ecb521460e108c9245f"
+                   "sport_id": "8"
                    }, {
                    "id": "24",
                    "firstPart": "Burn",
                    "secondPart": "CALORIES",
-                   "sport_id": "569e3ecb521460e108c9245f"
+                   "sport_id": "8"
                    }, {
                    "id": "25",
                    "firstPart": "Improve",
                    "secondPart": "FITNESS",
-                   "sport_id": "569e3ecb521460e108c92460"
+                   "sport_id": "9"
                    }, {
                    "id": "26",
                    "firstPart": "Feel the",
                    "secondPart": "ENERGY",
-                   "sport_id": "569e3ecb521460e108c92460"
+                   "sport_id": "9"
                    }, {
                    "id": "27",
                    "firstPart": "Maximize",
                    "secondPart": "CARDIO STAMINA",
-                   "sport_id": "569e3ecb521460e108c92460"
+                   "sport_id": "9"
                    }]
 }

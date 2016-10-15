@@ -1,27 +1,41 @@
 PODS:
-  - Alamofire (3.1.5)
-  - FSCalendar (1.7.2)
-  - JLToast (1.3.5)
-  - Realm (0.97.0):
-    - Realm/Headers (= 0.97.0)
-  - Realm/Headers (0.97.0)
-  - RealmSwift (0.97.0):
-    - Realm (= 0.97.0)
-  - SwiftyJSON (2.3.2)
+  - Alamofire (4.0.1)
+  - AlamofireImage (3.1.0):
+    - Alamofire (~> 4.0)
+  - APESuperHUD (1.1.2)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - FBSDKCoreKit (4.16.0):
+    - Bolts (~> 1.7)
+  - Realm (2.0.2):
+    - Realm/Headers (= 2.0.2)
+  - Realm/Headers (2.0.2)
+  - RealmSwift (2.0.2):
+    - Realm (= 2.0.2)
+  - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.1)
-  - FSCalendar (~> 1.7)
-  - JLToast (~> 1.3)
-  - RealmSwift (~> 0.96)
-  - SwiftyJSON (~> 2.3)
+  - Alamofire (~> 4.0)
+  - AlamofireImage
+  - APESuperHUD (~> 1.1)
+  - FBSDKCoreKit
+  - RealmSwift
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
-  FSCalendar: 38f5b3de1aeaa7dc03a3e997bdc6fb3ff3a88b8d
-  JLToast: 08024c173a36e4d747607593d59cc17f3c3b09f1
-  Realm: b498a6fb9d288b171ff98d0e2d4384c295be8990
-  RealmSwift: d014810dec75c9a3f1a33926d2dabfed855c582c
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  AlamofireImage: bb8c8351c51cb1633bb6be69b6dbbaff37ce65b7
+  APESuperHUD: 9c7ea17cea21b4a9212f1c43810b0c8b9ee585a6
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FBSDKCoreKit: 7a6baaed4a2b2a244ba253346713bdbc74df135b
+  Realm: 0f5a194af0b7e6158b83db41b4ee1a00be7ddf1a
+  RealmSwift: 0eb5070d851cba7c66e841ca756d83609dc78bc8
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: ab4a77ec0461a0ec68b3badd0f06b91edf1dad9f
+
+COCOAPODS: 1.0.1

@@ -21,12 +21,12 @@ class SessionTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }
     
-    func setData(session: SessionModel) {
+    func setData(_ session: SessionModel) {
         
         RealmManager.SharedInstance.getSportWithId(session.sport_id) { (sport) -> Void in
             if(sport.count>0){
@@ -34,12 +34,7 @@ class SessionTableViewCell: UITableViewCell {
                 self.sessionLabel?.text      = sport[0].name
             }
         }
-        RealmManager.SharedInstance.getTeacherWithId(session.teacher_id) { (teacher) -> Void in
-            if(teacher.count>0){
-                self.coachLabel?.text        = teacher[0].name + " " + teacher[0].first_name
-            }
-        }
-        
+
         fromLabel?.text         = session.from
         durationLabel?.text     = session.duration+NSLocalizedString("MINUTES_SHORT", comment:"")
 

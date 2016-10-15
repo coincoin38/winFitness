@@ -1,9 +1,19 @@
-platform :ios, '8.3'
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '3.0'
+    end
+  end
+end
 
-link_with 'myGymSwift'
+platform :ios, '9.3'
+
+target 'myGymSwift' do
 use_frameworks!
-pod 'RealmSwift', '~> 0.96'
-pod 'FSCalendar', '~> 1.7'
-pod 'SwiftyJSON', '~> 2.3'
-pod 'JLToast', '~> 1.3'
-pod 'Alamofire', '~> 3.1'
+pod 'RealmSwift'
+pod 'SwiftyJSON'
+pod 'FBSDKCoreKit'
+pod 'AlamofireImage'
+pod 'Alamofire', '~> 4.0'
+pod 'APESuperHUD', '~> 1.1'
+end

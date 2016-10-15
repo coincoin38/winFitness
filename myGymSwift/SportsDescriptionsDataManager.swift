@@ -10,46 +10,32 @@ import SwiftyJSON
 
 class SportsDescriptionsDataManager: NSObject {
     
-    func getSportsDescriptions(completion: (isOk:Bool) -> Void){
+    func getSportsDescriptions(_ completion: @escaping (_ isOk:Bool) -> Void){
         
-        // Récupération du token
-        AlamofireManager.SharedInstance.getToken { (isTokenOK) -> Void in
-            
-            if isTokenOK{
-                
-                AlamofireManager.SharedInstance.downloadSportsDescriptions({ (sportsDescriptions) -> Void in
-                    self.feedDBWithDownloadedSportsDescriptions(sportsDescriptions, completion: { (isOk) -> Void in
-                        completion(isOk: isOk)
-                    })
-                })
-            }
-            else{
-                self.getSportsDescriptionsfromDB({ (isOk) -> Void in
-                    completion(isOk: isOk)
-                })
-            }
-        }
+        self.getSportsDescriptionsfromDB({ (isOk) -> Void in
+            completion(isOk)
+        })
     }
     
-    func feedDBWithDownloadedSportsDescriptions(sports: JSON,completion: (isOk:Bool) -> Void){
+    func feedDBWithDownloadedSportsDescriptions(_ sports: JSON,completion: @escaping (_ isOk:Bool) -> Void){
         
         RealmManager.SharedInstance.writeDataFromWS(3, json: sports, completion: { (isOk) -> Void in
             
             if isOk{
                 self.getSportsDescriptionsfromDB({ (isOk) -> Void in
-                    completion(isOk: isOk)
+                    completion(isOk)
                 })
             }
         })
     }
     
-    func getSportsDescriptionsfromDB(completion: (isOk:Bool) -> Void){
+    func getSportsDescriptionsfromDB(_ completion: (_ isOk:Bool) -> Void){
         
         let arrayOfDescriptions = RealmManager.SharedInstance.getAllSportsDescriptions()
         
         if arrayOfDescriptions.count>0{
-            completion(isOk: true)
+            completion(true)
         }
-        completion(isOk: false)
+        completion(false)
     }
 }

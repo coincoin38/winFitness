@@ -11,5 +11,20 @@
 "NOTHING" = "Aucune séance de prévue";
 "OK" = "OK";
 "CLOSE" = "Fermer";
+"NO" = "Non";
+"YES" = "Oui";
 "MINUTES_SHORT" = "min";
 "PULL_TO_REFRESH" = "Relâcher pour rafraîchir";
+"FACEBOOK" = "Facebook";
+"LOADING_NEWS" = "Chargement des dernières actualités";
+"LOADING_NEW" = "Chargement de l'actualité";
+"CATCH_PHRASE" ="L'excellence de la forme à prix mini";
+"NEWS_TITLE" = "News du %@";
+"WARNING_PLANING" = "Le planing peut faire l'objet de modifications afin d'améliorer le service.";
+
+//ALERTS
+"FB_INSTALLATION" = "Souhaitez-vous installer l'application Facebook ?";
+
+
+//ERRORS
+"ERROR_TOKEN" = "Erreur lors de la récupération du Token";

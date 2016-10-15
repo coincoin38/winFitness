@@ -11,11 +11,12 @@ import UIKit
 class SportDetailsViewController: UIViewController,UIGestureRecognizerDelegate,UIWebViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
 
     var sport: SportModel = SportModel()
+    var loaded : Bool = true
     @IBOutlet weak var sportDescriptionTextView: UITextView!
     @IBOutlet weak var objectivesCollectionView: UICollectionView?
-    private let reuseIdentifier = "ObjectiveIdentifier"
+    fileprivate let reuseIdentifier = "ObjectiveIdentifier"
     var objectivesArray: Array<ObjectiveModel> = Array<ObjectiveModel>()
-
+    let navBar = NavBarManager()
 
     // MARK: - Init
 
@@ -31,51 +32,44 @@ class SportDetailsViewController: UIViewController,UIGestureRecognizerDelegate,U
             }
         })
         
-        sportDescriptionTextView.textAlignment = .Justified
-        sportDescriptionTextView.font = UIFont.systemFontOfSize(14, weight: 0)
-        objectivesCollectionView?.registerNib(UINib(nibName: "ObjectiveCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        sportDescriptionTextView.textAlignment = .justified
+        sportDescriptionTextView.font = UIFont.systemFont(ofSize: 14, weight: 0)
+        objectivesCollectionView?.register(UINib(nibName: "ObjectiveCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
     }
     
-    override func viewWillAppear(animated: Bool) {
-        navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: true)
+    override func viewWillAppear(_ animated: Bool) {
+        
+        navigationController?.setNavigationBarHidden(false, animated: loaded)
         configureStyleNavBar()
+        if loaded {
+            loaded = false
+        }
+        
     }
     
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: true)
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.Default
-       // NavBarManager.SharedInstance.resetNavBar(navigationController!)
+        navigationController?.setNavigationBarHidden(navigationController?.isNavigationBarHidden == false, animated: true)
+        UIApplication.shared.statusBarStyle = .default
     }
 
     func configureStyleNavBar(){
         
         //NavBar
         title = sport.name
-        NavBarManager.SharedInstance.configureNavBarWithColors(navigationController!, backgroundColor: FormaterManager.SharedInstance.uicolorFromHexa(sport.color), textColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor))
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
-        
-        //Back button
-        let newBackButton = UIBarButtonItem(title: NSLocalizedString("BACK", comment:""), style: UIBarButtonItemStyle.Done, target: self, action: "back:")
-        newBackButton.setTitleTextAttributes([NSForegroundColorAttributeName: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor),NSFontAttributeName:UIFont.systemFontOfSize(15, weight: 0)], forState: UIControlState.Normal)
-
-        self.navigationItem.leftBarButtonItem = newBackButton;
-        
-        
-        //StatusBar
-        UIApplication.sharedApplication().statusBarStyle = .LightContent
-    }
+        navBar.configureNavBarWithColors(navigationController!, backgroundColor: FormaterManager.SharedInstance.uicolorFromHexa(sport.color), textColor: FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.navBarTextAlternColor))
+        }
     
     // MARK: - Actions
     
-    func back(sender: UIBarButtonItem) {
-        navigationController?.popViewControllerAnimated(true)
+    func back(_ sender: UIBarButtonItem) {
+        let _ = navigationController?.popViewController(animated: true)
     }
     
-    func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         if(navigationController!.viewControllers.count > 1){
-            navigationController?.popViewControllerAnimated(true)
+            let _ = navigationController?.popViewController(animated: true)
             return true
         }
         return false
@@ -83,22 +77,22 @@ class SportDetailsViewController: UIViewController,UIGestureRecognizerDelegate,U
     
     // MARK: - Collection delegate
 
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize
     {
         return CGSize(width: collectionView.frame.size.width/3, height: collectionView.frame.height)
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return objectivesArray.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ObjectiveCollectionViewCell
-        cell.setData(objectivesArray[indexPath.row], sport: sport)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ObjectiveCollectionViewCell
+        cell.setData(objectivesArray[(indexPath as NSIndexPath).row], sport: sport)
 
         return cell
     }

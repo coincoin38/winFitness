@@ -11,7 +11,7 @@ import UIKit
 class SportsViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
     var sportsArray: Array<SportModel> = Array<SportModel>()
-    private let reuseIdentifier = "SportIdentifier"
+    fileprivate let reuseIdentifier = "SportIdentifier"
     let kShowDetailSport = "showDetailSport"
     @IBOutlet weak var sportsCollectionView: UICollectionView?
     var sport: SportModel = SportModel()
@@ -29,8 +29,8 @@ class SportsViewController: UIViewController,UICollectionViewDelegate,UICollecti
     
     func setIHM(){
         
-        navigationController?.setNavigationBarHidden(navigationController?.navigationBarHidden == false, animated: true)
-        sportsCollectionView?.registerNib(UINib(nibName: "SportCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        navigationController?.setNavigationBarHidden(navigationController?.isNavigationBarHidden == false, animated: true)
+        sportsCollectionView?.register(UINib(nibName: "SportCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
     }
 
     func getSports(){
@@ -53,40 +53,41 @@ class SportsViewController: UIViewController,UICollectionViewDelegate,UICollecti
     
     // MARK: - Collection delegate
 
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
         return CGSize(width: collectionView.frame.size.width/2, height: collectionView.frame.size.width/2)
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sportsArray.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! SportCollectionViewCell
-        cell.setData(sportsArray[indexPath.row])
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SportCollectionViewCell
+        cell.setData(sportsArray[(indexPath as NSIndexPath).row])
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        self.sport = self.sportsArray[indexPath.row]
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        navigationItem.title = ""
+        self.sport = self.sportsArray[(indexPath as NSIndexPath).row]
         self.sportsDataManager.getObjectivesFromDB(self.sport, completion: { (objectives) -> Void in
             self.objectivesArray = objectives
         })
-        self.performSegueWithIdentifier(self.kShowDetailSport, sender: self)
+        self.performSegue(withIdentifier: self.kShowDetailSport, sender: self)
     }
     
     // MARK: - Navigation
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if(segue.identifier == kShowDetailSport) {
-            let sdvc = segue.destinationViewController as! SportDetailsViewController
+            let sdvc = segue.destination as! SportDetailsViewController
             sdvc.sport = sport
             sdvc.objectivesArray = objectivesArray
         }

@@ -20,7 +20,7 @@ class SportCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func setData(sport: SportModel) {
+    func setData(_ sport: SportModel) {
 
         titleLabel?.text           = sport.name
         footerView.backgroundColor = FormaterManager.SharedInstance.uicolorFromHexa(sport.color)
@@ -29,19 +29,19 @@ class SportCollectionViewCell: UICollectionViewCell {
         voileView.backgroundColor  = FormaterManager.SharedInstance.uicolorFromHexa(sport.color)
     }
     
-    override var highlighted: Bool {
+    override var isHighlighted: Bool {
         get {
-            return super.highlighted
+            return super.isHighlighted
         }
         set {
             if newValue {
-                super.highlighted = true
-                UIView.animateWithDuration(0.25, animations: {
+                super.isHighlighted = true
+                UIView.animate(withDuration: 0.25, animations: {
                     self.voileView.alpha = 0.75
                 })
             } else if newValue == false {
-                super.highlighted = false
-                UIView.animateWithDuration(0.25, animations: {
+                super.isHighlighted = false
+                UIView.animate(withDuration: 0.25, animations: {
                     self.voileView.alpha = 0.0
                 })
             }

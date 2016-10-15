@@ -19,7 +19,7 @@ class ObjectiveCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
-    func setData(objective: ObjectiveModel, sport:SportModel) {
+    func setData(_ objective: ObjectiveModel, sport:SportModel) {
         firstPartLabel?.text      = objective.firstPart
         secondePartLabel?.text    = objective.secondPart
         colorView.backgroundColor = FormaterManager.SharedInstance.uicolorFromHexa(sport.color)

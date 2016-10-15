@@ -12,9 +12,9 @@ class FormaterManager: NSObject {
 
     static let SharedInstance = FormaterManager()
     let yyyyMMdd = "yyyy-MM-dd"
-    let formatServerDate = "yyyy-MM-dd'T'HH:mm:ss'.'SSSZ"
+    let formatServerDate = "yyyy-MM-dd'T'HH:mm:ss'+'0000"
     let EEEE_dd = "EEEE dd"
-    let dd_MM = "dd/MM"
+    let dd_MM = "dd MMMM, HH:mm"
 
     let MMM = "MMM"
 
@@ -22,80 +22,53 @@ class FormaterManager: NSObject {
     let diez    = "#"
 
     // MARK: - Dates
-
-    func formatyyyMMddFromString(dateString: String) -> NSDate {
-
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = yyyyMMdd
-        //formatter.timeZone = NSTimeZone(abbreviation: "UTC")
-
-        let dateFromString: NSDate = formatter.dateFromString(dateString)!
-        
-        return dateFromString
-    }
     
-    func formatServerDateFromString(dateString: String) -> NSDate {
+    func formatServerDateFromString(_ dateString: String) -> Date {
         
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = formatServerDate
         //formatter.timeZone = NSTimeZone(abbreviation: "UTC")
         
-        let dateFromString: NSDate = formatter.dateFromString(dateString)!
+        let dateFromString: Date = formatter.date(from: dateString)!
         
         return dateFromString
     }
     
-    func formatMMddFromDate(dateDate: NSDate) -> String {
+    func formatMMddFromDate(_ dateDate: Date) -> String {
 
         //format date
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dd_MM
-        dateFormatter.locale = NSLocale.init(localeIdentifier: fr_BI)
+        dateFormatter.locale = Locale.init(identifier: fr_BI)
 
-        let stringFromDate = dateFormatter.stringFromDate(dateDate)
+        let stringFromDate = dateFormatter.string(from: dateDate)
         
         return stringFromDate
     }
     
-    func formatWeekDayAndDate(aDate: NSDate) -> String {
+    func formatWeekDayAndDate(_ aDate: Date) -> String {
         
-        let dateFormatter = NSDateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = EEEE_dd
-        dateFormatter.locale = NSLocale.init(localeIdentifier: fr_BI)
-        let newDay =  dateFormatter.stringFromDate(aDate).capitalizedString
+        dateFormatter.locale = Locale.init(identifier: fr_BI)
+        let newDay =  dateFormatter.string(from: aDate).capitalized
         
         return newDay
-    }
-
-    
-    func isSameDayWithDate1(date1: NSDate, date2: NSDate) -> Bool {
-        
-        let cal = NSCalendar.currentCalendar()
-        var components = cal.components([.Era, .Year, .Month, .Day], fromDate: date1)
-        let today = cal.dateFromComponents(components)!
-        
-        components = cal.components([.Era, .Year, .Month, .Day], fromDate:date2);
-        let otherDate = cal.dateFromComponents(components)!
-        
-        if(today.isEqualToDate(otherDate)) {
-            return true
-        }
-        return false
     }
     
     // MARK: - Colors
 
-    func uicolorFromHexa(hexString:String) -> UIColor {
+    func uicolorFromHexa(_ hexString:String) -> UIColor {
         
-        let hexString:String = hexString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-        let scanner = NSScanner(string: hexString)
+        let hexString:String = hexString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let scanner = Scanner(string: hexString)
         
         if (hexString.hasPrefix(diez)) {
             scanner.scanLocation = 1
         }
         
         var color:UInt32 = 0
-        scanner.scanHexInt(&color)
+        scanner.scanHexInt32(&color)
         
         let mask = 0x000000FF
         let r = Int(color >> 16) & mask
@@ -107,5 +80,13 @@ class FormaterManager: NSObject {
         let blue  = CGFloat(b) / 255.0
         
         return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+    }
+    
+    func getDayOfWeek()->Int? {
+        
+        let date = Date()
+        let calendar = Calendar.current
+        
+        return calendar.component(.weekday, from: date)
     }
 }
