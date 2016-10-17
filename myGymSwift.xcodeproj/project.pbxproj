@@ -50,6 +50,7 @@
 		387B1ABA1C2990CA004FAA16 /* ObjectiveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387B1AB81C2990CA004FAA16 /* ObjectiveCollectionViewCell.xib */; };
 		388F7DA71D8AE53F00AC0B39 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F7DA61D8AE53F00AC0B39 /* NetworkConstants.swift */; };
 		388F7DA91D8AE6CC00AC0B39 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F7DA81D8AE6CC00AC0B39 /* StorageManager.swift */; };
+		389649BE1DB4BD4000923C9D /* SeguesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389649BD1DB4BD4000923C9D /* SeguesConstants.swift */; };
 		38985AEC1DA7A5B900F4E375 /* AlertViewControllerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985AEB1DA7A5B900F4E375 /* AlertViewControllerUtil.swift */; };
 		38D3C0A01DA7F0FE006BBA23 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D3C09F1DA7F0FE006BBA23 /* RootViewController.swift */; };
 		38F943BA1C3FA05200643571 /* ModelsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F943B91C3FA05200643571 /* ModelsConstants.swift */; };
@@ -105,6 +106,7 @@
 		387B1AB81C2990CA004FAA16 /* ObjectiveCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ObjectiveCollectionViewCell.xib; sourceTree = "<group>"; };
 		388F7DA61D8AE53F00AC0B39 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		388F7DA81D8AE6CC00AC0B39 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		389649BD1DB4BD4000923C9D /* SeguesConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeguesConstants.swift; sourceTree = "<group>"; };
 		38985AEB1DA7A5B900F4E375 /* AlertViewControllerUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewControllerUtil.swift; sourceTree = "<group>"; };
 		38D3C09F1DA7F0FE006BBA23 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		38F943B91C3FA05200643571 /* ModelsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelsConstants.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				13CE08C91C2ABFB6009BC5E9 /* ImagesConstants.swift */,
 				13CE08CB1C2AC209009BC5E9 /* ColorsConstants.swift */,
 				38F943B91C3FA05200643571 /* ModelsConstants.swift */,
+				389649BD1DB4BD4000923C9D /* SeguesConstants.swift */,
 			);
 			name = Constans;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				38210E711C2431210001A4CE /* SportsViewController.swift in Sources */,
 				387666031C28383600DE8A62 /* SportDetailsViewController.swift in Sources */,
 				13616EB31C2C25B700DC459A /* ObjectiveModel.swift in Sources */,
+				389649BE1DB4BD4000923C9D /* SeguesConstants.swift in Sources */,
 				13CF0E0F1C09ECC100715454 /* AppDelegate.swift in Sources */,
 				13CE08CC1C2AC209009BC5E9 /* ColorsConstants.swift in Sources */,
 				38210E6F1C24177B0001A4CE /* MainTabBarViewController.swift in Sources */,

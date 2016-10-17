@@ -10,8 +10,6 @@ import APESuperHUD
 
 class HomeViewController: RootViewController, AlertViewControllerUtilProtocol {
 
-    let kShowNews = "showNews"
-
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -42,6 +40,6 @@ class HomeViewController: RootViewController, AlertViewControllerUtilProtocol {
     
     func showNews()
     {
-        self.performSegue(withIdentifier: kShowNews, sender: self)
+        self.performSegue(withIdentifier: SeguesConstants.kShowNews, sender: self)
     }
 }

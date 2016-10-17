@@ -12,7 +12,6 @@ class SportsViewController: UIViewController,UICollectionViewDelegate,UICollecti
 
     var sportsArray: Array<SportModel> = Array<SportModel>()
     fileprivate let reuseIdentifier = "SportIdentifier"
-    let kShowDetailSport = "showDetailSport"
     @IBOutlet weak var sportsCollectionView: UICollectionView?
     var sport: SportModel = SportModel()
     var objectivesArray: Array<ObjectiveModel> = Array<ObjectiveModel>()
@@ -78,7 +77,7 @@ class SportsViewController: UIViewController,UICollectionViewDelegate,UICollecti
         self.sportsDataManager.getObjectivesFromDB(self.sport, completion: { (objectives) -> Void in
             self.objectivesArray = objectives
         })
-        self.performSegue(withIdentifier: self.kShowDetailSport, sender: self)
+        self.performSegue(withIdentifier: SeguesConstants.kShowDetailSport, sender: self)
     }
     
     // MARK: - Navigation
@@ -86,7 +85,7 @@ class SportsViewController: UIViewController,UICollectionViewDelegate,UICollecti
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if(segue.identifier == kShowDetailSport) {
+        if(segue.identifier == SeguesConstants.kShowDetailSport) {
             let sdvc = segue.destination as! SportDetailsViewController
             sdvc.sport = sport
             sdvc.objectivesArray = objectivesArray

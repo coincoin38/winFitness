@@ -14,8 +14,6 @@ class NewsViewController: RootViewController,UITableViewDelegate, UITableViewDat
 
     let cellIdentifier = "newsIdentifier"
     let cellXib = "NewsTableViewCell"
-    let cellXibV2 = "NewsTableViewCellV2"
-    let kShowDetailNews = "showDetailNews"
     let api = FBAPIController()
     
     var refreshControl:UIRefreshControl!
@@ -93,14 +91,14 @@ class NewsViewController: RootViewController,UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         navigationItem.title = ""
-        self.performSegue(withIdentifier: kShowDetailNews, sender: self)
+        self.performSegue(withIdentifier: SeguesConstants.kShowDetailNews, sender: self)
     }
     
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if(segue.identifier == kShowDetailNews) {
+        if(segue.identifier == SeguesConstants.kShowDetailNews) {
             let ndvc = segue.destination as! NewsDetailsViewController
             ndvc.news = FBFeed[((tableView?.indexPathForSelectedRow as NSIndexPath?)?.row)!]
         }

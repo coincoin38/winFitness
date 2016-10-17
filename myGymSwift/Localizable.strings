@@ -6,22 +6,33 @@
   Copyright © 2015 julien gimenez. All rights reserved.
 */
 
+//ACTIONS
 "BACK" = "Retour";
-"NOTHING" = "Aucune séance de prévue";
 "OK" = "OK";
 "CLOSE" = "Fermer";
 "NO" = "Non";
 "YES" = "Oui";
-"MINUTES_SHORT" = "min";
 "PULL_TO_REFRESH" = "Relâcher pour rafraîchir";
-"FACEBOOK" = "Facebook";
-"LOADING_NEWS" = "Chargement des dernières actualités";
-"LOADING_NEW" = "Chargement de l'actualité";
-"CATCH_PHRASE" ="L'excellence de la forme à prix mini";
-"WARNING_PLANING" = "Le planing peut faire l'objet de modifications afin d'améliorer le service.";
 
 //ALERTS
 "FB_INSTALLATION" = "Souhaitez-vous installer l'application Facebook ?";
+"NOTHING" = "Aucune séance de prévue";
+"LOADING_NEWS" = "Chargement des dernières actualités";
+"LOADING_NEW" = "Chargement de l'actualité";
+"WARNING_PLANING" = "Le planing peut faire l'objet de modifications afin d'améliorer le service.";
 
 //ERRORS
 "ERROR_TOKEN" = "Erreur lors de la récupération du Token";
+
+//OTHER
+"MINUTES_SHORT" = "min";
+"FACEBOOK" = "Facebook";
+"CATCH_PHRASE" ="L'excellence de la forme à prix mini";
+
+//DAYS
+"MONDAY" = "Lundi";
+"TUESDAY" = "Mardi";
+"WEDNESDAY" = "Mercredi";
+"THURSDAY" = "Jeudi";
+"FRIDAY" = "Vendredi";
+"SATURDAY" = "Samedi";

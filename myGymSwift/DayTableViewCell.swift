@@ -17,8 +17,6 @@ class DayTableViewCell: UITableViewCell {
     
     var delegate: DayTableViewCellProtocol?
     
-    let kShowDetailDay = "showDetailDay"
-    
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var RPMImageView: UIImageView!
     @IBOutlet weak var LESMILLSImageView: UIImageView!

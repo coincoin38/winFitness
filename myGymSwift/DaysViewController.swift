@@ -10,11 +10,16 @@ import UIKit
 
 class DaysViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, DayTableViewCellProtocol {
 
-    var daysArray: [String] = ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"]
+    var daysArray: [String] = [NSLocalizedString("MONDAY", comment:""),
+                               NSLocalizedString("TUESDAY", comment:""),
+                               NSLocalizedString("WEDNESDAY", comment:""),
+                               NSLocalizedString("THURSDAY", comment:""),
+                               NSLocalizedString("FRIDAY", comment:""),
+                               NSLocalizedString("SATURDAY", comment:"")]
+    
     @IBOutlet weak var tableView: UITableView?
     @IBOutlet weak var warningLabel: UILabel?
 
-    let kShowDetailDay = "showDetailDay"
     let cellIdentifier = "dayIdentifier"
     let cellXib = "DayTableViewCell"
     
@@ -60,7 +65,7 @@ class DaysViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if(segue.identifier == kShowDetailDay) {
+        if(segue.identifier == SeguesConstants.kShowDetailDay) {
             
             let svc = segue.destination as! DayViewController
             svc.selectedDay   = selectedDay
@@ -93,13 +98,13 @@ class DaysViewController: UIViewController, UITableViewDelegate, UITableViewData
     func didTouchRPM(day: String)
     {
         selectedDay = day
-        self.performSegue(withIdentifier: kShowDetailDay, sender: self)
+        self.performSegue(withIdentifier: SeguesConstants.kShowDetailDay, sender: self)
     }
     
     func didTouchLESMILLS(day: String)
     {
         selectedDay = day
-        self.performSegue(withIdentifier: kShowDetailDay, sender: self)
+        self.performSegue(withIdentifier: SeguesConstants.kShowDetailDay, sender: self)
     }
     
     // MARK: - Memory
