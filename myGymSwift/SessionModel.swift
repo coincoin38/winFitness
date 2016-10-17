@@ -16,7 +16,6 @@ class SessionModel: Object {
     dynamic var sport_id = ""
     dynamic var from = ""
     dynamic var duration = ""
-    dynamic var location = ""
     dynamic var attendance = ""
     dynamic var day = ""
     
@@ -27,7 +26,6 @@ class SessionModel: Object {
         sport_id   = dictionary[ModelsConstants.kSport_id].stringValue
         from       = dictionary[ModelsConstants.kFrom].stringValue
         duration   = dictionary[ModelsConstants.kDuration].stringValue
-        location   = dictionary[ModelsConstants.kLocation].stringValue
         attendance = dictionary[ModelsConstants.kAttendance].stringValue
         day        = dictionary[ModelsConstants.kDay].stringValue
         return self

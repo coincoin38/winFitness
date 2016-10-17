@@ -1,6 +1,4 @@
 {
-    "page": 1,
-    "page_count": 1,
     "sessions": [
                  {
                  "id": "1",
@@ -8,7 +6,6 @@
                  "from": "9.30",
                  "duration": "30",
                  "day": "Lundi",
-                 "location": "Salle 1",
                  "attendance": "1"
                  },
                  {
@@ -17,7 +14,6 @@
                  "from": "10.30",
                  "duration": "45",
                  "day": "Lundi",
-                 "location": "Salle 1",
                  "attendance": "0"
                  },
                  {
@@ -26,7 +22,6 @@
                  "from": "11.30",
                  "duration": "30",
                  "day": "Lundi",
-                 "location": "Salle 1",
                  "attendance": "1"
                  },
                  {
@@ -35,7 +30,6 @@
                  "from": "12.30",
                  "duration": "45",
                  "day": "Lundi",
-                 "location": "Salle 1",
                  "attendance": "0"
                  },
                  {
@@ -44,7 +38,6 @@
                  "from": "13.30",
                  "duration": "30",
                  "day": "Lundi",
-                 "location": "Salle 1",
                  "attendance": "1"
                  },
                  {
@@ -53,7 +46,6 @@
                  "from": "9.30",
                  "duration": "45",
                  "day": "2016-01-30",
-                 "location": "Salle 1",
                  "attendance": "0"
                  },
                  {
@@ -62,7 +54,6 @@
                  "from": "10.30",
                  "duration": "30",
                  "day": "2016-01-30",
-                 "location": "Salle 1",
                  "attendance": "1"
                  },
                  {
@@ -71,7 +62,6 @@
                  "from": "13.30",
                  "duration": "45",
                  "day": "2016-01-30",
-                 "location": "Salle 1",
                  "attendance": "0"
                  },
                  {
@@ -80,7 +70,6 @@
                  "from": "14.00",
                  "duration": "30",
                  "day": "2016-01-30",
-                 "location": "Salle 1",
                  "attendance": "1"
                  },
                  {
@@ -89,7 +78,6 @@
                  "from": "16.30",
                  "duration": "45",
                  "day": "2016-01-30",
-                 "location": "Salle 3",
                  "attendance": "0"
                  },
                  {
@@ -98,7 +86,6 @@
                  "from": "17.30",
                  "duration": "45",
                  "day": "2016-01-30",
-                 "location": "Salle 3",
                  "attendance": "0"
                  },
                  {
@@ -107,7 +94,6 @@
                  "from": "19.30",
                  "duration": "45",
                  "day": "2016-01-30",
-                 "location": "Salle 3",
                  "attendance": "1"
                  },
                  {
@@ -116,7 +102,6 @@
                  "from": "9.30",
                  "duration": "45",
                  "day": "Lundi",
-                 "location": "Salle 1",
                  "attendance": "0"
                  },
                  {
@@ -125,7 +110,6 @@
                  "from": "10.30",
                  "duration": "30",
                  "day": "Lundi",
-                 "location": "Salle 1",
                  "attendance": "1"
                  },
                  {
@@ -134,7 +118,6 @@
                  "from": "13.30",
                  "duration": "45",
                  "day": "Lundi",
-                 "location": "Salle 1",
                  "attendance": "0"
                  },
                  {
@@ -143,7 +126,6 @@
                  "from": "14.00",
                  "duration": "30",
                  "day": "Lundi",
-                 "location": "Salle 1",
                  "attendance": "1"
                  },
                  {
@@ -152,7 +134,6 @@
                  "from": "16.30",
                  "duration": "45",
                  "day": "Lundi",
-                 "location": "Salle 3",
                  "attendance": "0"
                  }
                  ]

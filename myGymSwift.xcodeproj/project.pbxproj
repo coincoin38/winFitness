@@ -16,7 +16,6 @@
 		13623BA51D65E39800F94406 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13623BA41D65E39800F94406 /* HomeViewController.swift */; };
 		13623BC51D65EF3500F94406 /* FBTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13623BC41D65EF3500F94406 /* FBTokenManager.swift */; };
 		13623BCA1D66156600F94406 /* FBFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13623BC91D66156600F94406 /* FBFeedModel.swift */; };
-		1376A5F11C09EDE0000AA652 /* newsFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 1376A5ED1C09EDE0000AA652 /* newsFeed.json */; };
 		1376A5F21C09EDE0000AA652 /* sessionsFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 1376A5EE1C09EDE0000AA652 /* sessionsFeed.json */; };
 		1376A5F61C09EE67000AA652 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1376A5F51C09EE67000AA652 /* SessionModel.swift */; };
 		1376A5FA1C09F1C2000AA652 /* DaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1376A5F91C09F1C2000AA652 /* DaysViewController.swift */; };
@@ -53,7 +52,6 @@
 		388F7DA91D8AE6CC00AC0B39 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F7DA81D8AE6CC00AC0B39 /* StorageManager.swift */; };
 		38985AEC1DA7A5B900F4E375 /* AlertViewControllerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985AEB1DA7A5B900F4E375 /* AlertViewControllerUtil.swift */; };
 		38D3C0A01DA7F0FE006BBA23 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D3C09F1DA7F0FE006BBA23 /* RootViewController.swift */; };
-		38F943571C3D2A3900643571 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F943561C3D2A3900643571 /* NewsModel.swift */; };
 		38F943BA1C3FA05200643571 /* ModelsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F943B91C3FA05200643571 /* ModelsConstants.swift */; };
 		CE6791709A58BE84782420AF /* Pods_myGymSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A24D320B1CEC4F09FA47B2 /* Pods_myGymSwift.framework */; };
 /* End PBXBuildFile section */
@@ -69,7 +67,6 @@
 		13623BA41D65E39800F94406 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		13623BC41D65EF3500F94406 /* FBTokenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBTokenManager.swift; sourceTree = "<group>"; };
 		13623BC91D66156600F94406 /* FBFeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBFeedModel.swift; sourceTree = "<group>"; };
-		1376A5ED1C09EDE0000AA652 /* newsFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newsFeed.json; sourceTree = "<group>"; };
 		1376A5EE1C09EDE0000AA652 /* sessionsFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sessionsFeed.json; sourceTree = "<group>"; };
 		1376A5F51C09EE67000AA652 /* SessionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
 		1376A5F91C09F1C2000AA652 /* DaysViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +107,6 @@
 		388F7DA81D8AE6CC00AC0B39 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		38985AEB1DA7A5B900F4E375 /* AlertViewControllerUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewControllerUtil.swift; sourceTree = "<group>"; };
 		38D3C09F1DA7F0FE006BBA23 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		38F943561C3D2A3900643571 /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		38F943B91C3FA05200643571 /* ModelsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelsConstants.swift; sourceTree = "<group>"; };
 		645A1990FAF170CC8B1D4F43 /* Pods-myGymSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myGymSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				1376A5F51C09EE67000AA652 /* SessionModel.swift */,
-				38F943561C3D2A3900643571 /* NewsModel.swift */,
 				139595481C1481E500F43523 /* SportModel.swift */,
 				13616EB01C2C1D6D00DC459A /* SportDescriptionModel.swift */,
 				13616EB21C2C25B700DC459A /* ObjectiveModel.swift */,
@@ -201,7 +196,6 @@
 			children = (
 				139A946F1C143CDD00CF754A /* sportsFeed.json */,
 				13616EAE1C2C18FF00DC459A /* sportsDescriptionsFeed.json */,
-				1376A5ED1C09EDE0000AA652 /* newsFeed.json */,
 				1376A5EE1C09EDE0000AA652 /* sessionsFeed.json */,
 				130EC7021C29FA7600EE9805 /* objectivesFeed.json */,
 			);
@@ -409,7 +403,6 @@
 				13CF0E161C09ECC100715454 /* Assets.xcassets in Resources */,
 				387B1ABA1C2990CA004FAA16 /* ObjectiveCollectionViewCell.xib in Resources */,
 				387B1AB61C296FBC004FAA16 /* Localizable.strings in Resources */,
-				1376A5F11C09EDE0000AA652 /* newsFeed.json in Resources */,
 				3825E6791C24515C00F589FA /* SportCollectionViewCell.xib in Resources */,
 				138C3F781C3F049600470ACB /* NewsTableViewCell.xib in Resources */,
 				13CF0E141C09ECC100715454 /* Main.storyboard in Resources */,
@@ -464,7 +457,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -479,7 +472,6 @@
 				13616EB11C2C1D6D00DC459A /* SportDescriptionModel.swift in Sources */,
 				13E68F561C0B8B6A00CDCDD0 /* RealmManager.swift in Sources */,
 				387B1AB91C2990CA004FAA16 /* ObjectiveCollectionViewCell.swift in Sources */,
-				38F943571C3D2A3900643571 /* NewsModel.swift in Sources */,
 				3810B3281DA78B84000F91B8 /* FBAPIController.swift in Sources */,
 				3825E6781C24515C00F589FA /* SportCollectionViewCell.swift in Sources */,
 				38D3C0A01DA7F0FE006BBA23 /* RootViewController.swift in Sources */,
