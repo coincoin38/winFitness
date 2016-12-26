@@ -2,9 +2,9 @@
     "sessions": [
                  {
                  "id": "1",
-                 "sport_id": "1",
-                 "from": "9.30",
-                 "duration": "30",
+                 "sport_id": "3",
+                 "from": "9.05",
+                 "duration": "69",
                  "day": "Lundi",
                  "attendance": "1"
                  },

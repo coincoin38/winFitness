@@ -82,6 +82,16 @@ class RealmManager: NSObject {
                 if (new.count==0){
                     self.writeData(newObject)
                 }
+                else {
+                    let realm = try! Realm()
+                    try! realm.write {
+                        new[0].sport_id = newObject.sport_id
+                        new[0].from = newObject.from
+                        new[0].duration = newObject.duration
+                        new[0].attendance = newObject.attendance
+                        new[0].day = newObject.day
+                    }
+                }
             })
         }
     }
