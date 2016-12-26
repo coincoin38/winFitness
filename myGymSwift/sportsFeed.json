@@ -53,5 +53,11 @@
                "description_id": "9",
                "color": "#00a3e3",
                "image": "rpm-2"
+               }, {
+               "id": "10",
+               "name": "JAM",
+               "description_id": "10",
+               "color": "#ec9cc3",
+               "image": "bodyjam"
                }]
 }

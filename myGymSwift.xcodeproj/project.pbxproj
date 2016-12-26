@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1306D0241E0FCFF9002C2FA1 /* SwiftStyleSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1306D0231E0FCFF9002C2FA1 /* SwiftStyleSettings.plist */; };
 		130EC7031C29FA7600EE9805 /* objectivesFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 130EC7021C29FA7600EE9805 /* objectivesFeed.json */; };
 		133AA3401CD609DE00786A12 /* DayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AA33E1CD609DE00786A12 /* DayTableViewCell.swift */; };
 		133AA3411CD609DE00786A12 /* DayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 133AA33F1CD609DE00786A12 /* DayTableViewCell.xib */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		0B0E4BCD6721A36AC0FF04DA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1306D0231E0FCFF9002C2FA1 /* SwiftStyleSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SwiftStyleSettings.plist; sourceTree = "<group>"; };
 		130EC7021C29FA7600EE9805 /* objectivesFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = objectivesFeed.json; sourceTree = "<group>"; };
 		133AA33E1CD609DE00786A12 /* DayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTableViewCell.swift; sourceTree = "<group>"; };
 		133AA33F1CD609DE00786A12 /* DayTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayTableViewCell.xib; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 		13CF0E021C09ECC100715454 = {
 			isa = PBXGroup;
 			children = (
+				1306D0231E0FCFF9002C2FA1 /* SwiftStyleSettings.plist */,
 				13CF0E0D1C09ECC100715454 /* myGymSwift */,
 				13CF0E0C1C09ECC100715454 /* Products */,
 				8BAEF0186558D58525B085E9 /* Frameworks */,
@@ -349,6 +352,7 @@
 				13CF0E091C09ECC100715454 /* Resources */,
 				7AF7173D3D7E72854C6C7D6A /* [CP] Embed Pods Frameworks */,
 				B556CFD7A2E9CD8E5476EF73 /* [CP] Copy Pods Resources */,
+				SWIFCLEANCUSTOMRUNSCRIPT /* Swift-Clean Run Script */,
 			);
 			buildRules = (
 			);
@@ -366,7 +370,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "julien gimenez";
 				TargetAttributes = {
 					13CF0E0A1C09ECC100715454 = {
@@ -404,6 +408,7 @@
 				130EC7031C29FA7600EE9805 /* objectivesFeed.json in Resources */,
 				139A94701C143CDD00CF754A /* sportsFeed.json in Resources */,
 				13CF0E161C09ECC100715454 /* Assets.xcassets in Resources */,
+				1306D0241E0FCFF9002C2FA1 /* SwiftStyleSettings.plist in Resources */,
 				387B1ABA1C2990CA004FAA16 /* ObjectiveCollectionViewCell.xib in Resources */,
 				387B1AB61C296FBC004FAA16 /* Localizable.strings in Resources */,
 				3825E6791C24515C00F589FA /* SportCollectionViewCell.xib in Resources */,
@@ -460,8 +465,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		SWIFCLEANCUSTOMRUNSCRIPT /* Swift-Clean Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift-Clean Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix \nelse\necho \"warning: You have to install and set up Swift-Clean to use its features!\" \nfi\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

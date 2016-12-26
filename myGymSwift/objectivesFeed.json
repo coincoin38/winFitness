@@ -134,5 +134,20 @@
                    "firstPart": "Maximize",
                    "secondPart": "CARDIO STAMINA",
                    "sport_id": "9"
+                   }, {
+                   "id": "28",
+                   "firstPart": "Hear the",
+                   "secondPart": "LATEST MUSIC",
+                   "sport_id": "10"
+                   }, {
+                   "id": "29",
+                   "firstPart": "Learn the",
+                   "secondPart": "FRESHEST MOVES",
+                   "sport_id": "10"
+                   }, {
+                   "id": "30",
+                   "firstPart": "Love yourself and",
+                   "secondPart": "JUST DANCE",
+                   "sport_id": "10"
                    }]
 }
