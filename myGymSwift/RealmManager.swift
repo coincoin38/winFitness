@@ -19,58 +19,54 @@ class RealmManager: NSObject {
     // MARK: - Generateur d'objets
     
     func startFeed(){
-        for index in 0 ..< 6 {
-            RealmManager.SharedInstance.feedDataBaseWithFile(index)
+        
+        self.startFeedSessionsByDay()
+        self.startFeedSports()
+        self.startFeedSportsDescriptions()
+        self.startFeedObjectives()
+    }
+    
+    func startFeedSessionsByDay(){
+        
+        self.groupsFromFile("Lundi",object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsInDB(JSON)
+        }
+        self.groupsFromFile("Mardi",object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsInDB(JSON)
+        }
+        self.groupsFromFile("Mercredi",object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsInDB(JSON)
+        }
+        self.groupsFromFile("Jeudi",object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsInDB(JSON)
+        }
+        self.groupsFromFile("Vendredi",object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsInDB(JSON)
+        }
+        self.groupsFromFile("Samedi",object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsInDB(JSON)
         }
     }
     
-    // Remplissage de la base de données avec les stubs
-    func feedDataBaseWithFile(_ key: NSInteger) {
+    func startFeedSports (){
         
-        returnFileAndObject(key) { (stub, keyStub) -> Void in
-            
-            self.groupsFromFile(stub, object: keyStub) { (result) -> Void in
-                
-                switch key {
-                    
-                case ModelsConstants.stub_sports:
-                    self.writeSportsInDB(result)
-                case ModelsConstants.stub_sportsDescription:
-                    self.writeSportsDescriptionsInDB(result)
-                case ModelsConstants.stub_sessions:
-                    self.writeSessionsInDB(result)
-                case ModelsConstants.stub_objectives:
-                    self.writeObjectivesInDB(result)
-                default:
-                    //print("no stub for key %@",key)
-                    break
-                }
-            }
+        self.groupsFromFile(ModelsConstants.kSportsStub,object: ModelsConstants.kSportsObject) { (JSON) in
+            self.writeSportsInDB(JSON)
+        }
+    }
+
+    func startFeedSportsDescriptions (){
+        
+        self.groupsFromFile(ModelsConstants.kSportsDescritpionsStub,object: ModelsConstants.kSportsDescriptionsObject) { (JSON) in
+            self.writeSportsDescriptionsInDB(JSON)
         }
     }
     
-    func writeDataFromWS(_ key: NSInteger,json:JSON, completion:(_ bool:Bool) -> Void) {
+    func startFeedObjectives (){
         
-            switch key {
-                
-            case ModelsConstants.stub_sessions:
-                self.writeSessionsInDB(json)
-                //print(self.getAllSessions())
-            case ModelsConstants.stub_sports:
-                self.writeSportsInDB(json)
-                completion(true)
-                //print(self.getAllSports())
-            case ModelsConstants.stub_sportsDescription:
-                self.writeSportsDescriptionsInDB(json)
-                completion(true)
-                //print(self.getAllSportsDescriptions())
-            case ModelsConstants.stub_objectives:
-                self.writeObjectivesInDB(json)
-                //print(self.getAllObjectives())
-            default:
-                //print("no ws for key %@",key)
-                completion(false)
-            }
+        self.groupsFromFile(ModelsConstants.kObjectivesStub,object: ModelsConstants.kObjectivesObject) { (JSON) in
+            self.writeObjectivesInDB(JSON)
+        }
     }
 
     // MARK: - Ecriture d'objets dans la DB

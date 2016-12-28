@@ -17,7 +17,6 @@
 		13623BA51D65E39800F94406 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13623BA41D65E39800F94406 /* HomeViewController.swift */; };
 		13623BC51D65EF3500F94406 /* FBTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13623BC41D65EF3500F94406 /* FBTokenManager.swift */; };
 		13623BCA1D66156600F94406 /* FBFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13623BC91D66156600F94406 /* FBFeedModel.swift */; };
-		1376A5F21C09EDE0000AA652 /* sessionsFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 1376A5EE1C09EDE0000AA652 /* sessionsFeed.json */; };
 		1376A5F61C09EE67000AA652 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1376A5F51C09EE67000AA652 /* SessionModel.swift */; };
 		1376A5FA1C09F1C2000AA652 /* DaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1376A5F91C09F1C2000AA652 /* DaysViewController.swift */; };
 		1376A5FC1C09F1CE000AA652 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1376A5FB1C09F1CE000AA652 /* DayViewController.swift */; };
@@ -29,6 +28,12 @@
 		13A6B1D11C131FC800F93232 /* FormaterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A6B1D01C131FC800F93232 /* FormaterManager.swift */; };
 		13A6B1D91C13A24A00F93232 /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A6B1D71C13A24A00F93232 /* SessionTableViewCell.swift */; };
 		13A6B1DA1C13A24A00F93232 /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13A6B1D81C13A24A00F93232 /* SessionTableViewCell.xib */; };
+		13C955C01E14543200DD9FBA /* Lundi.json in Resources */ = {isa = PBXBuildFile; fileRef = 13C955BF1E14543200DD9FBA /* Lundi.json */; };
+		13C955C21E14547000DD9FBA /* Mardi.json in Resources */ = {isa = PBXBuildFile; fileRef = 13C955C11E14547000DD9FBA /* Mardi.json */; };
+		13C955C41E14548400DD9FBA /* Mercredi.json in Resources */ = {isa = PBXBuildFile; fileRef = 13C955C31E14548400DD9FBA /* Mercredi.json */; };
+		13C955C61E14549700DD9FBA /* Jeudi.json in Resources */ = {isa = PBXBuildFile; fileRef = 13C955C51E14549700DD9FBA /* Jeudi.json */; };
+		13C955C81E1454A900DD9FBA /* Vendredi.json in Resources */ = {isa = PBXBuildFile; fileRef = 13C955C71E1454A900DD9FBA /* Vendredi.json */; };
+		13C955CA1E1454BD00DD9FBA /* Samedi.json in Resources */ = {isa = PBXBuildFile; fileRef = 13C955C91E1454BD00DD9FBA /* Samedi.json */; };
 		13CE08CA1C2ABFB6009BC5E9 /* ImagesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE08C91C2ABFB6009BC5E9 /* ImagesConstants.swift */; };
 		13CE08CC1C2AC209009BC5E9 /* ColorsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE08CB1C2AC209009BC5E9 /* ColorsConstants.swift */; };
 		13CF0E0F1C09ECC100715454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CF0E0E1C09ECC100715454 /* AppDelegate.swift */; };
@@ -70,7 +75,6 @@
 		13623BA41D65E39800F94406 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		13623BC41D65EF3500F94406 /* FBTokenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBTokenManager.swift; sourceTree = "<group>"; };
 		13623BC91D66156600F94406 /* FBFeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBFeedModel.swift; sourceTree = "<group>"; };
-		1376A5EE1C09EDE0000AA652 /* sessionsFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sessionsFeed.json; sourceTree = "<group>"; };
 		1376A5F51C09EE67000AA652 /* SessionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
 		1376A5F91C09F1C2000AA652 /* DaysViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysViewController.swift; sourceTree = "<group>"; };
 		1376A5FB1C09F1CE000AA652 /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,12 @@
 		13A6B1D01C131FC800F93232 /* FormaterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormaterManager.swift; sourceTree = "<group>"; };
 		13A6B1D71C13A24A00F93232 /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
 		13A6B1D81C13A24A00F93232 /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
+		13C955BF1E14543200DD9FBA /* Lundi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Lundi.json; sourceTree = "<group>"; };
+		13C955C11E14547000DD9FBA /* Mardi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Mardi.json; sourceTree = "<group>"; };
+		13C955C31E14548400DD9FBA /* Mercredi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Mercredi.json; sourceTree = "<group>"; };
+		13C955C51E14549700DD9FBA /* Jeudi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Jeudi.json; sourceTree = "<group>"; };
+		13C955C71E1454A900DD9FBA /* Vendredi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Vendredi.json; sourceTree = "<group>"; };
+		13C955C91E1454BD00DD9FBA /* Samedi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Samedi.json; sourceTree = "<group>"; };
 		13CE08C91C2ABFB6009BC5E9 /* ImagesConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesConstants.swift; sourceTree = "<group>"; };
 		13CE08CB1C2AC209009BC5E9 /* ColorsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsConstants.swift; sourceTree = "<group>"; };
 		13CF0E0B1C09ECC100715454 /* myGymSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myGymSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,9 +209,9 @@
 		1376A5EC1C09EDCF000AA652 /* Stubs */ = {
 			isa = PBXGroup;
 			children = (
+				13C955BE1E1453F600DD9FBA /* Sessions */,
 				139A946F1C143CDD00CF754A /* sportsFeed.json */,
 				13616EAE1C2C18FF00DC459A /* sportsDescriptionsFeed.json */,
-				1376A5EE1C09EDE0000AA652 /* sessionsFeed.json */,
 				130EC7021C29FA7600EE9805 /* objectivesFeed.json */,
 			);
 			name = Stubs;
@@ -213,6 +223,19 @@
 				13CF0E121C09ECC100715454 /* Main.storyboard */,
 			);
 			name = StoryBoards;
+			sourceTree = "<group>";
+		};
+		13C955BE1E1453F600DD9FBA /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				13C955BF1E14543200DD9FBA /* Lundi.json */,
+				13C955C11E14547000DD9FBA /* Mardi.json */,
+				13C955C31E14548400DD9FBA /* Mercredi.json */,
+				13C955C51E14549700DD9FBA /* Jeudi.json */,
+				13C955C71E1454A900DD9FBA /* Vendredi.json */,
+				13C955C91E1454BD00DD9FBA /* Samedi.json */,
+			);
+			name = Sessions;
 			sourceTree = "<group>";
 		};
 		13CE08CD1C2AC2E0009BC5E9 /* Controllers */ = {
@@ -404,19 +427,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1376A5F21C09EDE0000AA652 /* sessionsFeed.json in Resources */,
+				13C955C81E1454A900DD9FBA /* Vendredi.json in Resources */,
+				13C955C41E14548400DD9FBA /* Mercredi.json in Resources */,
 				130EC7031C29FA7600EE9805 /* objectivesFeed.json in Resources */,
 				139A94701C143CDD00CF754A /* sportsFeed.json in Resources */,
 				13CF0E161C09ECC100715454 /* Assets.xcassets in Resources */,
 				1306D0241E0FCFF9002C2FA1 /* SwiftStyleSettings.plist in Resources */,
 				387B1ABA1C2990CA004FAA16 /* ObjectiveCollectionViewCell.xib in Resources */,
 				387B1AB61C296FBC004FAA16 /* Localizable.strings in Resources */,
+				13C955CA1E1454BD00DD9FBA /* Samedi.json in Resources */,
 				3825E6791C24515C00F589FA /* SportCollectionViewCell.xib in Resources */,
 				138C3F781C3F049600470ACB /* NewsTableViewCell.xib in Resources */,
 				13CF0E141C09ECC100715454 /* Main.storyboard in Resources */,
+				13C955C61E14549700DD9FBA /* Jeudi.json in Resources */,
+				13C955C01E14543200DD9FBA /* Lundi.json in Resources */,
 				13616EAF1C2C18FF00DC459A /* sportsDescriptionsFeed.json in Resources */,
 				133AA3411CD609DE00786A12 /* DayTableViewCell.xib in Resources */,
 				13A6B1DA1C13A24A00F93232 /* SessionTableViewCell.xib in Resources */,
+				13C955C21E14547000DD9FBA /* Mardi.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

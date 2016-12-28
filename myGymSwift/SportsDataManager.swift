@@ -17,18 +17,6 @@ class SportsDataManager: NSObject {
         })
     }
     
-    func feedDBWithDownloadedSports(_ sports: JSON,completion: @escaping (_ newsArray: Array<SportModel>) -> Void){
-        
-        RealmManager.SharedInstance.writeDataFromWS(2, json: sports, completion: { (isOk) -> Void in
-            
-            if isOk{
-                self.getSportsfromDB({ (newsFromDB) -> Void in
-                    completion(newsFromDB)
-                })
-            }
-        })
-    }
-    
     func getSportsfromDB(_ completion: @escaping (_ sportsArray: Array<SportModel>) -> Void){
         
         RealmManager.SharedInstance.getAllSportsFromDB { (sports) -> Void in
