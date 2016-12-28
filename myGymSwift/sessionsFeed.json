@@ -3,137 +3,497 @@
                  {
                  "id": "1",
                  "sport_id": "3",
-                 "from": "9.05",
-                 "duration": "69",
+                 "from": "9.00",
+                 "duration": "60",
                  "day": "Lundi",
                  "attendance": "1"
                  },
                  {
                  "id": "2",
-                 "sport_id": "2",
-                 "from": "10.30",
-                 "duration": "45",
+                 "sport_id": "5",
+                 "from": "10.00",
+                 "duration": "30",
                  "day": "Lundi",
                  "attendance": "0"
                  },
                  {
                  "id": "3",
-                 "sport_id": "3",
-                 "from": "11.30",
-                 "duration": "30",
+                 "sport_id": "6",
+                 "from": "12.15",
+                 "duration": "60",
                  "day": "Lundi",
                  "attendance": "1"
                  },
                  {
                  "id": "4",
-                 "sport_id": "4",
-                 "from": "12.30",
-                 "duration": "45",
+                 "sport_id": "1",
+                 "from": "13.15",
+                 "duration": "30",
                  "day": "Lundi",
                  "attendance": "0"
                  },
                  {
                  "id": "5",
-                 "sport_id": "5",
-                 "from": "13.30",
-                 "duration": "30",
+                 "sport_id": "8",
+                 "from": "14.30",
+                 "duration": "45",
                  "day": "Lundi",
-                 "attendance": "1"
+                 "attendance": "0"
                  },
                  {
                  "id": "6",
-                 "sport_id": "6",
-                 "from": "9.30",
-                 "duration": "45",
-                 "day": "2016-01-30",
+                 "sport_id": "7",
+                 "from": "17.00",
+                 "duration": "30",
+                 "day": "Lundi",
                  "attendance": "0"
                  },
                  {
                  "id": "7",
-                 "sport_id": "7",
-                 "from": "10.30",
+                 "sport_id": "5",
+                 "from": "17.30",
                  "duration": "30",
-                 "day": "2016-01-30",
-                 "attendance": "1"
+                 "day": "Lundi",
+                 "attendance": "0"
                  },
                  {
                  "id": "8",
-                 "sport_id": "8",
-                 "from": "13.30",
-                 "duration": "45",
-                 "day": "2016-01-30",
+                 "sport_id": "1",
+                 "from": "18.00",
+                 "duration": "30",
+                 "day": "Lundi",
                  "attendance": "0"
                  },
                  {
                  "id": "9",
-                 "sport_id": "9",
-                 "from": "14.00",
-                 "duration": "30",
-                 "day": "2016-01-30",
-                 "attendance": "1"
+                 "sport_id": "7",
+                 "from": "18.30",
+                 "duration": "45",
+                 "day": "Lundi",
+                 "attendance": "0"
                  },
                  {
                  "id": "10",
-                 "sport_id": "1",
-                 "from": "16.30",
+                 "sport_id": "9",
+                 "from": "19.30",
                  "duration": "45",
-                 "day": "2016-01-30",
+                 "day": "Lundi",
                  "attendance": "0"
                  },
                  {
                  "id": "11",
                  "sport_id": "2",
-                 "from": "17.30",
+                 "from": "19.30",
                  "duration": "45",
-                 "day": "2016-01-30",
+                 "day": "Lundi",
                  "attendance": "0"
                  },
                  {
                  "id": "12",
-                 "sport_id": "3",
-                 "from": "19.30",
-                 "duration": "45",
-                 "day": "2016-01-30",
-                 "attendance": "1"
+                 "sport_id": "1",
+                 "from": "20.15",
+                 "duration": "30",
+                 "day": "Lundi",
+                 "attendance": "0"
                  },
                  {
                  "id": "13",
-                 "sport_id": "4",
-                 "from": "9.30",
-                 "duration": "45",
-                 "day": "Lundi",
-                 "attendance": "0"
+                 "sport_id": "5",
+                 "from": "9.00",
+                 "duration": "60",
+                 "day": "Mardi",
+                 "attendance": "1"
                  },
                  {
                  "id": "14",
-                 "sport_id": "5",
-                 "from": "10.30",
-                 "duration": "30",
-                 "day": "Lundi",
-                 "attendance": "1"
-                 },
-                 {
-                 "id": "15",
-                 "sport_id": "6",
-                 "from": "13.30",
+                 "sport_id": "8",
+                 "from": "10.00",
                  "duration": "45",
-                 "day": "Lundi",
+                 "day": "Mardi",
                  "attendance": "0"
                  },
                  {
-                 "id": "16",
+                 "id": "15",
                  "sport_id": "7",
-                 "from": "14.00",
-                 "duration": "30",
-                 "day": "Lundi",
+                 "from": "12.15",
+                 "duration": "60",
+                 "day": "Mardi",
                  "attendance": "1"
                  },
                  {
-                 "id": "17",
-                 "sport_id": "8",
-                 "from": "16.30",
+                 "id": "16",
+                 "sport_id": "2",
+                 "from": "14.30",
                  "duration": "45",
-                 "day": "Lundi",
+                 "day": "Mardi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "17",
+                 "sport_id": "1",
+                 "from": "15.15",
+                 "duration": "30",
+                 "day": "Mardi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "18",
+                 "sport_id": "6",
+                 "from": "16.45",
+                 "duration": "60",
+                 "day": "Mardi",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "19",
+                 "sport_id": "3",
+                 "from": "17.45",
+                 "duration": "45",
+                 "day": "Mardi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "20",
+                 "sport_id": "9",
+                 "from": "18.30",
+                 "duration": "45",
+                 "day": "Mardi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "21",
+                 "sport_id": "4",
+                 "from": "18.45",
+                 "duration": "45",
+                 "day": "Mardi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "22",
+                 "sport_id": "7",
+                 "from": "19.30",
+                 "duration": "45",
+                 "day": "Mardi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "23",
+                 "sport_id": "5",
+                 "from": "20.15",
+                 "duration": "45",
+                 "day": "Mardi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "24",
+                 "sport_id": "8",
+                 "from": "9.15",
+                 "duration": "45",
+                 "day": "Mercredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "25",
+                 "sport_id": "2",
+                 "from": "10.00",
+                 "duration": "45",
+                 "day": "Mercredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "26",
+                 "sport_id": "4",
+                 "from": "12.15",
+                 "duration": "60",
+                 "day": "Mercredi",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "27",
+                 "sport_id": "1",
+                 "from": "13.15",
+                 "duration": "30",
+                 "day": "Mercredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "28",
+                 "sport_id": "5",
+                 "from": "14.15",
+                 "duration": "60",
+                 "day": "Mercredi",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "29",
+                 "sport_id": "7",
+                 "from": "16.45",
+                 "duration": "45",
+                 "day": "Mercredi",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "30",
+                 "sport_id": "4",
+                 "from": "17.45",
+                 "duration": "45",
+                 "day": "Mercredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "31",
+                 "sport_id": "5",
+                 "from": "18.30",
+                 "duration": "45",
+                 "day": "Mercredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "32",
+                 "sport_id": "9",
+                 "from": "19.30",
+                 "duration": "45",
+                 "day": "Mercredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "33",
+                 "sport_id": "1",
+                 "from": "19.30",
+                 "duration": "30",
+                 "day": "Mercredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "34",
+                 "sport_id": "6",
+                 "from": "20.00",
+                 "duration": "45",
+                 "day": "Mercredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "35",
+                 "sport_id": "7",
+                 "from": "9.00",
+                 "duration": "60",
+                 "day": "Jeudi",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "36",
+                 "sport_id": "1",
+                 "from": "10.00",
+                 "duration": "30",
+                 "day": "Jeudi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "37",
+                 "sport_id": "3",
+                 "from": "12.15",
+                 "duration": "60",
+                 "day": "Jeudi",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "38",
+                 "sport_id": "3",
+                 "from": "14.15",
+                 "duration": "15",
+                 "day": "Jeudi",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "39",
+                 "sport_id": "7",
+                 "from": "14.30",
+                 "duration": "45",
+                 "day": "Jeudi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "40",
+                 "sport_id": "8",
+                 "from": "17.15",
+                 "duration": "45",
+                 "day": "Jeudi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "41",
+                 "sport_id": "1",
+                 "from": "18.00",
+                 "duration": "30",
+                 "day": "Jeudi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "42",
+                 "sport_id": "9",
+                 "from": "18.30",
+                 "duration": "45",
+                 "day": "Jeudi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "43",
+                 "sport_id": "2",
+                 "from": "18.30",
+                 "duration": "45",
+                 "day": "Jeudi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "44",
+                 "sport_id": "4",
+                 "from": "19.30",
+                 "duration": "45",
+                 "day": "Jeudi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "45",
+                 "sport_id": "7",
+                 "from": "20.15",
+                 "duration": "45",
+                 "day": "Jeudi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "46",
+                 "sport_id": "1",
+                 "from": "9.15",
+                 "duration": "30",
+                 "day": "Vendredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "47",
+                 "sport_id": "8",
+                 "from": "9.45",
+                 "duration": "45",
+                 "day": "Vendredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "48",
+                 "sport_id": "1",
+                 "from": "12.30",
+                 "duration": "30",
+                 "day": "Vendredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "49",
+                 "sport_id": "5",
+                 "from": "13.00",
+                 "duration": "45",
+                 "day": "Vendredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "50",
+                 "sport_id": "7",
+                 "from": "14.15",
+                 "duration": "15",
+                 "day": "Vendredi",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "51",
+                 "sport_id": "3",
+                 "from": "14.30",
+                 "duration": "45",
+                 "day": "Vendredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "52",
+                 "sport_id": "4",
+                 "from": "16.45",
+                 "duration": "45",
+                 "day": "Vendredi",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "53",
+                 "sport_id": "7",
+                 "from": "17.30",
+                 "duration": "45",
+                 "day": "Vendredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "54",
+                 "sport_id": "9",
+                 "from": "17.30",
+                 "duration": "45",
+                 "day": "Vendredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "55",
+                 "sport_id": "3",
+                 "from": "18.30",
+                 "duration": "45",
+                 "day": "Vendredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "56",
+                 "sport_id": "10",
+                 "from": "19.30",
+                 "duration": "45",
+                 "day": "Vendredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "57",
+                 "sport_id": "5",
+                 "from": "20.15",
+                 "duration": "45",
+                 "day": "Vendredi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "58",
+                 "sport_id": "5",
+                 "from": "9.00",
+                 "duration": "60",
+                 "day": "Samedi",
+                 "attendance": "1"
+                 },
+                 {
+                 "id": "59",
+                 "sport_id": "4",
+                 "from": "10.00",
+                 "duration": "45",
+                 "day": "Samedi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "60",
+                 "sport_id": "2",
+                 "from": "10.45",
+                 "duration": "45",
+                 "day": "Samedi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "61",
+                 "sport_id": "7",
+                 "from": "11.30",
+                 "duration": "45",
+                 "day": "Samedi",
+                 "attendance": "0"
+                 },
+                 {
+                 "id": "62",
+                 "sport_id": "9",
+                 "from": "12.30",
+                 "duration": "45",
+                 "day": "Samedi",
                  "attendance": "0"
                  }
                  ]
