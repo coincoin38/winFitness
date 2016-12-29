@@ -18,6 +18,8 @@ class RootViewController: UIViewController{
         APESuperHUD.appearance.hudSquareSize = self.view.frame.size.width/1.25
         APESuperHUD.appearance.textColor =  FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor)
         APESuperHUD.appearance.shadow = false
+        APESuperHUD.appearance.animateInTime = 0.25
+        APESuperHUD.appearance.animateOutTime = 0.25
     }
     
     func APESuperHUDDefault() {

@@ -164,26 +164,14 @@ class RealmManager: NSObject {
     
     // MARK: - Récupération de la totalité d'un type d'objet stocké
 
-    func getAllSessions() -> Results<(SessionModel)> {
-        return realm.objects(SessionModel.self)
-    }
-    
-    func getAllSports() -> Results<(SportModel)> {
-        return realm.objects(SportModel.self)
-    }
-    
     func getAllSportsDescriptions() -> Results<(SportDescriptionModel)> {
         return realm.objects(SportDescriptionModel.self)
     }
     
     func getAllSportsFromDB(_ completion: (_ sports: Array<(SportModel)>) -> Void) {
-        completion(Array<SportModel>(realm.objects(SportModel.self)))
+        completion(Array<SportModel>(realm.objects(SportModel.self).sorted(byProperty: "name")))
     }
-    
-    func getAllObjectives()->Results<(ObjectiveModel)>{
-        return realm.objects(ObjectiveModel.self)
-    }
-    
+
     // MARK : - Recherches d'objet(s) stocké(s)
     
     func isSessionWithDate(_ day: String, completion: (_ sessions: Results<(SessionModel)>) -> Void) {

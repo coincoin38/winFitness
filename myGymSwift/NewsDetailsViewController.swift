@@ -88,5 +88,4 @@ class NewsDetailsViewController: UIViewController, UIWebViewDelegate, AlertViewC
     func didClickSecondButton() {
         UIApplication.shared.openURL(URL (string: NetworkConstants.FB_appstore)!)
     }
-    
 }
