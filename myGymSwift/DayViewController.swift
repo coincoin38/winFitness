@@ -18,7 +18,6 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
 
     @IBOutlet weak var tableView: UITableView?
     @IBOutlet weak var dateLabel: UILabel?
-    @IBOutlet weak var dayPageIndicator: UIPageControl?
 
     // MARK: - Init
 
@@ -42,53 +41,8 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         animateTable()
     }
     
-    func detectAnotherDay(_ isNext:Bool){
-        
-        /*let components: DateComponents = DateComponents()
-        (components as NSDateComponents).setValue(-1, forComponent: Calendar.init.day);
-        
-        if(isNext){
-            (components as NSDateComponents).setValue(1, forComponent: Calendar.init.day);
-        }
-        
-        let anotherDay   = (Calendar.current as NSCalendar).date(byAdding: components, to: selectedDate, options: Calendar.Options(rawValue: 0))
-        updateDataWithAnotherDay(anotherDay!,isNext: isNext)*/
-    }
-    
-    func updateDataWithAnotherDay(_ newDate:Date,isNext:Bool){
-        
-       /* RealmManager.SharedInstance.isSessionWithDate(newDate) { (sessions) -> Void in
-            
-            if(sessions.count>0){
-                
-                self.sessionsArray.removeAll()
-                
-                for session in sessions {
-                    self.sessionsArray.append(session)
-                }
-                
-                if(self.sessionsArray.count > 0) {
-                    
-                    if(isNext){
-                        self.dayPageIndicator?.currentPage+=1
-                    }
-                    else{
-                        self.dayPageIndicator?.currentPage-=1
-                    }
-                    self.selectedDay  = FormaterManager.SharedInstance.formatWeekDayAndDate(newDate)
-                    self.dateLabel?.text = self.selectedDay
-                    self.animateTable()
-                }
-            }
-            else{
-                if(!self.timer.isValid){
-                    self.timer = NSTimer.scheduledTimerWithTimeInterval(JLToastDelay.ShortDelay+1.0, target: self, selector: #selector(DayViewController.countUp), userInfo: nil, repeats: false)
-                    JLToast.makeText(NSLocalizedString("NOTHING", comment:"")+"\n"+FormaterManager.SharedInstance.formatWeekDayAndDate(newDate), duration: JLToastDelay.ShortDelay).show()
-                }
-            }
-        }*/
-    }
-    
+    // MARK: - Animation
+
     func animateTable() {
         tableView!.reloadData()
         
@@ -112,23 +66,6 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         }
     }
     
-    // MARK: - Actions
-
-    @IBAction func rightGesture(_ sender: UISwipeGestureRecognizer) {
-        if (self.dayPageIndicator?.currentPage != 0)
-        {
-            detectAnotherDay(false)
-        }
-    }
-    
-    @IBAction func leftGesture(_ sender: UISwipeGestureRecognizer) {
-        detectAnotherDay(true)
-    }
-    
-    @IBAction func dismiss(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     // MARK: - TableView delegate
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -144,6 +81,12 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func dismiss(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Memory

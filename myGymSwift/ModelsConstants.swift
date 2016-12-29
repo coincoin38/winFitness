@@ -8,12 +8,6 @@
 
 struct ModelsConstants {
     
-    static let stub_sessions          = 0
-    static let stub_sports            = 2
-    static let stub_sportsDescription = 3
-    static let stub_objectives        = 4
-    
-    static let kSessionsStub           = "sessionsFeed"
     static let kSportsStub             = "sportsFeed"
     static let kSportsDescritpionsStub = "sportsDescriptionsFeed"
     static let kObjectivesStub         = "objectivesFeed"
@@ -38,6 +32,7 @@ struct ModelsConstants {
     static let kColor          = "color"
     static let kImage          = "image"
     static let kKey_sport      = "key_sport"
+    
     static let kCreated_time   = "created_time"
     static let kFull_picture   = "full_picture"
     static let kActions        = "actions"
@@ -50,7 +45,13 @@ struct ModelsConstants {
     static let kGetId          = "id = %@"
     static let kGetSportId     = "sport_id = %@"
     static let kGetKey_sport   = "key_sport = %@"
+    
+    static let kMonday    = "Lundi"
+    static let kTuesday   = "Mardi"
+    static let kWednesday = "Mercredi"
+    static let kThursday  = "Jeudi"
+    static let kFriday    = "Vendredi"
+    static let kSaturday  = "Samedi"
 
     static let kJsonExtension = "json"
-
 }

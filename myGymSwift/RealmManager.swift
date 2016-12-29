@@ -20,50 +20,37 @@ class RealmManager: NSObject {
     
     func startFeed(){
         
-        self.startFeedSessionsByDay()
-        self.startFeedSports()
-        self.startFeedSportsDescriptions()
-        self.startFeedObjectives()
-    }
-    
-    func startFeedSessionsByDay(){
+        // ########## SESSIONS
+        self.groupsFromFile(ModelsConstants.kMonday,object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsInDB(JSON)
+        }
+        self.groupsFromFile(ModelsConstants.kTuesday,object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsInDB(JSON)
+        }
+        self.groupsFromFile(ModelsConstants.kWednesday,object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsInDB(JSON)
+        }
+        self.groupsFromFile(ModelsConstants.kThursday,object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsInDB(JSON)
+        }
+        self.groupsFromFile(ModelsConstants.kFriday,object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsInDB(JSON)
+        }
+        self.groupsFromFile(ModelsConstants.kSaturday,object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsInDB(JSON)
+        }
         
-        self.groupsFromFile("Lundi",object: ModelsConstants.kSessionsObject) { (JSON) in
-            self.writeSessionsInDB(JSON)
-        }
-        self.groupsFromFile("Mardi",object: ModelsConstants.kSessionsObject) { (JSON) in
-            self.writeSessionsInDB(JSON)
-        }
-        self.groupsFromFile("Mercredi",object: ModelsConstants.kSessionsObject) { (JSON) in
-            self.writeSessionsInDB(JSON)
-        }
-        self.groupsFromFile("Jeudi",object: ModelsConstants.kSessionsObject) { (JSON) in
-            self.writeSessionsInDB(JSON)
-        }
-        self.groupsFromFile("Vendredi",object: ModelsConstants.kSessionsObject) { (JSON) in
-            self.writeSessionsInDB(JSON)
-        }
-        self.groupsFromFile("Samedi",object: ModelsConstants.kSessionsObject) { (JSON) in
-            self.writeSessionsInDB(JSON)
-        }
-    }
-    
-    func startFeedSports (){
-        
+        // ########## SPORTS
         self.groupsFromFile(ModelsConstants.kSportsStub,object: ModelsConstants.kSportsObject) { (JSON) in
             self.writeSportsInDB(JSON)
         }
-    }
-
-    func startFeedSportsDescriptions (){
         
+        // ########## DESCRIPTIONS
         self.groupsFromFile(ModelsConstants.kSportsDescritpionsStub,object: ModelsConstants.kSportsDescriptionsObject) { (JSON) in
             self.writeSportsDescriptionsInDB(JSON)
         }
-    }
-    
-    func startFeedObjectives (){
         
+        // ########## OBJECTIVES
         self.groupsFromFile(ModelsConstants.kObjectivesStub,object: ModelsConstants.kObjectivesObject) { (JSON) in
             self.writeObjectivesInDB(JSON)
         }
@@ -99,6 +86,16 @@ class RealmManager: NSObject {
                 if (new.count==0){
                     self.writeData(newObject)
                 }
+                else {
+                    let realm = try! Realm()
+                    try! realm.write {
+                        new[0].id = newObject.id
+                        new[0].name = newObject.name
+                        new[0].description_id = newObject.description_id
+                        new[0].color = newObject.color
+                        new[0].image = newObject.image
+                    }
+                }
             })
         }
     }
@@ -109,6 +106,13 @@ class RealmManager: NSObject {
             getSportDescriptionWithId(newObject.key_sport, completion: { (new) -> Void in
                 if (new.count==0){
                     self.writeData(newObject)
+                }
+                else {
+                    let realm = try! Realm()
+                    try! realm.write {
+                        new[0].key_sport = newObject.key_sport
+                        new[0].content = newObject.content
+                    }
                 }
             })
         }
@@ -121,6 +125,15 @@ class RealmManager: NSObject {
                 if (new.count==0){
                     self.writeData(newObject)
                 }
+                else {
+                    let realm = try! Realm()
+                    try! realm.write {
+                        new[0].id = newObject.id
+                        new[0].sport_id = newObject.sport_id
+                        new[0].firstPart = newObject.firstPart
+                        new[0].secondPart = newObject.secondPart
+                    }
+                }
             })
         }
     }
@@ -131,7 +144,7 @@ class RealmManager: NSObject {
         }
     }
     
-    // MARK: - Génération d'objets
+    // MARK: - Génération d'objets à partir de fichiers JSON
 
     func generateSession(_ dictionary: JSON) -> SessionModel {
         return SessionModel().setData(dictionary)
@@ -149,7 +162,7 @@ class RealmManager: NSObject {
         return ObjectiveModel().setData(dictionary)
     }
     
-    // MARK: - Récupération d'objets
+    // MARK: - Récupération de la totalité d'un type d'objet stocké
 
     func getAllSessions() -> Results<(SessionModel)> {
         return realm.objects(SessionModel.self)
@@ -171,10 +184,10 @@ class RealmManager: NSObject {
         return realm.objects(ObjectiveModel.self)
     }
     
-    // MARK : - Recherches
+    // MARK : - Recherches d'objet(s) stocké(s)
     
     func isSessionWithDate(_ day: String, completion: (_ sessions: Results<(SessionModel)>) -> Void) {
-        completion(realm.objects(SessionModel.self).filter(ModelsConstants.kGetDay, day))
+        completion(realm.objects(SessionModel.self).filter(ModelsConstants.kGetDay, day).sorted(byProperty: "from"))
     }
     
     func getSessionWithId(_ id: String, completion: (_ session: Results<(SessionModel)>) -> Void) {
@@ -205,26 +218,8 @@ class RealmManager: NSObject {
         }
     }
     
-    // MARK: - Traitement JSON
-
-    func returnFileAndObject(_ keyStubDetection: NSInteger, completion: (_ stub: String, _ keyStub: String) -> Void) {
-        
-        switch keyStubDetection{
-            
-        case ModelsConstants.stub_sessions:
-            completion(ModelsConstants.kSessionsStub, ModelsConstants.kSessionsObject);
-        case ModelsConstants.stub_sports:
-            completion(ModelsConstants.kSportsStub, ModelsConstants.kSportsObject);
-        case ModelsConstants.stub_sportsDescription:
-            completion(ModelsConstants.kSportsDescritpionsStub, ModelsConstants.kSportsDescriptionsObject);
-        case ModelsConstants.stub_objectives:
-            completion(ModelsConstants.kObjectivesStub, ModelsConstants.kObjectivesObject);
-        default:
-            completion("", "");
-        }
-    }
+    // MARK: - Transformation d'un stub en data JSON
     
-    // Transformation d'un stub en data JSON
     func groupsFromFile(_ fileName: String, object: String, completion: (_ result: JSON) -> Void) {
         
         let path = Bundle.main.path(forResource: fileName, ofType: ModelsConstants.kJsonExtension)
