@@ -60,7 +60,7 @@
 		38985AEC1DA7A5B900F4E375 /* AlertViewControllerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985AEB1DA7A5B900F4E375 /* AlertViewControllerUtil.swift */; };
 		38D3C0A01DA7F0FE006BBA23 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D3C09F1DA7F0FE006BBA23 /* RootViewController.swift */; };
 		38F943BA1C3FA05200643571 /* ModelsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F943B91C3FA05200643571 /* ModelsConstants.swift */; };
-		CE6791709A58BE84782420AF /* Pods_myGymSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A24D320B1CEC4F09FA47B2 /* Pods_myGymSwift.framework */; };
+		833EC24F89F1FA1F1356A8DE /* Pods_myGymSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7817AB2550FBD3CD6EA16E8A /* Pods_myGymSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +86,7 @@
 		13A6B1D01C131FC800F93232 /* FormaterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormaterManager.swift; sourceTree = "<group>"; };
 		13A6B1D71C13A24A00F93232 /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
 		13A6B1D81C13A24A00F93232 /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
+		13C8F03C1E1917DD00B4D2AA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKCoreKit/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		13C955BF1E14543200DD9FBA /* Lundi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Lundi.json; sourceTree = "<group>"; };
 		13C955C11E14547000DD9FBA /* Mardi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Mardi.json; sourceTree = "<group>"; };
 		13C955C31E14548400DD9FBA /* Mercredi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Mercredi.json; sourceTree = "<group>"; };
@@ -100,8 +101,6 @@
 		13CF0E151C09ECC100715454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13CF0E1A1C09ECC100715454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13E68F551C0B8B6A00CDCDD0 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		217242C58D014979570DFDDD /* Pods-myGymSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myGymSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift.debug.xcconfig"; sourceTree = "<group>"; };
-		30A24D320B1CEC4F09FA47B2 /* Pods_myGymSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myGymSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		380E29891C591391005D0E4B /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		3810B3271DA78B84000F91B8 /* FBAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBAPIController.swift; sourceTree = "<group>"; };
 		38210E6E1C24177B0001A4CE /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -122,7 +121,9 @@
 		38985AEB1DA7A5B900F4E375 /* AlertViewControllerUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewControllerUtil.swift; sourceTree = "<group>"; };
 		38D3C09F1DA7F0FE006BBA23 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		38F943B91C3FA05200643571 /* ModelsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelsConstants.swift; sourceTree = "<group>"; };
-		645A1990FAF170CC8B1D4F43 /* Pods-myGymSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myGymSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift.release.xcconfig"; sourceTree = "<group>"; };
+		7817AB2550FBD3CD6EA16E8A /* Pods_myGymSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myGymSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		824DD462F8CF79003FEBDF93 /* Pods-myGymSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myGymSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		899E2EF53002DAB45E21AE0C /* Pods-myGymSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myGymSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6791709A58BE84782420AF /* Pods_myGymSwift.framework in Frameworks */,
+				833EC24F89F1FA1F1356A8DE /* Pods_myGymSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +291,7 @@
 				13CF0E0D1C09ECC100715454 /* myGymSwift */,
 				13CF0E0C1C09ECC100715454 /* Products */,
 				8BAEF0186558D58525B085E9 /* Frameworks */,
-				485ABA2559C09ABFE63F68AE /* Pods */,
+				8A4962CD08A10BFFFCDE24A7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -344,11 +345,11 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		485ABA2559C09ABFE63F68AE /* Pods */ = {
+		8A4962CD08A10BFFFCDE24A7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				217242C58D014979570DFDDD /* Pods-myGymSwift.debug.xcconfig */,
-				645A1990FAF170CC8B1D4F43 /* Pods-myGymSwift.release.xcconfig */,
+				824DD462F8CF79003FEBDF93 /* Pods-myGymSwift.debug.xcconfig */,
+				899E2EF53002DAB45E21AE0C /* Pods-myGymSwift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -356,8 +357,9 @@
 		8BAEF0186558D58525B085E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				13C8F03C1E1917DD00B4D2AA /* FBSDKCoreKit.framework */,
 				0B0E4BCD6721A36AC0FF04DA /* Pods.framework */,
-				30A24D320B1CEC4F09FA47B2 /* Pods_myGymSwift.framework */,
+				7817AB2550FBD3CD6EA16E8A /* Pods_myGymSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -369,13 +371,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13CF0E1D1C09ECC100715454 /* Build configuration list for PBXNativeTarget "myGymSwift" */;
 			buildPhases = (
-				E121BBE49F837C172602DD60 /* [CP] Check Pods Manifest.lock */,
+				AEDE008DA16D1A919A0B777D /* [CP] Check Pods Manifest.lock */,
 				13CF0E071C09ECC100715454 /* Sources */,
 				13CF0E081C09ECC100715454 /* Frameworks */,
 				13CF0E091C09ECC100715454 /* Resources */,
-				7AF7173D3D7E72854C6C7D6A /* [CP] Embed Pods Frameworks */,
-				B556CFD7A2E9CD8E5476EF73 /* [CP] Copy Pods Resources */,
 				SWIFCLEANCUSTOMRUNSCRIPT /* Swift-Clean Run Script */,
+				26B942F5ABCDA2E8B756204C /* [CP] Embed Pods Frameworks */,
+				3A377F21EECBC049A056B1FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -451,7 +453,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7AF7173D3D7E72854C6C7D6A /* [CP] Embed Pods Frameworks */ = {
+		26B942F5ABCDA2E8B756204C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -466,7 +468,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B556CFD7A2E9CD8E5476EF73 /* [CP] Copy Pods Resources */ = {
+		3A377F21EECBC049A056B1FA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -481,7 +483,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E121BBE49F837C172602DD60 /* [CP] Check Pods Manifest.lock */ = {
+		AEDE008DA16D1A919A0B777D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -659,7 +661,7 @@
 		};
 		13CF0E1E1C09ECC100715454 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 217242C58D014979570DFDDD /* Pods-myGymSwift.debug.xcconfig */;
+			baseConfigurationReference = 824DD462F8CF79003FEBDF93 /* Pods-myGymSwift.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -667,6 +669,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: juliengimenez38@gmail.com (9QTNNW3YNQ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 27X585C4QL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKCoreKit",
+				);
 				INFOPLIST_FILE = myGymSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -680,7 +686,7 @@
 		};
 		13CF0E1F1C09ECC100715454 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 645A1990FAF170CC8B1D4F43 /* Pods-myGymSwift.release.xcconfig */;
+			baseConfigurationReference = 899E2EF53002DAB45E21AE0C /* Pods-myGymSwift.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -688,6 +694,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: juliengimenez38@gmail.com (9QTNNW3YNQ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 27X585C4QL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKCoreKit",
+				);
 				INFOPLIST_FILE = myGymSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
