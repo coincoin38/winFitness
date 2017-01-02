@@ -43,7 +43,7 @@ class NewsDetailsViewController: UIViewController, UIWebViewDelegate, AlertViewC
         
         navigationItem.rightBarButtonItem = fbButton
         
-        let modifiedURLString = (news.full_picture != nil) ? String(format: NetworkConstants.FB_webview_news_detail_with_image,news.full_picture!,news.feedBody()) : String(format: NetworkConstants.FB_webview_news_detail,news.feedBody())
+        let modifiedURLString = (news.full_picture != nil) ? String(format: NetworkConstants.FB_webview_news_detail_with_image,news.full_picture!,news.feedBodyHTML()) : String(format: NetworkConstants.FB_webview_news_detail,news.feedBodyHTML())
    
         bodyNewsWebView.delegate = self
         bodyNewsWebView.loadHTMLString(modifiedURLString, baseURL: nil)
@@ -65,11 +65,11 @@ class NewsDetailsViewController: UIViewController, UIWebViewDelegate, AlertViewC
     }
     
     func webViewDidStartLoad(_ webView : UIWebView) {
-        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: NSLocalizedString("LOADING_NEW", comment:""), presentingView: self.view)
+        //APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: NSLocalizedString("LOADING_NEW", comment:""), presentingView: self.view)
     }
     
     func webViewDidFinishLoad(_ webView : UIWebView) {
-        APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion:nil)
+        //APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion:nil)
     }
     
     func openFacebook() {

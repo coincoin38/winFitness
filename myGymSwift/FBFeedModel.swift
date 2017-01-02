@@ -50,4 +50,24 @@ class FBFeedModel: NSObject {
         
         return ""
     }
+    
+    func feedBodyHTML()->String
+    {
+        if (self.message != nil && self._description != nil)
+        {
+            return self.message! + "<br /><br />" + self._description!
+        }
+        
+        if (self.message != nil)
+        {
+            return self.message!
+        }
+        
+        if (self._description != nil)
+        {
+            return self._description!
+        }
+        
+        return ""
+    }
 }
