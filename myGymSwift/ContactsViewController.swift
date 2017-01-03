@@ -17,9 +17,9 @@ class ContactsViewController: UIViewController,UIGestureRecognizerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ContactsViewController.openPlan(_:)))
-        planImage.addGestureRecognizer(tap)
-        tap.delegate = self
+        //let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ContactsViewController.openPlan(_:)))
+        //planImage.addGestureRecognizer(tap)
+        //tap.delegate = self
     }
     
     func openPlan(_ gr:UITapGestureRecognizer)
