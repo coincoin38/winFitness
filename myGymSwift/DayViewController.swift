@@ -12,6 +12,7 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
 
     var sessionsArray: Array<SessionModel> = Array<SessionModel>()
     var selectedDay: String = String()
+    var isRPM: Bool = Bool()
 
     let cellIdentifier = "sessionIdentifier"
     let cellXib = "SessionTableViewCell"
@@ -26,12 +27,27 @@ class DayViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         tableView?.register(UINib(nibName: cellXib, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         dateLabel?.text = selectedDay
         
-        RealmManager.SharedInstance.isSessionWithDate(selectedDay) { (sessions) -> Void in
+        if isRPM {
             
-            if(sessions.count>0){
+            RealmManager.SharedInstance.isSessionRPMWithDate(selectedDay) { (sessions) -> Void in
                 
-                for session in sessions {
-                    self.sessionsArray.append(session)
+                if(sessions.count>0){
+                    
+                    for session in sessions {
+                        self.sessionsArray.append(session)
+                    }
+                }
+            }
+        }
+        else{
+            
+            RealmManager.SharedInstance.isSessionWithDate(selectedDay) { (sessions) -> Void in
+                
+                if(sessions.count>0){
+                    
+                    for session in sessions {
+                        self.sessionsArray.append(session)
+                    }
                 }
             }
         }

@@ -25,7 +25,7 @@ class DaysViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var cellSize : CGFloat = 0;
     var selectedDay: String = String()
-    var selectedDate: Date = Date()
+    var isRPM: Bool = Bool()
     
     // MARK: - Init
 
@@ -69,6 +69,7 @@ class DaysViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             let svc = segue.destination as! DayViewController
             svc.selectedDay   = selectedDay
+            svc.isRPM = isRPM
         }
     }
     
@@ -98,12 +99,14 @@ class DaysViewController: UIViewController, UITableViewDelegate, UITableViewData
     func didTouchRPM(day: String)
     {
         selectedDay = day
+        isRPM = true
         self.performSegue(withIdentifier: SeguesConstants.kShowDetailDay, sender: self)
     }
     
     func didTouchLESMILLS(day: String)
     {
         selectedDay = day
+        isRPM = false
         self.performSegue(withIdentifier: SeguesConstants.kShowDetailDay, sender: self)
     }
     

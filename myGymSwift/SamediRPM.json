@@ -1,0 +1,16 @@
+{
+    "sessions":[{
+                "id": "f1",
+                "sport_id": "9",
+                "from": "09.15",
+                "duration": "45",
+                "day": "Samedi",
+                "attendance": "0"
+                }, {
+                "id": "f2",
+                "sport_id": "9",
+                "from": "10.00",
+                "duration": "45",
+                "day": "Samedi",
+                "attendance": "0"
+                }]}

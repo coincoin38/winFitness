@@ -1,0 +1,44 @@
+{
+    "sessions":[{
+                "id": "b1",
+                "sport_id": "9",
+                "from": "09.15",
+                "duration": "45",
+                "day": "Mardi",
+                "attendance": "0"
+                }, {
+                "id": "b2",
+                "sport_id": "9",
+                "from": "10.00",
+                "duration": "45",
+                "day": "Mardi",
+                "attendance": "0"
+                }, {
+                "id": "b3",
+                "sport_id": "9",
+                "from": "12.30",
+                "duration": "45",
+                "day": "Mardi",
+                "attendance": "0"
+                }, {
+                "id": "b4",
+                "sport_id": "9",
+                "from": "17.30",
+                "duration": "45",
+                "day": "Mardi",
+                "attendance": "0"
+                }, {
+                "id": "b5",
+                "sport_id": "9",
+                "from": "19.30",
+                "duration": "45",
+                "day": "Mardi",
+                "attendance": "0"
+                }, {
+                "id": "b6",
+                "sport_id": "9",
+                "from": "20.15",
+                "duration": "45",
+                "day": "Mardi",
+                "attendance": "0"
+                }]}

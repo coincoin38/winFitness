@@ -22,6 +22,7 @@ class RealmManager: NSObject {
         
         try! realm.write {
             self.realm.delete(realm.objects(SessionModel.self))
+            self.realm.delete(realm.objects(SessionRPMModel.self))
         }
         // ########## SESSIONS
         self.groupsFromFile(ModelsConstants.kMonday,object: ModelsConstants.kSessionsObject) { (JSON) in
@@ -41,6 +42,26 @@ class RealmManager: NSObject {
         }
         self.groupsFromFile(ModelsConstants.kSaturday,object: ModelsConstants.kSessionsObject) { (JSON) in
             self.writeSessionsInDB(JSON)
+        }
+        
+        // ########## SESSIONS RPM
+        self.groupsFromFile(ModelsConstants.kMondayRPM,object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsRPMInDB(JSON)
+        }
+        self.groupsFromFile(ModelsConstants.kTuesdayRPM,object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsRPMInDB(JSON)
+        }
+        self.groupsFromFile(ModelsConstants.kWednesdayRPM,object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsRPMInDB(JSON)
+        }
+        self.groupsFromFile(ModelsConstants.kThursdayRPM,object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsRPMInDB(JSON)
+        }
+        self.groupsFromFile(ModelsConstants.kFridayRPM,object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsRPMInDB(JSON)
+        }
+        self.groupsFromFile(ModelsConstants.kSaturdayRPM,object: ModelsConstants.kSessionsObject) { (JSON) in
+            self.writeSessionsRPMInDB(JSON)
         }
         
         // ########## SPORTS
@@ -65,6 +86,27 @@ class RealmManager: NSObject {
         for object in result {
             let newObject = self.generateSession(object.1)
             getSessionWithId(newObject.id, completion: { (new) -> Void in
+                if (new.count==0){
+                    self.writeData(newObject)
+                }
+                else {
+                    let realm = try! Realm()
+                    try! realm.write {
+                        new[0].sport_id = newObject.sport_id
+                        new[0].from = newObject.from
+                        new[0].duration = newObject.duration
+                        new[0].attendance = newObject.attendance
+                        new[0].day = newObject.day
+                    }
+                }
+            })
+        }
+    }
+    
+    func writeSessionsRPMInDB(_ result: JSON) {
+        for object in result {
+            let newObject = self.generateSessionRPM(object.1)
+            getSessionRPMWithId(newObject.id, completion: { (new) -> Void in
                 if (new.count==0){
                     self.writeData(newObject)
                 }
@@ -153,6 +195,10 @@ class RealmManager: NSObject {
         return SessionModel().setData(dictionary)
     }
 
+    func generateSessionRPM(_ dictionary: JSON) -> SessionRPMModel {
+        return SessionRPMModel().setData(dictionary) as! SessionRPMModel
+    }
+    
     func generateSport(_ dictionary: JSON) -> SportModel {
         return SportModel().setData(dictionary)
     }
@@ -181,8 +227,16 @@ class RealmManager: NSObject {
         completion(realm.objects(SessionModel.self).filter(ModelsConstants.kGetDay, day).sorted(byProperty: "from"))
     }
     
+    func isSessionRPMWithDate(_ day: String, completion: (_ sessions: Results<(SessionRPMModel)>) -> Void) {
+        completion(realm.objects(SessionRPMModel.self).filter(ModelsConstants.kGetDay, day).sorted(byProperty: "from"))
+    }
+    
     func getSessionWithId(_ id: String, completion: (_ session: Results<(SessionModel)>) -> Void) {
         completion(realm.objects(SessionModel.self).filter(ModelsConstants.kGetId, id))
+    }
+    
+    func getSessionRPMWithId(_ id: String, completion: (_ session: Results<(SessionRPMModel)>) -> Void) {
+        completion(realm.objects(SessionRPMModel.self).filter(ModelsConstants.kGetId, id))
     }
     
     func getSportWithId(_ id: String, completion: (_ sport: Results<(SportModel)>) -> Void) {

@@ -52,6 +52,13 @@ struct ModelsConstants {
     static let kThursday  = "Jeudi"
     static let kFriday    = "Vendredi"
     static let kSaturday  = "Samedi"
+    
+    static let kMondayRPM    = "LundiRPM"
+    static let kTuesdayRPM   = "MardiRPM"
+    static let kWednesdayRPM = "MercrediRPM"
+    static let kThursdayRPM  = "JeudiRPM"
+    static let kFridayRPM    = "VendrediRPM"
+    static let kSaturdayRPM  = "SamediRPM"
 
     static let kJsonExtension = "json"
 }
