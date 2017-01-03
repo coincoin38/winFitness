@@ -13,7 +13,6 @@ class SessionTableViewCell: UITableViewCell {
     @IBOutlet weak var sessionLabel: UILabel!
     @IBOutlet weak var fromLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var coachLabel: UILabel!
     @IBOutlet weak var attendanceView: UIView!
 
     override func awakeFromNib() {

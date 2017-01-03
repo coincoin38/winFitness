@@ -20,6 +20,9 @@ class RealmManager: NSObject {
     
     func startFeed(){
         
+        try! realm.write {
+            self.realm.delete(realm.objects(SessionModel.self))
+        }
         // ########## SESSIONS
         self.groupsFromFile(ModelsConstants.kMonday,object: ModelsConstants.kSessionsObject) { (JSON) in
             self.writeSessionsInDB(JSON)
