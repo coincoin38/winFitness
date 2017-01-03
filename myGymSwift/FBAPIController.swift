@@ -32,7 +32,7 @@ class FBAPIController {
                 print("Error: \(error)")
             }
             
-            print("Result: \(result)")
+            //print("Result: \(result)")
             
             self.FBFeedModelisation(result as AnyObject)
         })
