@@ -65,11 +65,11 @@ class NewsDetailsViewController: UIViewController, UIWebViewDelegate, AlertViewC
     }
     
     func webViewDidStartLoad(_ webView : UIWebView) {
-        //APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: NSLocalizedString("LOADING_NEW", comment:""), presentingView: self.view)
+        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: NSLocalizedString("LOADING_NEW", comment:""), presentingView: self.view)
     }
     
     func webViewDidFinishLoad(_ webView : UIWebView) {
-        //APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion:nil)
+        APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion:nil)
     }
     
     func openFacebook() {

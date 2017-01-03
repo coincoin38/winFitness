@@ -55,7 +55,9 @@ class FBFeedModel: NSObject {
     {
         if (self.message != nil && self._description != nil)
         {
-            return self.message! + "<br /><br />" + self._description!
+            var clean = self._description!
+            clean = clean.replacingOccurrences(of: "\n", with: "<br />")
+            return self.message! + "<br /><br />" + clean
         }
         
         if (self.message != nil)

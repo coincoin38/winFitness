@@ -1,735 +1,2080 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		1306D0241E0FCFF9002C2FA1 /* SwiftStyleSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1306D0231E0FCFF9002C2FA1 /* SwiftStyleSettings.plist */; };
-		130EC7031C29FA7600EE9805 /* objectivesFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 130EC7021C29FA7600EE9805 /* objectivesFeed.json */; };
-		133AA3401CD609DE00786A12 /* DayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AA33E1CD609DE00786A12 /* DayTableViewCell.swift */; };
-		133AA3411CD609DE00786A12 /* DayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 133AA33F1CD609DE00786A12 /* DayTableViewCell.xib */; };
-		13616EAF1C2C18FF00DC459A /* sportsDescriptionsFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 13616EAE1C2C18FF00DC459A /* sportsDescriptionsFeed.json */; };
-		13616EB11C2C1D6D00DC459A /* SportDescriptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13616EB01C2C1D6D00DC459A /* SportDescriptionModel.swift */; };
-		13616EB31C2C25B700DC459A /* ObjectiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13616EB21C2C25B700DC459A /* ObjectiveModel.swift */; };
-		13623BA51D65E39800F94406 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13623BA41D65E39800F94406 /* HomeViewController.swift */; };
-		13623BC51D65EF3500F94406 /* FBTokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13623BC41D65EF3500F94406 /* FBTokenManager.swift */; };
-		13623BCA1D66156600F94406 /* FBFeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13623BC91D66156600F94406 /* FBFeedModel.swift */; };
-		1376A5F61C09EE67000AA652 /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1376A5F51C09EE67000AA652 /* SessionModel.swift */; };
-		1376A5FA1C09F1C2000AA652 /* DaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1376A5F91C09F1C2000AA652 /* DaysViewController.swift */; };
-		1376A5FC1C09F1CE000AA652 /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1376A5FB1C09F1CE000AA652 /* DayViewController.swift */; };
-		138C3F771C3F049600470ACB /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138C3F751C3F049600470ACB /* NewsTableViewCell.swift */; };
-		138C3F781C3F049600470ACB /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 138C3F761C3F049600470ACB /* NewsTableViewCell.xib */; };
-		139163701C1A20E8000B9ECC /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1391636F1C1A20E8000B9ECC /* NewsViewController.swift */; };
-		139595491C1481E500F43523 /* SportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139595481C1481E500F43523 /* SportModel.swift */; };
-		139A94701C143CDD00CF754A /* sportsFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 139A946F1C143CDD00CF754A /* sportsFeed.json */; };
-		13A6B1D11C131FC800F93232 /* FormaterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A6B1D01C131FC800F93232 /* FormaterManager.swift */; };
-		13A6B1D91C13A24A00F93232 /* SessionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A6B1D71C13A24A00F93232 /* SessionTableViewCell.swift */; };
-		13A6B1DA1C13A24A00F93232 /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13A6B1D81C13A24A00F93232 /* SessionTableViewCell.xib */; };
-		13C955C01E14543200DD9FBA /* Lundi.json in Resources */ = {isa = PBXBuildFile; fileRef = 13C955BF1E14543200DD9FBA /* Lundi.json */; };
-		13C955C21E14547000DD9FBA /* Mardi.json in Resources */ = {isa = PBXBuildFile; fileRef = 13C955C11E14547000DD9FBA /* Mardi.json */; };
-		13C955C41E14548400DD9FBA /* Mercredi.json in Resources */ = {isa = PBXBuildFile; fileRef = 13C955C31E14548400DD9FBA /* Mercredi.json */; };
-		13C955C61E14549700DD9FBA /* Jeudi.json in Resources */ = {isa = PBXBuildFile; fileRef = 13C955C51E14549700DD9FBA /* Jeudi.json */; };
-		13C955C81E1454A900DD9FBA /* Vendredi.json in Resources */ = {isa = PBXBuildFile; fileRef = 13C955C71E1454A900DD9FBA /* Vendredi.json */; };
-		13C955CA1E1454BD00DD9FBA /* Samedi.json in Resources */ = {isa = PBXBuildFile; fileRef = 13C955C91E1454BD00DD9FBA /* Samedi.json */; };
-		13CE08CA1C2ABFB6009BC5E9 /* ImagesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE08C91C2ABFB6009BC5E9 /* ImagesConstants.swift */; };
-		13CE08CC1C2AC209009BC5E9 /* ColorsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CE08CB1C2AC209009BC5E9 /* ColorsConstants.swift */; };
-		13CF0E0F1C09ECC100715454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CF0E0E1C09ECC100715454 /* AppDelegate.swift */; };
-		13CF0E141C09ECC100715454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CF0E121C09ECC100715454 /* Main.storyboard */; };
-		13CF0E161C09ECC100715454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CF0E151C09ECC100715454 /* Assets.xcassets */; };
-		13E68F561C0B8B6A00CDCDD0 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E68F551C0B8B6A00CDCDD0 /* RealmManager.swift */; };
-		380E298A1C591391005D0E4B /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E29891C591391005D0E4B /* ContactsViewController.swift */; };
-		3810B3281DA78B84000F91B8 /* FBAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3810B3271DA78B84000F91B8 /* FBAPIController.swift */; };
-		38210E6F1C24177B0001A4CE /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38210E6E1C24177B0001A4CE /* MainTabBarViewController.swift */; };
-		38210E711C2431210001A4CE /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38210E701C2431210001A4CE /* SportsViewController.swift */; };
-		3825E6781C24515C00F589FA /* SportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3825E6761C24515C00F589FA /* SportCollectionViewCell.swift */; };
-		3825E6791C24515C00F589FA /* SportCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3825E6771C24515C00F589FA /* SportCollectionViewCell.xib */; };
-		3865A5291C4E46B400D7F82B /* NewsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3865A5281C4E46B400D7F82B /* NewsDetailsViewController.swift */; };
-		3865A52B1C4E85DA00D7F82B /* SportsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3865A52A1C4E85DA00D7F82B /* SportsDataManager.swift */; };
-		3865A52D1C4E972D00D7F82B /* SportsDescriptionsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3865A52C1C4E972D00D7F82B /* SportsDescriptionsDataManager.swift */; };
-		387666031C28383600DE8A62 /* SportDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387666021C28383600DE8A62 /* SportDetailsViewController.swift */; };
-		387B1AB41C2961C1004FAA16 /* NavBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B1AB31C2961C1004FAA16 /* NavBarManager.swift */; };
-		387B1AB61C296FBC004FAA16 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 387B1AB51C296FBC004FAA16 /* Localizable.strings */; };
-		387B1AB91C2990CA004FAA16 /* ObjectiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B1AB71C2990CA004FAA16 /* ObjectiveCollectionViewCell.swift */; };
-		387B1ABA1C2990CA004FAA16 /* ObjectiveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387B1AB81C2990CA004FAA16 /* ObjectiveCollectionViewCell.xib */; };
-		388F7DA71D8AE53F00AC0B39 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F7DA61D8AE53F00AC0B39 /* NetworkConstants.swift */; };
-		388F7DA91D8AE6CC00AC0B39 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F7DA81D8AE6CC00AC0B39 /* StorageManager.swift */; };
-		389649BE1DB4BD4000923C9D /* SeguesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389649BD1DB4BD4000923C9D /* SeguesConstants.swift */; };
-		38985AEC1DA7A5B900F4E375 /* AlertViewControllerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985AEB1DA7A5B900F4E375 /* AlertViewControllerUtil.swift */; };
-		38D3C0A01DA7F0FE006BBA23 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D3C09F1DA7F0FE006BBA23 /* RootViewController.swift */; };
-		38F943BA1C3FA05200643571 /* ModelsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F943B91C3FA05200643571 /* ModelsConstants.swift */; };
-		833EC24F89F1FA1F1356A8DE /* Pods_myGymSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7817AB2550FBD3CD6EA16E8A /* Pods_myGymSwift.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		0B0E4BCD6721A36AC0FF04DA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1306D0231E0FCFF9002C2FA1 /* SwiftStyleSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SwiftStyleSettings.plist; sourceTree = "<group>"; };
-		130EC7021C29FA7600EE9805 /* objectivesFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = objectivesFeed.json; sourceTree = "<group>"; };
-		133AA33E1CD609DE00786A12 /* DayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayTableViewCell.swift; sourceTree = "<group>"; };
-		133AA33F1CD609DE00786A12 /* DayTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayTableViewCell.xib; sourceTree = "<group>"; };
-		13616EAE1C2C18FF00DC459A /* sportsDescriptionsFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sportsDescriptionsFeed.json; sourceTree = "<group>"; };
-		13616EB01C2C1D6D00DC459A /* SportDescriptionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportDescriptionModel.swift; sourceTree = "<group>"; };
-		13616EB21C2C25B700DC459A /* ObjectiveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveModel.swift; sourceTree = "<group>"; };
-		13623BA41D65E39800F94406 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		13623BC41D65EF3500F94406 /* FBTokenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBTokenManager.swift; sourceTree = "<group>"; };
-		13623BC91D66156600F94406 /* FBFeedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBFeedModel.swift; sourceTree = "<group>"; };
-		1376A5F51C09EE67000AA652 /* SessionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
-		1376A5F91C09F1C2000AA652 /* DaysViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysViewController.swift; sourceTree = "<group>"; };
-		1376A5FB1C09F1CE000AA652 /* DayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
-		138C3F751C3F049600470ACB /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
-		138C3F761C3F049600470ACB /* NewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
-		1391636F1C1A20E8000B9ECC /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
-		139595481C1481E500F43523 /* SportModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportModel.swift; sourceTree = "<group>"; };
-		139A946F1C143CDD00CF754A /* sportsFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sportsFeed.json; sourceTree = "<group>"; };
-		13A6B1D01C131FC800F93232 /* FormaterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormaterManager.swift; sourceTree = "<group>"; };
-		13A6B1D71C13A24A00F93232 /* SessionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTableViewCell.swift; sourceTree = "<group>"; };
-		13A6B1D81C13A24A00F93232 /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
-		13C8F03C1E1917DD00B4D2AA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Pods/../build/Debug-iphoneos/FBSDKCoreKit/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
-		13C955BF1E14543200DD9FBA /* Lundi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Lundi.json; sourceTree = "<group>"; };
-		13C955C11E14547000DD9FBA /* Mardi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Mardi.json; sourceTree = "<group>"; };
-		13C955C31E14548400DD9FBA /* Mercredi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Mercredi.json; sourceTree = "<group>"; };
-		13C955C51E14549700DD9FBA /* Jeudi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Jeudi.json; sourceTree = "<group>"; };
-		13C955C71E1454A900DD9FBA /* Vendredi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Vendredi.json; sourceTree = "<group>"; };
-		13C955C91E1454BD00DD9FBA /* Samedi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Samedi.json; sourceTree = "<group>"; };
-		13CE08C91C2ABFB6009BC5E9 /* ImagesConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesConstants.swift; sourceTree = "<group>"; };
-		13CE08CB1C2AC209009BC5E9 /* ColorsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsConstants.swift; sourceTree = "<group>"; };
-		13CF0E0B1C09ECC100715454 /* myGymSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myGymSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13CF0E0E1C09ECC100715454 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		13CF0E131C09ECC100715454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		13CF0E151C09ECC100715454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		13CF0E1A1C09ECC100715454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		13E68F551C0B8B6A00CDCDD0 /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
-		380E29891C591391005D0E4B /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
-		3810B3271DA78B84000F91B8 /* FBAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBAPIController.swift; sourceTree = "<group>"; };
-		38210E6E1C24177B0001A4CE /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
-		38210E701C2431210001A4CE /* SportsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
-		3825E6761C24515C00F589FA /* SportCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportCollectionViewCell.swift; sourceTree = "<group>"; };
-		3825E6771C24515C00F589FA /* SportCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SportCollectionViewCell.xib; sourceTree = "<group>"; };
-		3865A5281C4E46B400D7F82B /* NewsDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewController.swift; sourceTree = "<group>"; };
-		3865A52A1C4E85DA00D7F82B /* SportsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsDataManager.swift; sourceTree = "<group>"; };
-		3865A52C1C4E972D00D7F82B /* SportsDescriptionsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsDescriptionsDataManager.swift; sourceTree = "<group>"; };
-		387666021C28383600DE8A62 /* SportDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportDetailsViewController.swift; sourceTree = "<group>"; };
-		387B1AB31C2961C1004FAA16 /* NavBarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarManager.swift; sourceTree = "<group>"; };
-		387B1AB51C296FBC004FAA16 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		387B1AB71C2990CA004FAA16 /* ObjectiveCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveCollectionViewCell.swift; sourceTree = "<group>"; };
-		387B1AB81C2990CA004FAA16 /* ObjectiveCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ObjectiveCollectionViewCell.xib; sourceTree = "<group>"; };
-		388F7DA61D8AE53F00AC0B39 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
-		388F7DA81D8AE6CC00AC0B39 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		389649BD1DB4BD4000923C9D /* SeguesConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeguesConstants.swift; sourceTree = "<group>"; };
-		38985AEB1DA7A5B900F4E375 /* AlertViewControllerUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewControllerUtil.swift; sourceTree = "<group>"; };
-		38D3C09F1DA7F0FE006BBA23 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		38F943B91C3FA05200643571 /* ModelsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelsConstants.swift; sourceTree = "<group>"; };
-		7817AB2550FBD3CD6EA16E8A /* Pods_myGymSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myGymSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		824DD462F8CF79003FEBDF93 /* Pods-myGymSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myGymSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift.debug.xcconfig"; sourceTree = "<group>"; };
-		899E2EF53002DAB45E21AE0C /* Pods-myGymSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myGymSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift.release.xcconfig"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		13CF0E081C09ECC100715454 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				833EC24F89F1FA1F1356A8DE /* Pods_myGymSwift.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		13623BC61D6614DA00F94406 /* FBModels */ = {
-			isa = PBXGroup;
-			children = (
-				13623BC91D66156600F94406 /* FBFeedModel.swift */,
-			);
-			name = FBModels;
-			sourceTree = "<group>";
-		};
-		1376A5E61C09ED88000AA652 /* RealmModels */ = {
-			isa = PBXGroup;
-			children = (
-				1376A5F51C09EE67000AA652 /* SessionModel.swift */,
-				139595481C1481E500F43523 /* SportModel.swift */,
-				13616EB01C2C1D6D00DC459A /* SportDescriptionModel.swift */,
-				13616EB21C2C25B700DC459A /* ObjectiveModel.swift */,
-			);
-			name = RealmModels;
-			sourceTree = "<group>";
-		};
-		1376A5E81C09EDA7000AA652 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				38D3C09F1DA7F0FE006BBA23 /* RootViewController.swift */,
-				13623BA41D65E39800F94406 /* HomeViewController.swift */,
-				1391636F1C1A20E8000B9ECC /* NewsViewController.swift */,
-				3865A5281C4E46B400D7F82B /* NewsDetailsViewController.swift */,
-				1376A5F91C09F1C2000AA652 /* DaysViewController.swift */,
-				1376A5FB1C09F1CE000AA652 /* DayViewController.swift */,
-				38210E701C2431210001A4CE /* SportsViewController.swift */,
-				387666021C28383600DE8A62 /* SportDetailsViewController.swift */,
-				380E29891C591391005D0E4B /* ContactsViewController.swift */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
-		1376A5E91C09EDBA000AA652 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				13CE08D01C2AC370009BC5E9 /* CollectionViewCells */,
-				13CE08CF1C2AC359009BC5E9 /* TableViewCells */,
-			);
-			name = Cells;
-			sourceTree = "<group>";
-		};
-		1376A5EA1C09EDC0000AA652 /* Constans */ = {
-			isa = PBXGroup;
-			children = (
-				388F7DA61D8AE53F00AC0B39 /* NetworkConstants.swift */,
-				13CE08C91C2ABFB6009BC5E9 /* ImagesConstants.swift */,
-				13CE08CB1C2AC209009BC5E9 /* ColorsConstants.swift */,
-				38F943B91C3FA05200643571 /* ModelsConstants.swift */,
-				389649BD1DB4BD4000923C9D /* SeguesConstants.swift */,
-			);
-			name = Constans;
-			sourceTree = "<group>";
-		};
-		1376A5EB1C09EDC7000AA652 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				13A6B1D01C131FC800F93232 /* FormaterManager.swift */,
-				13E68F551C0B8B6A00CDCDD0 /* RealmManager.swift */,
-				387B1AB31C2961C1004FAA16 /* NavBarManager.swift */,
-				3865A52A1C4E85DA00D7F82B /* SportsDataManager.swift */,
-				3865A52C1C4E972D00D7F82B /* SportsDescriptionsDataManager.swift */,
-				388F7DA81D8AE6CC00AC0B39 /* StorageManager.swift */,
-			);
-			name = Managers;
-			sourceTree = "<group>";
-		};
-		1376A5EC1C09EDCF000AA652 /* Stubs */ = {
-			isa = PBXGroup;
-			children = (
-				13C955BE1E1453F600DD9FBA /* Sessions */,
-				139A946F1C143CDD00CF754A /* sportsFeed.json */,
-				13616EAE1C2C18FF00DC459A /* sportsDescriptionsFeed.json */,
-				130EC7021C29FA7600EE9805 /* objectivesFeed.json */,
-			);
-			name = Stubs;
-			sourceTree = "<group>";
-		};
-		13A6B1D61C13A0C200F93232 /* StoryBoards */ = {
-			isa = PBXGroup;
-			children = (
-				13CF0E121C09ECC100715454 /* Main.storyboard */,
-			);
-			name = StoryBoards;
-			sourceTree = "<group>";
-		};
-		13C955BE1E1453F600DD9FBA /* Sessions */ = {
-			isa = PBXGroup;
-			children = (
-				13C955BF1E14543200DD9FBA /* Lundi.json */,
-				13C955C11E14547000DD9FBA /* Mardi.json */,
-				13C955C31E14548400DD9FBA /* Mercredi.json */,
-				13C955C51E14549700DD9FBA /* Jeudi.json */,
-				13C955C71E1454A900DD9FBA /* Vendredi.json */,
-				13C955C91E1454BD00DD9FBA /* Samedi.json */,
-			);
-			name = Sessions;
-			sourceTree = "<group>";
-		};
-		13CE08CD1C2AC2E0009BC5E9 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				38985AEA1DA7A58E00F4E375 /* Utils */,
-				38985AE91DA79E4500F4E375 /* Facebook */,
-				38210E6D1C2417540001A4CE /* TabBarController */,
-				1376A5E81C09EDA7000AA652 /* ViewControllers */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		13CE08CE1C2AC31A009BC5E9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				13623BC61D6614DA00F94406 /* FBModels */,
-				1376A5EC1C09EDCF000AA652 /* Stubs */,
-				1376A5E61C09ED88000AA652 /* RealmModels */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		13CE08CF1C2AC359009BC5E9 /* TableViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				13A6B1D71C13A24A00F93232 /* SessionTableViewCell.swift */,
-				13A6B1D81C13A24A00F93232 /* SessionTableViewCell.xib */,
-				138C3F751C3F049600470ACB /* NewsTableViewCell.swift */,
-				138C3F761C3F049600470ACB /* NewsTableViewCell.xib */,
-				133AA33E1CD609DE00786A12 /* DayTableViewCell.swift */,
-				133AA33F1CD609DE00786A12 /* DayTableViewCell.xib */,
-			);
-			name = TableViewCells;
-			sourceTree = "<group>";
-		};
-		13CE08D01C2AC370009BC5E9 /* CollectionViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				3825E6761C24515C00F589FA /* SportCollectionViewCell.swift */,
-				3825E6771C24515C00F589FA /* SportCollectionViewCell.xib */,
-				387B1AB71C2990CA004FAA16 /* ObjectiveCollectionViewCell.swift */,
-				387B1AB81C2990CA004FAA16 /* ObjectiveCollectionViewCell.xib */,
-			);
-			name = CollectionViewCells;
-			sourceTree = "<group>";
-		};
-		13CF0E021C09ECC100715454 = {
-			isa = PBXGroup;
-			children = (
-				1306D0231E0FCFF9002C2FA1 /* SwiftStyleSettings.plist */,
-				13CF0E0D1C09ECC100715454 /* myGymSwift */,
-				13CF0E0C1C09ECC100715454 /* Products */,
-				8BAEF0186558D58525B085E9 /* Frameworks */,
-				8A4962CD08A10BFFFCDE24A7 /* Pods */,
-			);
-			sourceTree = "<group>";
-		};
-		13CF0E0C1C09ECC100715454 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				13CF0E0B1C09ECC100715454 /* myGymSwift.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		13CF0E0D1C09ECC100715454 /* myGymSwift */ = {
-			isa = PBXGroup;
-			children = (
-				13CE08CD1C2AC2E0009BC5E9 /* Controllers */,
-				1376A5EB1C09EDC7000AA652 /* Managers */,
-				13CE08CE1C2AC31A009BC5E9 /* Models */,
-				1376A5E91C09EDBA000AA652 /* Cells */,
-				13A6B1D61C13A0C200F93232 /* StoryBoards */,
-				1376A5EA1C09EDC0000AA652 /* Constans */,
-				13CF0E0E1C09ECC100715454 /* AppDelegate.swift */,
-				13CF0E151C09ECC100715454 /* Assets.xcassets */,
-				13CF0E1A1C09ECC100715454 /* Info.plist */,
-				387B1AB51C296FBC004FAA16 /* Localizable.strings */,
-			);
-			path = myGymSwift;
-			sourceTree = "<group>";
-		};
-		38210E6D1C2417540001A4CE /* TabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				38210E6E1C24177B0001A4CE /* MainTabBarViewController.swift */,
-			);
-			name = TabBarController;
-			sourceTree = "<group>";
-		};
-		38985AE91DA79E4500F4E375 /* Facebook */ = {
-			isa = PBXGroup;
-			children = (
-				3810B3271DA78B84000F91B8 /* FBAPIController.swift */,
-				13623BC41D65EF3500F94406 /* FBTokenManager.swift */,
-			);
-			name = Facebook;
-			sourceTree = "<group>";
-		};
-		38985AEA1DA7A58E00F4E375 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				38985AEB1DA7A5B900F4E375 /* AlertViewControllerUtil.swift */,
-			);
-			name = Utils;
-			sourceTree = "<group>";
-		};
-		8A4962CD08A10BFFFCDE24A7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				824DD462F8CF79003FEBDF93 /* Pods-myGymSwift.debug.xcconfig */,
-				899E2EF53002DAB45E21AE0C /* Pods-myGymSwift.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8BAEF0186558D58525B085E9 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				13C8F03C1E1917DD00B4D2AA /* FBSDKCoreKit.framework */,
-				0B0E4BCD6721A36AC0FF04DA /* Pods.framework */,
-				7817AB2550FBD3CD6EA16E8A /* Pods_myGymSwift.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		13CF0E0A1C09ECC100715454 /* myGymSwift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 13CF0E1D1C09ECC100715454 /* Build configuration list for PBXNativeTarget "myGymSwift" */;
-			buildPhases = (
-				AEDE008DA16D1A919A0B777D /* [CP] Check Pods Manifest.lock */,
-				13CF0E071C09ECC100715454 /* Sources */,
-				13CF0E081C09ECC100715454 /* Frameworks */,
-				13CF0E091C09ECC100715454 /* Resources */,
-				SWIFCLEANCUSTOMRUNSCRIPT /* Swift-Clean Run Script */,
-				26B942F5ABCDA2E8B756204C /* [CP] Embed Pods Frameworks */,
-				3A377F21EECBC049A056B1FA /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = myGymSwift;
-			productName = myGymSwift;
-			productReference = 13CF0E0B1C09ECC100715454 /* myGymSwift.app */;
-			productType = "com.apple.product-type.application";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		13CF0E031C09ECC100715454 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = "julien gimenez";
-				TargetAttributes = {
-					13CF0E0A1C09ECC100715454 = {
-						CreatedOnToolsVersion = 7.1.1;
-						DevelopmentTeam = 27X585C4QL;
-						LastSwiftMigration = 0800;
-						ProvisioningStyle = Automatic;
-					};
-				};
-			};
-			buildConfigurationList = 13CF0E061C09ECC100715454 /* Build configuration list for PBXProject "myGymSwift" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 13CF0E021C09ECC100715454;
-			productRefGroup = 13CF0E0C1C09ECC100715454 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				13CF0E0A1C09ECC100715454 /* myGymSwift */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		13CF0E091C09ECC100715454 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				13C955C81E1454A900DD9FBA /* Vendredi.json in Resources */,
-				13C955C41E14548400DD9FBA /* Mercredi.json in Resources */,
-				130EC7031C29FA7600EE9805 /* objectivesFeed.json in Resources */,
-				139A94701C143CDD00CF754A /* sportsFeed.json in Resources */,
-				13CF0E161C09ECC100715454 /* Assets.xcassets in Resources */,
-				1306D0241E0FCFF9002C2FA1 /* SwiftStyleSettings.plist in Resources */,
-				387B1ABA1C2990CA004FAA16 /* ObjectiveCollectionViewCell.xib in Resources */,
-				387B1AB61C296FBC004FAA16 /* Localizable.strings in Resources */,
-				13C955CA1E1454BD00DD9FBA /* Samedi.json in Resources */,
-				3825E6791C24515C00F589FA /* SportCollectionViewCell.xib in Resources */,
-				138C3F781C3F049600470ACB /* NewsTableViewCell.xib in Resources */,
-				13CF0E141C09ECC100715454 /* Main.storyboard in Resources */,
-				13C955C61E14549700DD9FBA /* Jeudi.json in Resources */,
-				13C955C01E14543200DD9FBA /* Lundi.json in Resources */,
-				13616EAF1C2C18FF00DC459A /* sportsDescriptionsFeed.json in Resources */,
-				133AA3411CD609DE00786A12 /* DayTableViewCell.xib in Resources */,
-				13A6B1DA1C13A24A00F93232 /* SessionTableViewCell.xib in Resources */,
-				13C955C21E14547000DD9FBA /* Mardi.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		26B942F5ABCDA2E8B756204C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3A377F21EECBC049A056B1FA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AEDE008DA16D1A919A0B777D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		SWIFCLEANCUSTOMRUNSCRIPT /* Swift-Clean Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Swift-Clean Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" || -d \"${LOCAL_APPS_DIR}/Swift-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean \"${SRCROOT}\"?@autoFix \nelse\necho \"warning: You have to install and set up Swift-Clean to use its features!\" \nfi\nfi";
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		13CF0E071C09ECC100715454 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				13623BC51D65EF3500F94406 /* FBTokenManager.swift in Sources */,
-				1376A5FA1C09F1C2000AA652 /* DaysViewController.swift in Sources */,
-				13616EB11C2C1D6D00DC459A /* SportDescriptionModel.swift in Sources */,
-				13E68F561C0B8B6A00CDCDD0 /* RealmManager.swift in Sources */,
-				387B1AB91C2990CA004FAA16 /* ObjectiveCollectionViewCell.swift in Sources */,
-				3810B3281DA78B84000F91B8 /* FBAPIController.swift in Sources */,
-				3825E6781C24515C00F589FA /* SportCollectionViewCell.swift in Sources */,
-				38D3C0A01DA7F0FE006BBA23 /* RootViewController.swift in Sources */,
-				13CE08CA1C2ABFB6009BC5E9 /* ImagesConstants.swift in Sources */,
-				139163701C1A20E8000B9ECC /* NewsViewController.swift in Sources */,
-				138C3F771C3F049600470ACB /* NewsTableViewCell.swift in Sources */,
-				13A6B1D11C131FC800F93232 /* FormaterManager.swift in Sources */,
-				38210E711C2431210001A4CE /* SportsViewController.swift in Sources */,
-				387666031C28383600DE8A62 /* SportDetailsViewController.swift in Sources */,
-				13616EB31C2C25B700DC459A /* ObjectiveModel.swift in Sources */,
-				389649BE1DB4BD4000923C9D /* SeguesConstants.swift in Sources */,
-				13CF0E0F1C09ECC100715454 /* AppDelegate.swift in Sources */,
-				13CE08CC1C2AC209009BC5E9 /* ColorsConstants.swift in Sources */,
-				38210E6F1C24177B0001A4CE /* MainTabBarViewController.swift in Sources */,
-				13A6B1D91C13A24A00F93232 /* SessionTableViewCell.swift in Sources */,
-				3865A52D1C4E972D00D7F82B /* SportsDescriptionsDataManager.swift in Sources */,
-				38F943BA1C3FA05200643571 /* ModelsConstants.swift in Sources */,
-				139595491C1481E500F43523 /* SportModel.swift in Sources */,
-				3865A52B1C4E85DA00D7F82B /* SportsDataManager.swift in Sources */,
-				13623BCA1D66156600F94406 /* FBFeedModel.swift in Sources */,
-				388F7DA91D8AE6CC00AC0B39 /* StorageManager.swift in Sources */,
-				387B1AB41C2961C1004FAA16 /* NavBarManager.swift in Sources */,
-				380E298A1C591391005D0E4B /* ContactsViewController.swift in Sources */,
-				1376A5F61C09EE67000AA652 /* SessionModel.swift in Sources */,
-				13623BA51D65E39800F94406 /* HomeViewController.swift in Sources */,
-				133AA3401CD609DE00786A12 /* DayTableViewCell.swift in Sources */,
-				3865A5291C4E46B400D7F82B /* NewsDetailsViewController.swift in Sources */,
-				38985AEC1DA7A5B900F4E375 /* AlertViewControllerUtil.swift in Sources */,
-				388F7DA71D8AE53F00AC0B39 /* NetworkConstants.swift in Sources */,
-				1376A5FC1C09F1CE000AA652 /* DayViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		13CF0E121C09ECC100715454 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13CF0E131C09ECC100715454 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		13CF0E1B1C09ECC100715454 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		13CF0E1C1C09ECC100715454 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		13CF0E1E1C09ECC100715454 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 824DD462F8CF79003FEBDF93 /* Pods-myGymSwift.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: juliengimenez38@gmail.com (9QTNNW3YNQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 27X585C4QL;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKCoreKit",
-				);
-				INFOPLIST_FILE = myGymSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = julieng38.myGymSwift;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		13CF0E1F1C09ECC100715454 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 899E2EF53002DAB45E21AE0C /* Pods-myGymSwift.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: juliengimenez38@gmail.com (9QTNNW3YNQ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 27X585C4QL;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKCoreKit",
-				);
-				INFOPLIST_FILE = myGymSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = julieng38.myGymSwift;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		13CF0E061C09ECC100715454 /* Build configuration list for PBXProject "myGymSwift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				13CF0E1B1C09ECC100715454 /* Debug */,
-				13CF0E1C1C09ECC100715454 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		13CF0E1D1C09ECC100715454 /* Build configuration list for PBXNativeTarget "myGymSwift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				13CF0E1E1C09ECC100715454 /* Debug */,
-				13CF0E1F1C09ECC100715454 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 13CF0E031C09ECC100715454 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0B0E4BCD6721A36AC0FF04DA</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>1306D0231E0FCFF9002C2FA1</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>SwiftStyleSettings.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1306D0241E0FCFF9002C2FA1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1306D0231E0FCFF9002C2FA1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>130EC7021C29FA7600EE9805</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.json</string>
+			<key>path</key>
+			<string>objectivesFeed.json</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>130EC7031C29FA7600EE9805</key>
+		<dict>
+			<key>fileRef</key>
+			<string>130EC7021C29FA7600EE9805</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>133AA33E1CD609DE00786A12</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>DayTableViewCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>133AA33F1CD609DE00786A12</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>DayTableViewCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>133AA3401CD609DE00786A12</key>
+		<dict>
+			<key>fileRef</key>
+			<string>133AA33E1CD609DE00786A12</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>133AA3411CD609DE00786A12</key>
+		<dict>
+			<key>fileRef</key>
+			<string>133AA33F1CD609DE00786A12</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13616EAE1C2C18FF00DC459A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.json</string>
+			<key>path</key>
+			<string>sportsDescriptionsFeed.json</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13616EAF1C2C18FF00DC459A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13616EAE1C2C18FF00DC459A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13616EB01C2C1D6D00DC459A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SportDescriptionModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13616EB11C2C1D6D00DC459A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13616EB01C2C1D6D00DC459A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13616EB21C2C25B700DC459A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ObjectiveModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13616EB31C2C25B700DC459A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13616EB21C2C25B700DC459A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13623BA41D65E39800F94406</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>HomeViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13623BA51D65E39800F94406</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13623BA41D65E39800F94406</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13623BC41D65EF3500F94406</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>FBTokenManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13623BC51D65EF3500F94406</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13623BC41D65EF3500F94406</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13623BC61D6614DA00F94406</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>13623BC91D66156600F94406</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>FBModels</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13623BC91D66156600F94406</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>FBFeedModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13623BCA1D66156600F94406</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13623BC91D66156600F94406</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1376A5E61C09ED88000AA652</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1376A5F51C09EE67000AA652</string>
+				<string>139595481C1481E500F43523</string>
+				<string>13616EB01C2C1D6D00DC459A</string>
+				<string>13616EB21C2C25B700DC459A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>RealmModels</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1376A5E81C09EDA7000AA652</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>38D3C09F1DA7F0FE006BBA23</string>
+				<string>13623BA41D65E39800F94406</string>
+				<string>1391636F1C1A20E8000B9ECC</string>
+				<string>3865A5281C4E46B400D7F82B</string>
+				<string>1376A5F91C09F1C2000AA652</string>
+				<string>1376A5FB1C09F1CE000AA652</string>
+				<string>38210E701C2431210001A4CE</string>
+				<string>387666021C28383600DE8A62</string>
+				<string>380E29891C591391005D0E4B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ViewControllers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1376A5E91C09EDBA000AA652</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>13CE08D01C2AC370009BC5E9</string>
+				<string>13CE08CF1C2AC359009BC5E9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Cells</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1376A5EA1C09EDC0000AA652</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>388F7DA61D8AE53F00AC0B39</string>
+				<string>13CE08C91C2ABFB6009BC5E9</string>
+				<string>13CE08CB1C2AC209009BC5E9</string>
+				<string>38F943B91C3FA05200643571</string>
+				<string>389649BD1DB4BD4000923C9D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Constans</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1376A5EB1C09EDC7000AA652</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>13A6B1D01C131FC800F93232</string>
+				<string>13E68F551C0B8B6A00CDCDD0</string>
+				<string>387B1AB31C2961C1004FAA16</string>
+				<string>3865A52A1C4E85DA00D7F82B</string>
+				<string>3865A52C1C4E972D00D7F82B</string>
+				<string>388F7DA81D8AE6CC00AC0B39</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Managers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1376A5EC1C09EDCF000AA652</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>13C955BE1E1453F600DD9FBA</string>
+				<string>139A946F1C143CDD00CF754A</string>
+				<string>13616EAE1C2C18FF00DC459A</string>
+				<string>130EC7021C29FA7600EE9805</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Stubs</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1376A5F51C09EE67000AA652</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SessionModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1376A5F61C09EE67000AA652</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1376A5F51C09EE67000AA652</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1376A5F91C09F1C2000AA652</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>DaysViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1376A5FA1C09F1C2000AA652</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1376A5F91C09F1C2000AA652</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1376A5FB1C09F1CE000AA652</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>DayViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1376A5FC1C09F1CE000AA652</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1376A5FB1C09F1CE000AA652</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>138C3F751C3F049600470ACB</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>NewsTableViewCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>138C3F761C3F049600470ACB</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>NewsTableViewCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>138C3F771C3F049600470ACB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>138C3F751C3F049600470ACB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>138C3F781C3F049600470ACB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>138C3F761C3F049600470ACB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1391636F1C1A20E8000B9ECC</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>NewsViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>139163701C1A20E8000B9ECC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1391636F1C1A20E8000B9ECC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>139595481C1481E500F43523</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SportModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>139595491C1481E500F43523</key>
+		<dict>
+			<key>fileRef</key>
+			<string>139595481C1481E500F43523</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>139A946F1C143CDD00CF754A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.json</string>
+			<key>path</key>
+			<string>sportsFeed.json</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>139A94701C143CDD00CF754A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>139A946F1C143CDD00CF754A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13A6B1D01C131FC800F93232</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>FormaterManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13A6B1D11C131FC800F93232</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13A6B1D01C131FC800F93232</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13A6B1D61C13A0C200F93232</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>13CF0E121C09ECC100715454</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>StoryBoards</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13A6B1D71C13A24A00F93232</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SessionTableViewCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13A6B1D81C13A24A00F93232</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>SessionTableViewCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13A6B1D91C13A24A00F93232</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13A6B1D71C13A24A00F93232</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13A6B1DA1C13A24A00F93232</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13A6B1D81C13A24A00F93232</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13C8F03C1E1917DD00B4D2AA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>FBSDKCoreKit.framework</string>
+			<key>path</key>
+			<string>Pods/../build/Debug-iphoneos/FBSDKCoreKit/FBSDKCoreKit.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13C955BE1E1453F600DD9FBA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>13C955BF1E14543200DD9FBA</string>
+				<string>13C955C11E14547000DD9FBA</string>
+				<string>13C955C31E14548400DD9FBA</string>
+				<string>13C955C51E14549700DD9FBA</string>
+				<string>13C955C71E1454A900DD9FBA</string>
+				<string>13C955C91E1454BD00DD9FBA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Sessions</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13C955BF1E14543200DD9FBA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.json</string>
+			<key>path</key>
+			<string>Lundi.json</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13C955C01E14543200DD9FBA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13C955BF1E14543200DD9FBA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13C955C11E14547000DD9FBA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.json</string>
+			<key>path</key>
+			<string>Mardi.json</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13C955C21E14547000DD9FBA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13C955C11E14547000DD9FBA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13C955C31E14548400DD9FBA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.json</string>
+			<key>path</key>
+			<string>Mercredi.json</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13C955C41E14548400DD9FBA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13C955C31E14548400DD9FBA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13C955C51E14549700DD9FBA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.json</string>
+			<key>path</key>
+			<string>Jeudi.json</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13C955C61E14549700DD9FBA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13C955C51E14549700DD9FBA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13C955C71E1454A900DD9FBA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.json</string>
+			<key>path</key>
+			<string>Vendredi.json</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13C955C81E1454A900DD9FBA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13C955C71E1454A900DD9FBA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13C955C91E1454BD00DD9FBA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.json</string>
+			<key>path</key>
+			<string>Samedi.json</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13C955CA1E1454BD00DD9FBA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13C955C91E1454BD00DD9FBA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13CE08C91C2ABFB6009BC5E9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ImagesConstants.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13CE08CA1C2ABFB6009BC5E9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13CE08C91C2ABFB6009BC5E9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13CE08CB1C2AC209009BC5E9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ColorsConstants.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13CE08CC1C2AC209009BC5E9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13CE08CB1C2AC209009BC5E9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13CE08CD1C2AC2E0009BC5E9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>38985AEA1DA7A58E00F4E375</string>
+				<string>38985AE91DA79E4500F4E375</string>
+				<string>38210E6D1C2417540001A4CE</string>
+				<string>1376A5E81C09EDA7000AA652</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Controllers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13CE08CE1C2AC31A009BC5E9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>13623BC61D6614DA00F94406</string>
+				<string>1376A5EC1C09EDCF000AA652</string>
+				<string>1376A5E61C09ED88000AA652</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Models</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13CE08CF1C2AC359009BC5E9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>13A6B1D71C13A24A00F93232</string>
+				<string>13A6B1D81C13A24A00F93232</string>
+				<string>138C3F751C3F049600470ACB</string>
+				<string>138C3F761C3F049600470ACB</string>
+				<string>133AA33E1CD609DE00786A12</string>
+				<string>133AA33F1CD609DE00786A12</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>TableViewCells</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13CE08D01C2AC370009BC5E9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3825E6761C24515C00F589FA</string>
+				<string>3825E6771C24515C00F589FA</string>
+				<string>387B1AB71C2990CA004FAA16</string>
+				<string>387B1AB81C2990CA004FAA16</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>CollectionViewCells</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13CF0E021C09ECC100715454</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1306D0231E0FCFF9002C2FA1</string>
+				<string>13CF0E0D1C09ECC100715454</string>
+				<string>13CF0E0C1C09ECC100715454</string>
+				<string>8BAEF0186558D58525B085E9</string>
+				<string>8A4962CD08A10BFFFCDE24A7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13CF0E031C09ECC100715454</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0710</string>
+				<key>LastUpgradeCheck</key>
+				<string>0820</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>julien gimenez</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>13CF0E0A1C09ECC100715454</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.1.1</string>
+						<key>DevelopmentTeam</key>
+						<string>27X585C4QL</string>
+						<key>LastSwiftMigration</key>
+						<string>0800</string>
+						<key>ProvisioningStyle</key>
+						<string>Automatic</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>13CF0E061C09ECC100715454</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>13CF0E021C09ECC100715454</string>
+			<key>productRefGroup</key>
+			<string>13CF0E0C1C09ECC100715454</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>13CF0E0A1C09ECC100715454</string>
+			</array>
+		</dict>
+		<key>13CF0E061C09ECC100715454</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>13CF0E1B1C09ECC100715454</string>
+				<string>13CF0E1C1C09ECC100715454</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>13CF0E071C09ECC100715454</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>13623BC51D65EF3500F94406</string>
+				<string>1376A5FA1C09F1C2000AA652</string>
+				<string>13616EB11C2C1D6D00DC459A</string>
+				<string>13E68F561C0B8B6A00CDCDD0</string>
+				<string>387B1AB91C2990CA004FAA16</string>
+				<string>3810B3281DA78B84000F91B8</string>
+				<string>3825E6781C24515C00F589FA</string>
+				<string>38D3C0A01DA7F0FE006BBA23</string>
+				<string>13CE08CA1C2ABFB6009BC5E9</string>
+				<string>139163701C1A20E8000B9ECC</string>
+				<string>138C3F771C3F049600470ACB</string>
+				<string>13A6B1D11C131FC800F93232</string>
+				<string>38210E711C2431210001A4CE</string>
+				<string>387666031C28383600DE8A62</string>
+				<string>13616EB31C2C25B700DC459A</string>
+				<string>389649BE1DB4BD4000923C9D</string>
+				<string>13CF0E0F1C09ECC100715454</string>
+				<string>13CE08CC1C2AC209009BC5E9</string>
+				<string>38210E6F1C24177B0001A4CE</string>
+				<string>13A6B1D91C13A24A00F93232</string>
+				<string>3865A52D1C4E972D00D7F82B</string>
+				<string>38F943BA1C3FA05200643571</string>
+				<string>139595491C1481E500F43523</string>
+				<string>3865A52B1C4E85DA00D7F82B</string>
+				<string>13623BCA1D66156600F94406</string>
+				<string>388F7DA91D8AE6CC00AC0B39</string>
+				<string>387B1AB41C2961C1004FAA16</string>
+				<string>380E298A1C591391005D0E4B</string>
+				<string>1376A5F61C09EE67000AA652</string>
+				<string>13623BA51D65E39800F94406</string>
+				<string>133AA3401CD609DE00786A12</string>
+				<string>3865A5291C4E46B400D7F82B</string>
+				<string>38985AEC1DA7A5B900F4E375</string>
+				<string>388F7DA71D8AE53F00AC0B39</string>
+				<string>1376A5FC1C09F1CE000AA652</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>13CF0E081C09ECC100715454</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>833EC24F89F1FA1F1356A8DE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>13CF0E091C09ECC100715454</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>13C955C81E1454A900DD9FBA</string>
+				<string>13C955C41E14548400DD9FBA</string>
+				<string>130EC7031C29FA7600EE9805</string>
+				<string>139A94701C143CDD00CF754A</string>
+				<string>13CF0E161C09ECC100715454</string>
+				<string>1306D0241E0FCFF9002C2FA1</string>
+				<string>387B1ABA1C2990CA004FAA16</string>
+				<string>387B1AB61C296FBC004FAA16</string>
+				<string>13C955CA1E1454BD00DD9FBA</string>
+				<string>3825E6791C24515C00F589FA</string>
+				<string>138C3F781C3F049600470ACB</string>
+				<string>13CF0E141C09ECC100715454</string>
+				<string>13C955C61E14549700DD9FBA</string>
+				<string>13C955C01E14543200DD9FBA</string>
+				<string>13616EAF1C2C18FF00DC459A</string>
+				<string>133AA3411CD609DE00786A12</string>
+				<string>13A6B1DA1C13A24A00F93232</string>
+				<string>13C955C21E14547000DD9FBA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>13CF0E0A1C09ECC100715454</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>13CF0E1D1C09ECC100715454</string>
+			<key>buildPhases</key>
+			<array>
+				<string>AEDE008DA16D1A919A0B777D</string>
+				<string>13CF0E071C09ECC100715454</string>
+				<string>13CF0E081C09ECC100715454</string>
+				<string>13CF0E091C09ECC100715454</string>
+				<string>SWIFCLEANCUSTOMRUNSCRIPT</string>
+				<string>26B942F5ABCDA2E8B756204C</string>
+				<string>3A377F21EECBC049A056B1FA</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>myGymSwift</string>
+			<key>productName</key>
+			<string>myGymSwift</string>
+			<key>productReference</key>
+			<string>13CF0E0B1C09ECC100715454</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>13CF0E0B1C09ECC100715454</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>myGymSwift.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>13CF0E0C1C09ECC100715454</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>13CF0E0B1C09ECC100715454</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13CF0E0D1C09ECC100715454</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>13CE08CD1C2AC2E0009BC5E9</string>
+				<string>1376A5EB1C09EDC7000AA652</string>
+				<string>13CE08CE1C2AC31A009BC5E9</string>
+				<string>1376A5E91C09EDBA000AA652</string>
+				<string>13A6B1D61C13A0C200F93232</string>
+				<string>1376A5EA1C09EDC0000AA652</string>
+				<string>13CF0E0E1C09ECC100715454</string>
+				<string>13CF0E151C09ECC100715454</string>
+				<string>13CF0E1A1C09ECC100715454</string>
+				<string>387B1AB51C296FBC004FAA16</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>myGymSwift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13CF0E0E1C09ECC100715454</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13CF0E0F1C09ECC100715454</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13CF0E0E1C09ECC100715454</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13CF0E121C09ECC100715454</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>13CF0E131C09ECC100715454</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13CF0E131C09ECC100715454</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13CF0E141C09ECC100715454</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13CF0E121C09ECC100715454</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13CF0E151C09ECC100715454</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13CF0E161C09ECC100715454</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13CF0E151C09ECC100715454</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13CF0E1A1C09ECC100715454</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13CF0E1B1C09ECC100715454</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>13CF0E1C1C09ECC100715454</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Owholemodule</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>13CF0E1D1C09ECC100715454</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>13CF0E1E1C09ECC100715454</string>
+				<string>13CF0E1F1C09ECC100715454</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>13CF0E1E1C09ECC100715454</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>824DD462F8CF79003FEBDF93</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+				<string>YES</string>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer: juliengimenez38@gmail.com (9QTNNW3YNQ)</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>27X585C4QL</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKCoreKit</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>myGymSwift/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>julieng38.myGymSwift</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>13CF0E1F1C09ECC100715454</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>899E2EF53002DAB45E21AE0C</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+				<string>YES</string>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer: juliengimenez38@gmail.com (9QTNNW3YNQ)</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>27X585C4QL</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(PROJECT_DIR)/build/Debug-iphoneos/FBSDKCoreKit</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>myGymSwift/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>julieng38.myGymSwift</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>13E68F551C0B8B6A00CDCDD0</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RealmManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>13E68F561C0B8B6A00CDCDD0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>13E68F551C0B8B6A00CDCDD0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>26B942F5ABCDA2E8B756204C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>380E29891C591391005D0E4B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ContactsViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>380E298A1C591391005D0E4B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>380E29891C591391005D0E4B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3810B3271DA78B84000F91B8</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>FBAPIController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3810B3281DA78B84000F91B8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3810B3271DA78B84000F91B8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>38210E6D1C2417540001A4CE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>38210E6E1C24177B0001A4CE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>TabBarController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>38210E6E1C24177B0001A4CE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MainTabBarViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>38210E6F1C24177B0001A4CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>38210E6E1C24177B0001A4CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>38210E701C2431210001A4CE</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SportsViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>38210E711C2431210001A4CE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>38210E701C2431210001A4CE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3825E6761C24515C00F589FA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SportCollectionViewCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3825E6771C24515C00F589FA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>SportCollectionViewCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3825E6781C24515C00F589FA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3825E6761C24515C00F589FA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3825E6791C24515C00F589FA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3825E6771C24515C00F589FA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3865A5281C4E46B400D7F82B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>NewsDetailsViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3865A5291C4E46B400D7F82B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3865A5281C4E46B400D7F82B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3865A52A1C4E85DA00D7F82B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SportsDataManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3865A52B1C4E85DA00D7F82B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3865A52A1C4E85DA00D7F82B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3865A52C1C4E972D00D7F82B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SportsDescriptionsDataManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3865A52D1C4E972D00D7F82B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3865A52C1C4E972D00D7F82B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>387666021C28383600DE8A62</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SportDetailsViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>387666031C28383600DE8A62</key>
+		<dict>
+			<key>fileRef</key>
+			<string>387666021C28383600DE8A62</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>387B1AB31C2961C1004FAA16</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>NavBarManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>387B1AB41C2961C1004FAA16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>387B1AB31C2961C1004FAA16</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>387B1AB51C296FBC004FAA16</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>path</key>
+			<string>Localizable.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>387B1AB61C296FBC004FAA16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>387B1AB51C296FBC004FAA16</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>387B1AB71C2990CA004FAA16</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ObjectiveCollectionViewCell.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>387B1AB81C2990CA004FAA16</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>ObjectiveCollectionViewCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>387B1AB91C2990CA004FAA16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>387B1AB71C2990CA004FAA16</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>387B1ABA1C2990CA004FAA16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>387B1AB81C2990CA004FAA16</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>388F7DA61D8AE53F00AC0B39</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>NetworkConstants.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>388F7DA71D8AE53F00AC0B39</key>
+		<dict>
+			<key>fileRef</key>
+			<string>388F7DA61D8AE53F00AC0B39</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>388F7DA81D8AE6CC00AC0B39</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>StorageManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>388F7DA91D8AE6CC00AC0B39</key>
+		<dict>
+			<key>fileRef</key>
+			<string>388F7DA81D8AE6CC00AC0B39</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>389649BD1DB4BD4000923C9D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>SeguesConstants.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>389649BE1DB4BD4000923C9D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>389649BD1DB4BD4000923C9D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>38985AE91DA79E4500F4E375</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3810B3271DA78B84000F91B8</string>
+				<string>13623BC41D65EF3500F94406</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Facebook</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>38985AEA1DA7A58E00F4E375</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>38985AEB1DA7A5B900F4E375</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Utils</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>38985AEB1DA7A5B900F4E375</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AlertViewControllerUtil.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>38985AEC1DA7A5B900F4E375</key>
+		<dict>
+			<key>fileRef</key>
+			<string>38985AEB1DA7A5B900F4E375</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>38D3C09F1DA7F0FE006BBA23</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RootViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>38D3C0A01DA7F0FE006BBA23</key>
+		<dict>
+			<key>fileRef</key>
+			<string>38D3C09F1DA7F0FE006BBA23</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>38F943B91C3FA05200643571</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ModelsConstants.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>38F943BA1C3FA05200643571</key>
+		<dict>
+			<key>fileRef</key>
+			<string>38F943B91C3FA05200643571</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3A377F21EECBC049A056B1FA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>7817AB2550FBD3CD6EA16E8A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_myGymSwift.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>824DD462F8CF79003FEBDF93</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-myGymSwift.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>833EC24F89F1FA1F1356A8DE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7817AB2550FBD3CD6EA16E8A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>899E2EF53002DAB45E21AE0C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-myGymSwift.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-myGymSwift/Pods-myGymSwift.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8A4962CD08A10BFFFCDE24A7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>824DD462F8CF79003FEBDF93</string>
+				<string>899E2EF53002DAB45E21AE0C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8BAEF0186558D58525B085E9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>13C8F03C1E1917DD00B4D2AA</string>
+				<string>0B0E4BCD6721A36AC0FF04DA</string>
+				<string>7817AB2550FBD3CD6EA16E8A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AEDE008DA16D1A919A0B777D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>SWIFCLEANCUSTOMRUNSCRIPT</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Swift-Clean Run Script</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/bash</string>
+			<key>shellScript</key>
+			<string>if [[ -z ${SKIP_SWIFTCLEAN} || ${SKIP_SWIFTCLEAN} != 1 ]]; then
+if [[ -d "${LOCAL_APPS_DIR}/Swift-Clean.app" || -d "${LOCAL_APPS_DIR}/Swift-Clean.app" ]]; then 
+"${LOCAL_APPS_DIR}"/Swift-Clean.app/Contents/Resources/SwiftClean.app/Contents/MacOS/SwiftClean "${SRCROOT}"?@autoFix 
+else
+echo "warning: You have to install and set up Swift-Clean to use its features!" 
+fi
+fi</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>13CF0E031C09ECC100715454</string>
+</dict>
+</plist>
