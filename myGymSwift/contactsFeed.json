@@ -3,14 +3,14 @@
                 "id": "a1",
                 "club": "WIN FITNESS",
                 "district": "Lyon 8ème",
-                "duration": "45",
-                "day": "Samedi",
-                "attendance": "0"
+                "address": "7 rue Antoine Lumière 69008 Lyon",
+                "informations": "Lundi au Vendredi : 09h00 à 20h00\nSamedi : 09h00 à 14h00",
+                "trainings": "Lundi au Vendredi : 8h45 à 21h00\n Samedi : 8h45 à 14h00"
                 }, {
                 "id": "a2",
-                "sport_id": "9",
-                "from": "10.00",
-                "duration": "45",
-                "day": "Samedi",
-                "attendance": "0"
+                "club": "WIN FITNESS",
+                "district": "Lyon 3ème",
+                "address": "2 rue Bara 69003 Lyon",
+                "informations": "Lundi au Jeudi : 09h30 à 20h00\n Vendredi : 12h00 à 20h00\n Samedi : 09h30 à 13h00",
+                "trainings": "Lundi au Jeudi : 09h00 à 20h00\n Vendredi : 12h00 à 20h00\n Samedi : 09h00 à 13h00"
                 }]}

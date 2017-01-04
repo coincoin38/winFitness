@@ -78,6 +78,11 @@ class RealmManager: NSObject {
         self.groupsFromFile(ModelsConstants.kObjectivesStub,object: ModelsConstants.kObjectivesObject) { (JSON) in
             self.writeObjectivesInDB(JSON)
         }
+        
+        // ########## CONTACTS
+        self.groupsFromFile(ModelsConstants.kContactsStub,object: ModelsConstants.kContactsStub) { (JSON) in
+            self.writeContactsInDB(JSON)
+        }
     }
 
     // MARK: - Ecriture d'objets dans la DB
@@ -183,6 +188,28 @@ class RealmManager: NSObject {
         }
     }
     
+    func writeContactsInDB(_ result: JSON) {
+        for object in result {
+            let newObject = self.generateContacts(object.1)
+            getContactsWithId(newObject.id, completion: { (new) -> Void in
+                if (new.count==0){
+                    self.writeData(newObject)
+                }
+                else {
+                    let realm = try! Realm()
+                    try! realm.write {
+                        new[0].id = newObject.id
+                        new[0].club = newObject.club
+                        new[0].district = newObject.district
+                        new[0].address = newObject.address
+                        new[0].informations = newObject.informations
+                        new[0].trainings = newObject.trainings
+                    }
+                }
+            })
+        }
+    }
+    
     func writeData(_ object:Object){
         try! self.realm.write {
             self.realm.add(object)
@@ -211,6 +238,10 @@ class RealmManager: NSObject {
         return ObjectiveModel().setData(dictionary)
     }
     
+    func generateContacts(_ dictionary: JSON) -> ContactModel {
+        return ContactModel().setData(dictionary)
+    }
+    
     // MARK: - Récupération de la totalité d'un type d'objet stocké
 
     func getAllSportsDescriptions() -> Results<(SportDescriptionModel)> {
@@ -219,6 +250,10 @@ class RealmManager: NSObject {
     
     func getAllSportsFromDB(_ completion: (_ sports: Array<(SportModel)>) -> Void) {
         completion(Array<SportModel>(realm.objects(SportModel.self).sorted(byProperty: "name")))
+    }
+    
+    func getAllContactsFromDB(_ completion: (_ sports: Array<(ContactModel)>) -> Void) {
+        completion(Array<ContactModel>(realm.objects(ContactModel.self)))
     }
 
     // MARK : - Recherches d'objet(s) stocké(s)
@@ -249,6 +284,10 @@ class RealmManager: NSObject {
     
     func getObjectivesWithId(_ id: String, completion: (_ objectives: Results<(ObjectiveModel)>) -> Void) {
         completion(realm.objects(ObjectiveModel.self).filter(ModelsConstants.kGetId, id))
+    }
+    
+    func getContactsWithId(_ id: String, completion: (_ objectives: Results<(ContactModel)>) -> Void) {
+        completion(realm.objects(ContactModel.self).filter(ModelsConstants.kGetId, id))
     }
     
     func getObjectivesWithSportId(_ sport_id: String, completion: (_ objectives: Results<(ObjectiveModel)>) -> Void) {

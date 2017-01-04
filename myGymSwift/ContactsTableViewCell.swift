@@ -30,4 +30,15 @@ class ContactsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setData(_ contact: ContactModel) {
+        
+        titreClubLabel.text = contact.club
+        titreArrondissementLabel.text = contact.district
+        titreRenseignementsLabel.text = "Renseignement"
+        adresseLabel.text = contact.address
+        titreHorairesLabel.text = "Horaires"
+        titreEntrainementsLabel.text = "Entraînements"
+        renseignementsTextView.text = contact.informations
+        entrainementsTextView.text = contact.trainings
+    }
 }

@@ -453,6 +453,9 @@
                         </subviews>
                     </view>
                     <tabBarItem key="tabBarItem" title="Contacts" id="Mug-qQ-iQl"/>
+                    <connections>
+                        <outlet property="tableView" destination="czw-HK-M6v" id="fIU-8B-zR5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3O-xF-5C6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

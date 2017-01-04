@@ -11,12 +11,14 @@ struct ModelsConstants {
     static let kSportsStub             = "sportsFeed"
     static let kSportsDescritpionsStub = "sportsDescriptionsFeed"
     static let kObjectivesStub         = "objectivesFeed"
-    
+    static let kContactsStub           = "contactsFeed"
+
     static let kSessionsObject           = "sessions"
     static let kSportsObject             = "sports"
     static let kSportsDescriptionsObject = "descriptions"
     static let kObjectivesObject         = "objectives"
-    
+    static let kContactsObject           = "contacts"
+
     static let kDay            = "day"
     static let kSport_id       = "sport_id"
     static let kId             = "id"
@@ -59,6 +61,12 @@ struct ModelsConstants {
     static let kThursdayRPM  = "JeudiRPM"
     static let kFridayRPM    = "VendrediRPM"
     static let kSaturdayRPM  = "SamediRPM"
+    
+    static let kClub          = "club"
+    static let kDistrict      = "district"
+    static let kAddress       = "address"
+    static let kInformations  = "informations"
+    static let kTrainings     = "trainings"
 
     static let kJsonExtension = "json"
 }

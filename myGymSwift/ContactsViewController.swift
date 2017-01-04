@@ -14,18 +14,26 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
 
     let cellIdentifier = "contactsIdentifier"
     let cellXib = "ContactsTableViewCell"
-    let  cellSize : CGFloat = 300;
-    
-    var ContactFeed: Array<Any> = []
+    let cellSize : CGFloat = 300;
+    let contactsManager = ContactsManager()
+
+    var ContactFeed: Array<ContactModel> = []
     
     @IBOutlet weak var tableView: UITableView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ContactsViewController.openPlan(_:)))
-        //planImage.addGestureRecognizer(tap)
-        //tap.delegate = self
+        tableView?.register(UINib(nibName: cellXib, bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        getContacts()
+    }
+    
+    func getContacts(){
+        
+        contactsManager.getContacts { (contactsArray) -> Void in
+            self.ContactFeed = contactsArray
+            self.tableView?.reloadData()
+        }
     }
     
     // MARK: - TableView delegate
@@ -37,8 +45,8 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ContactsTableViewCell
-        //cell.setData(dayOfTheWeek: daysArray[(indexPath as NSIndexPath).row], index: (indexPath as NSIndexPath).row)
-        //cell.delegate = self
+        cell.setData(ContactFeed[indexPath.row])
+
         return cell
     }
     

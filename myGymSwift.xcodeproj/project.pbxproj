@@ -57,6 +57,8 @@
 		38871E571E1CF82700D9717F /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38871E551E1CF82700D9717F /* ContactsTableViewCell.swift */; };
 		38871E581E1CF82700D9717F /* ContactsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38871E561E1CF82700D9717F /* ContactsTableViewCell.xib */; };
 		38871E5A1E1D00DF00D9717F /* contactsFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 38871E591E1D00DF00D9717F /* contactsFeed.json */; };
+		38871E5C1E1D068F00D9717F /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38871E5B1E1D068F00D9717F /* ContactModel.swift */; };
+		38871E5E1E1D0ACE00D9717F /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38871E5D1E1D0ACE00D9717F /* ContactsManager.swift */; };
 		388F7DA71D8AE53F00AC0B39 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F7DA61D8AE53F00AC0B39 /* NetworkConstants.swift */; };
 		388F7DA91D8AE6CC00AC0B39 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F7DA81D8AE6CC00AC0B39 /* StorageManager.swift */; };
 		389649BE1DB4BD4000923C9D /* SeguesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389649BD1DB4BD4000923C9D /* SeguesConstants.swift */; };
@@ -128,6 +130,8 @@
 		38871E551E1CF82700D9717F /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
 		38871E561E1CF82700D9717F /* ContactsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsTableViewCell.xib; sourceTree = "<group>"; };
 		38871E591E1D00DF00D9717F /* contactsFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contactsFeed.json; sourceTree = "<group>"; };
+		38871E5B1E1D068F00D9717F /* ContactModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		38871E5D1E1D0ACE00D9717F /* ContactsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
 		388F7DA61D8AE53F00AC0B39 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		388F7DA81D8AE6CC00AC0B39 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		389649BD1DB4BD4000923C9D /* SeguesConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeguesConstants.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				139595481C1481E500F43523 /* SportModel.swift */,
 				13616EB01C2C1D6D00DC459A /* SportDescriptionModel.swift */,
 				13616EB21C2C25B700DC459A /* ObjectiveModel.swift */,
+				38871E5B1E1D068F00D9717F /* ContactModel.swift */,
 			);
 			name = RealmModels;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 				3865A52A1C4E85DA00D7F82B /* SportsDataManager.swift */,
 				3865A52C1C4E972D00D7F82B /* SportsDescriptionsDataManager.swift */,
 				388F7DA81D8AE6CC00AC0B39 /* StorageManager.swift */,
+				38871E5D1E1D0ACE00D9717F /* ContactsManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -586,6 +592,7 @@
 				138C3F771C3F049600470ACB /* NewsTableViewCell.swift in Sources */,
 				13A6B1D11C131FC800F93232 /* FormaterManager.swift in Sources */,
 				38210E711C2431210001A4CE /* SportsViewController.swift in Sources */,
+				38871E5E1E1D0ACE00D9717F /* ContactsManager.swift in Sources */,
 				387666031C28383600DE8A62 /* SportDetailsViewController.swift in Sources */,
 				38C426B01E1BFBAB004D3FE6 /* SessionRPModel.swift in Sources */,
 				13616EB31C2C25B700DC459A /* ObjectiveModel.swift in Sources */,
@@ -597,6 +604,7 @@
 				3865A52D1C4E972D00D7F82B /* SportsDescriptionsDataManager.swift in Sources */,
 				38871E571E1CF82700D9717F /* ContactsTableViewCell.swift in Sources */,
 				38F943BA1C3FA05200643571 /* ModelsConstants.swift in Sources */,
+				38871E5C1E1D068F00D9717F /* ContactModel.swift in Sources */,
 				139595491C1481E500F43523 /* SportModel.swift in Sources */,
 				3865A52B1C4E85DA00D7F82B /* SportsDataManager.swift in Sources */,
 				13623BCA1D66156600F94406 /* FBFeedModel.swift in Sources */,
