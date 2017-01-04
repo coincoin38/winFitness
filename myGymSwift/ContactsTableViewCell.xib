@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="299"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIN FITNESS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUX-en-lZQ" userLabel="Titre Club Label">
@@ -48,11 +48,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 rue Antoine Lumière 69008 Lyon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohE-g9-cwX" userLabel="Adresse Label">
-                        <rect key="frame" x="8" y="37" width="261" height="21"/>
+                        <rect key="frame" x="8" y="37" width="234" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="ZgR-xo-6Lz"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -66,7 +66,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entraînements" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arO-cL-i7E" userLabel="Titre Entraînements Label">
-                        <rect key="frame" x="8" y="196" width="113.5" height="21"/>
+                        <rect key="frame" x="8" y="181" width="113.5" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Qc6-Xg-DJe"/>
                         </constraints>
@@ -75,23 +75,15 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="Lundi au Jeudi : 09h30 à 20h00 Vendredi : 12h à 20h00 Samedi : 09h30 à 13h00" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AH-HJ-LCs" userLabel="Renseignements Text View">
-                        <rect key="frame" x="4" y="127" width="216" height="67"/>
+                        <rect key="frame" x="4" y="127" width="308" height="52"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="67" id="0oM-fl-Bho"/>
-                            <constraint firstAttribute="width" constant="216" id="K6p-mB-oE8"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="Lundi au Jeudi : 09h00 à 20h00 Vendredi : 12h à 20h00 Samedi : 09h00 à 13h00" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nH-Ho-J7D" userLabel="Entrainements Text View">
-                        <rect key="frame" x="4" y="217" width="216" height="67"/>
+                        <rect key="frame" x="4" y="202" width="308" height="52"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="67" id="R5F-Bt-jMb"/>
-                            <constraint firstAttribute="width" constant="216" id="mYS-EX-rka"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
@@ -109,6 +101,8 @@
                     <constraint firstItem="ohE-g9-cwX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="eMs-Pv-M54"/>
                     <constraint firstItem="nUX-en-lZQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="esf-rv-uNF"/>
                     <constraint firstItem="Luw-jE-Z75" firstAttribute="top" secondItem="H7U-RN-Iov" secondAttribute="bottom" constant="8" id="mwn-h9-4eZ"/>
+                    <constraint firstAttribute="trailing" secondItem="0AH-HJ-LCs" secondAttribute="trailing" constant="8" id="tXf-gZ-2co"/>
+                    <constraint firstAttribute="trailing" secondItem="6nH-Ho-J7D" secondAttribute="trailing" constant="8" id="v6V-Bt-2cO"/>
                     <constraint firstItem="Luw-jE-Z75" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="vAb-zn-jjs"/>
                     <constraint firstItem="arO-cL-i7E" firstAttribute="top" secondItem="0AH-HJ-LCs" secondAttribute="bottom" constant="2" id="vZG-F4-Tdu"/>
                     <constraint firstItem="Coo-on-wJx" firstAttribute="leading" secondItem="nUX-en-lZQ" secondAttribute="trailing" constant="8" id="zS5-z4-prA"/>

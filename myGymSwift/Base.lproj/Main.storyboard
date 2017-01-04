@@ -155,7 +155,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DYl-Fk-igc" id="Xf6-tw-V3l">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -370,7 +370,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iMc-Pd-wKh" id="K0G-Zh-qAd">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -423,7 +423,7 @@
             </objects>
             <point key="canvasLocation" x="-1228" y="56"/>
         </scene>
-        <!--Contacts-->
+        <!--Informations-->
         <scene sceneID="Jpv-aA-8BN">
             <objects>
                 <viewController id="lJE-AK-CIj" customClass="ContactsViewController" customModule="myGymSwift" customModuleProvider="target" sceneMemberID="viewController">
@@ -435,24 +435,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="300" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="czw-HK-M6v">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="300" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="czw-HK-M6v">
                                 <rect key="frame" x="0.0" y="28" width="320" height="491"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactsIdentifier" id="HmA-CH-4uR" customClass="ContactsTableViewCell" customModule="myGymSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="320" height="300"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HmA-CH-4uR" id="LNc-oA-j1P">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="299"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="lJE-AK-CIj" id="mkD-dk-jUS"/>
+                                    <outlet property="delegate" destination="lJE-AK-CIj" id="wB7-b8-YA0"/>
+                                </connections>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="czw-HK-M6v" secondAttribute="trailing" id="0Ic-xM-LmM"/>
+                            <constraint firstItem="czw-HK-M6v" firstAttribute="leading" secondItem="pxi-hj-gc1" secondAttribute="leading" id="Rnh-7q-R21"/>
+                            <constraint firstItem="inO-GE-9t2" firstAttribute="top" secondItem="czw-HK-M6v" secondAttribute="bottom" id="s3Q-Jo-kLK"/>
+                            <constraint firstItem="czw-HK-M6v" firstAttribute="top" secondItem="J86-y7-Z5c" secondAttribute="bottom" constant="8" id="tBb-2c-cbb"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contacts" id="Mug-qQ-iQl"/>
+                    <tabBarItem key="tabBarItem" title="Informations" id="Mug-qQ-iQl"/>
                     <connections>
                         <outlet property="tableView" destination="czw-HK-M6v" id="fIU-8B-zR5"/>
                     </connections>

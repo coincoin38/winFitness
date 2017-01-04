@@ -14,7 +14,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
 
     let cellIdentifier = "contactsIdentifier"
     let cellXib = "ContactsTableViewCell"
-    let cellSize : CGFloat = 300;
+    let cellSize : CGFloat = 270;
     let contactsManager = ContactsManager()
 
     var ContactFeed: Array<ContactModel> = []

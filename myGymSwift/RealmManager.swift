@@ -80,7 +80,7 @@ class RealmManager: NSObject {
         }
         
         // ########## CONTACTS
-        self.groupsFromFile(ModelsConstants.kContactsStub,object: ModelsConstants.kContactsStub) { (JSON) in
+        self.groupsFromFile(ModelsConstants.kContactsStub,object: ModelsConstants.kContactsObject) { (JSON) in
             self.writeContactsInDB(JSON)
         }
     }
