@@ -13,6 +13,7 @@ class SessionTableViewCell: UITableViewCell {
     @IBOutlet weak var sessionLabel: UILabel!
     @IBOutlet weak var fromLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var explorerLabel: UILabel!
     @IBOutlet weak var attendanceView: UIView!
 
     override func awakeFromNib() {
@@ -39,9 +40,13 @@ class SessionTableViewCell: UITableViewCell {
 
         if(Int(session.attendance) == 0){
             attendanceView.backgroundColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.tableViewCellFullAttendanceColor)
+            explorerLabel.isHidden = true
         }
         else{
             attendanceView.backgroundColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.tableViewCellLowAttendanceColor)
+            explorerLabel.isHidden = false
+            explorerLabel.text = "Explorer"
+
         }
     }
 }

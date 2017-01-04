@@ -28,7 +28,10 @@
 "MINUTES_SHORT" = "min";
 "FACEBOOK" = "Facebook";
 "CATCH_PHRASE" ="L'excellence de la forme à prix mini";
-"EXPLORER" ="+ 15 min Explorer";
+"EXPLORER" = "+ 15 min Explorer";
+"INORMATIONS" = "Renseignements";
+"TRAININGS" = "Entraînements";
+"SCHEDULE" = "Horaires";
 
 //DAYS
 "MONDAY" = "Lundi";

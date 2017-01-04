@@ -65,6 +65,9 @@ struct ModelsConstants {
     static let kClub          = "club"
     static let kDistrict      = "district"
     static let kAddress       = "address"
+    static let kLatitude      = "latitude"
+    static let kLongitude     = "longitude"
+
     static let kInformations  = "informations"
     static let kTrainings     = "trainings"
 

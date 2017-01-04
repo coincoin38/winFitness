@@ -204,6 +204,8 @@ class RealmManager: NSObject {
                         new[0].address = newObject.address
                         new[0].informations = newObject.informations
                         new[0].trainings = newObject.trainings
+                        new[0].latitude = newObject.latitude
+                        new[0].longitude = newObject.longitude
                     }
                 }
             })

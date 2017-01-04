@@ -62,9 +62,19 @@
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52O-8v-DaA">
+                        <rect key="frame" x="286.5" y="1" width="30.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="xJa-wF-JYn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
+                        <color key="textColor" red="0.3921568627" green="0.40000000000000002" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="52O-8v-DaA" secondAttribute="trailing" constant="3" id="0y4-Jk-DuX"/>
                     <constraint firstAttribute="bottom" secondItem="N41-F2-u1O" secondAttribute="bottom" id="4eA-4q-j43"/>
                     <constraint firstItem="CUS-27-JZG" firstAttribute="leading" secondItem="N41-F2-u1O" secondAttribute="trailing" id="GUR-Ts-veM"/>
                     <constraint firstAttribute="bottom" secondItem="CUS-27-JZG" secondAttribute="bottom" id="Hdq-KC-Hjb"/>
@@ -78,12 +88,14 @@
                     <constraint firstItem="N41-F2-u1O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lxk-bK-2fv"/>
                     <constraint firstItem="CUS-27-JZG" firstAttribute="leading" secondItem="N41-F2-u1O" secondAttribute="trailing" id="svx-ln-mxo"/>
                     <constraint firstItem="N41-F2-u1O" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vvs-jG-H9J"/>
+                    <constraint firstItem="52O-8v-DaA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="wkQ-NY-1Hm"/>
                     <constraint firstItem="CUS-27-JZG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="woO-ba-Vfk"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="attendanceView" destination="N41-F2-u1O" id="omM-4H-CPi"/>
                 <outlet property="durationLabel" destination="xr7-TS-HON" id="XyZ-qj-ejS"/>
+                <outlet property="explorerLabel" destination="52O-8v-DaA" id="8pn-PM-zrM"/>
                 <outlet property="fromLabel" destination="AWU-nO-QTZ" id="OwC-nc-9nW"/>
                 <outlet property="sessionLabel" destination="cVn-pz-Xg9" id="xqt-7t-aBj"/>
             </connections>

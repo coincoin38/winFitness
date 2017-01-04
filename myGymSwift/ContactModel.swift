@@ -16,6 +16,8 @@ class ContactModel: Object {
     dynamic var club = ""
     dynamic var district = ""
     dynamic var address = ""
+    dynamic var latitude = ""
+    dynamic var longitude = ""
     dynamic var informations = ""
     dynamic var trainings = ""
 
@@ -25,9 +27,11 @@ class ContactModel: Object {
         club         = dictionary[ModelsConstants.kClub].stringValue
         district     = dictionary[ModelsConstants.kDistrict].stringValue
         address      = dictionary[ModelsConstants.kAddress].stringValue
+        latitude     = dictionary[ModelsConstants.kLatitude].stringValue
+        longitude    = dictionary[ModelsConstants.kLongitude].stringValue
         informations = dictionary[ModelsConstants.kInformations].stringValue
         trainings    = dictionary[ModelsConstants.kTrainings].stringValue
-
+    
         return self
     }
 }
