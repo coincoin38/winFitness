@@ -54,6 +54,9 @@
 		387B1AB61C296FBC004FAA16 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 387B1AB51C296FBC004FAA16 /* Localizable.strings */; };
 		387B1AB91C2990CA004FAA16 /* ObjectiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387B1AB71C2990CA004FAA16 /* ObjectiveCollectionViewCell.swift */; };
 		387B1ABA1C2990CA004FAA16 /* ObjectiveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387B1AB81C2990CA004FAA16 /* ObjectiveCollectionViewCell.xib */; };
+		38871E571E1CF82700D9717F /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38871E551E1CF82700D9717F /* ContactsTableViewCell.swift */; };
+		38871E581E1CF82700D9717F /* ContactsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38871E561E1CF82700D9717F /* ContactsTableViewCell.xib */; };
+		38871E5A1E1D00DF00D9717F /* contactsFeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 38871E591E1D00DF00D9717F /* contactsFeed.json */; };
 		388F7DA71D8AE53F00AC0B39 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F7DA61D8AE53F00AC0B39 /* NetworkConstants.swift */; };
 		388F7DA91D8AE6CC00AC0B39 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F7DA81D8AE6CC00AC0B39 /* StorageManager.swift */; };
 		389649BE1DB4BD4000923C9D /* SeguesConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389649BD1DB4BD4000923C9D /* SeguesConstants.swift */; };
@@ -122,6 +125,9 @@
 		387B1AB51C296FBC004FAA16 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		387B1AB71C2990CA004FAA16 /* ObjectiveCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectiveCollectionViewCell.swift; sourceTree = "<group>"; };
 		387B1AB81C2990CA004FAA16 /* ObjectiveCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ObjectiveCollectionViewCell.xib; sourceTree = "<group>"; };
+		38871E551E1CF82700D9717F /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		38871E561E1CF82700D9717F /* ContactsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsTableViewCell.xib; sourceTree = "<group>"; };
+		38871E591E1D00DF00D9717F /* contactsFeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = contactsFeed.json; sourceTree = "<group>"; };
 		388F7DA61D8AE53F00AC0B39 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		388F7DA81D8AE6CC00AC0B39 /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		389649BD1DB4BD4000923C9D /* SeguesConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeguesConstants.swift; sourceTree = "<group>"; };
@@ -230,6 +236,7 @@
 				139A946F1C143CDD00CF754A /* sportsFeed.json */,
 				13616EAE1C2C18FF00DC459A /* sportsDescriptionsFeed.json */,
 				130EC7021C29FA7600EE9805 /* objectivesFeed.json */,
+				38871E591E1D00DF00D9717F /* contactsFeed.json */,
 			);
 			name = Stubs;
 			sourceTree = "<group>";
@@ -279,6 +286,7 @@
 		13CE08CF1C2AC359009BC5E9 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				38871E471E1CF56600D9717F /* Contacts */,
 				13A6B1D71C13A24A00F93232 /* SessionTableViewCell.swift */,
 				13A6B1D81C13A24A00F93232 /* SessionTableViewCell.xib */,
 				138C3F751C3F049600470ACB /* NewsTableViewCell.swift */,
@@ -342,6 +350,15 @@
 				38210E6E1C24177B0001A4CE /* MainTabBarViewController.swift */,
 			);
 			name = TabBarController;
+			sourceTree = "<group>";
+		};
+		38871E471E1CF56600D9717F /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				38871E551E1CF82700D9717F /* ContactsTableViewCell.swift */,
+				38871E561E1CF82700D9717F /* ContactsTableViewCell.xib */,
+			);
+			name = Contacts;
 			sourceTree = "<group>";
 		};
 		38985AE91DA79E4500F4E375 /* Facebook */ = {
@@ -482,6 +499,8 @@
 				133AA3411CD609DE00786A12 /* DayTableViewCell.xib in Resources */,
 				13A6B1DA1C13A24A00F93232 /* SessionTableViewCell.xib in Resources */,
 				13C955C21E14547000DD9FBA /* Mardi.json in Resources */,
+				38871E581E1CF82700D9717F /* ContactsTableViewCell.xib in Resources */,
+				38871E5A1E1D00DF00D9717F /* contactsFeed.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +595,7 @@
 				38210E6F1C24177B0001A4CE /* MainTabBarViewController.swift in Sources */,
 				13A6B1D91C13A24A00F93232 /* SessionTableViewCell.swift in Sources */,
 				3865A52D1C4E972D00D7F82B /* SportsDescriptionsDataManager.swift in Sources */,
+				38871E571E1CF82700D9717F /* ContactsTableViewCell.swift in Sources */,
 				38F943BA1C3FA05200643571 /* ModelsConstants.swift in Sources */,
 				139595491C1481E500F43523 /* SportModel.swift in Sources */,
 				3865A52B1C4E85DA00D7F82B /* SportsDataManager.swift in Sources */,

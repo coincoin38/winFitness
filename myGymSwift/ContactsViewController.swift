@@ -10,9 +10,15 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class ContactsViewController: UIViewController,UIGestureRecognizerDelegate{
+class ContactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
-    @IBOutlet weak var planImage: UIImageView!
+    let cellIdentifier = "contactsIdentifier"
+    let cellXib = "ContactsTableViewCell"
+    let  cellSize : CGFloat = 300;
+    
+    var ContactFeed: Array<Any> = []
+    
+    @IBOutlet weak var tableView: UITableView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +27,31 @@ class ContactsViewController: UIViewController,UIGestureRecognizerDelegate{
         //planImage.addGestureRecognizer(tap)
         //tap.delegate = self
     }
+    
+    // MARK: - TableView delegate
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ContactFeed.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ContactsTableViewCell
+        //cell.setData(dayOfTheWeek: daysArray[(indexPath as NSIndexPath).row], index: (indexPath as NSIndexPath).row)
+        //cell.delegate = self
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return cellSize
+    }
+    
+    // MARK: - Actions
     
     func openPlan(_ gr:UITapGestureRecognizer)
     {
