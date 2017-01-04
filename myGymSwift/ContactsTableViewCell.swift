@@ -13,7 +13,7 @@ class ContactsTableViewCell: UITableViewCell {
     @IBOutlet weak var titreClubLabel: UILabel!
     @IBOutlet weak var titreArrondissementLabel: UILabel!
     @IBOutlet weak var titreRenseignementsLabel: UILabel!
-    @IBOutlet weak var adresseLabel: UILabel!
+    @IBOutlet weak var adresseButton: UIButton!
     @IBOutlet weak var titreHorairesLabel: UILabel!
     @IBOutlet weak var titreEntrainementsLabel: UILabel!
     @IBOutlet weak var renseignementsTextView: UITextView!
@@ -35,10 +35,14 @@ class ContactsTableViewCell: UITableViewCell {
         titreClubLabel.text = contact.club
         titreArrondissementLabel.text = contact.district
         titreRenseignementsLabel.text = "Renseignement"
-        adresseLabel.text = contact.address
+        adresseButton.setTitle(contact.address, for: .normal)
         titreHorairesLabel.text = "Horaires"
         titreEntrainementsLabel.text = "Entraînements"
         renseignementsTextView.text = contact.informations
         entrainementsTextView.text = contact.trainings
+    }
+    
+    @IBAction func openMap(sender: AnyObject) {
+        
     }
 }

@@ -52,7 +52,6 @@ class NewsDetailsViewController: UIViewController, UIWebViewDelegate, AlertViewC
     override func viewWillAppear(_ animated: Bool)
     {
         navigationController?.setNavigationBarHidden(false, animated: loaded)
-        UIApplication.shared.statusBarStyle = .lightContent
         if loaded {
             loaded = false
         }
@@ -61,7 +60,6 @@ class NewsDetailsViewController: UIViewController, UIWebViewDelegate, AlertViewC
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(navigationController?.isNavigationBarHidden == false, animated: true)
-        UIApplication.shared.statusBarStyle = .default
     }
     
     func webViewDidStartLoad(_ webView : UIWebView) {

@@ -16,7 +16,7 @@ class MainTabBarViewController: UITabBarController {
         
         let colorSelection: UIColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor)
         UITabBar.appearance().tintColor = colorSelection
-        
+
         let firstTabBarItem:UITabBarItem  = tabBar.items![0]
         let secondTabBarItem:UITabBarItem = tabBar.items![1]
         let thirdTabBarItem:UITabBarItem  = tabBar.items![2]

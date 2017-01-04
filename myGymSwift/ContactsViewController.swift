@@ -14,18 +14,26 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
 
     let cellIdentifier = "contactsIdentifier"
     let cellXib = "ContactsTableViewCell"
-    let cellSize : CGFloat = 270;
+    let cellSize : CGFloat = 300;
     let contactsManager = ContactsManager()
 
     var ContactFeed: Array<ContactModel> = []
     
     @IBOutlet weak var tableView: UITableView?
+    @IBOutlet weak var headerView: UIView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView?.register(UINib(nibName: cellXib, bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        setIHM()
         getContacts()
+    }
+    
+    func setIHM(){
+        
+        view.backgroundColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor)
+        headerView?.backgroundColor = FormaterManager.SharedInstance.uicolorFromHexa(ColorsConstants.selectionTabBarColor)
+        tableView?.register(UINib(nibName: cellXib, bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
     
     func getContacts(){
